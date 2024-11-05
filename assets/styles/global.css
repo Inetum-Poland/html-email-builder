@@ -19,4 +19,6 @@ body {
   width: auto;
   min-height: 100svh;
   margin: 0;
+  display: grid;
+  grid-template: 1fr / 1fr;
 }

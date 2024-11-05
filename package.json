@@ -10,11 +10,13 @@
     "postinstall": "nuxt prepare",
     "test": "vitest",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "icons:generate": "pwa-assets-generator --preset minimal-2023 public/logo.svg"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.6.1",
     "@nuxtjs/i18n": "9.0.0-rc.2",
+    "@vite-pwa/nuxt": "^0.10.6",
     "grapesjs": "^0.22.2",
     "grapesjs-mjml": "^1.0.6",
     "nuxt": "^3.13.2",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.14.4",
+    "@vite-pwa/assets-generator": "^0.2.6",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^15.9.0",
