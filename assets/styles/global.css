@@ -1,0 +1,22 @@
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  --inetum-blue: #232d4b;
+  --inetum-green: #00aa9b;
+  --inetum-orange: #f14540;
+
+  font-family: Inter, system-ui, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, system-ui, sans-serif;
+  }
+}
+
+body {
+  width: auto;
+  min-height: 100svh;
+  margin: 0;
+}

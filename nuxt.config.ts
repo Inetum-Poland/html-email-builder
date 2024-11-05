@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/test-utils/module", "@nuxtjs/i18n", "@nuxt/eslint"],
   ssr: false,
+  css: ["~/assets/styles/global.css"],
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => tag === "mjml" || /^(Mj[A-Z]|mj-)/.test(tag),
