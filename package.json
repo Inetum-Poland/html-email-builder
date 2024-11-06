@@ -19,6 +19,7 @@
     "@vite-pwa/nuxt": "^0.10.6",
     "grapesjs": "^0.22.2",
     "grapesjs-mjml": "^1.0.6",
+    "lucide-static": "^0.454.0",
     "nuxt": "^3.13.2",
     "vue": "latest",
     "vue-router": "latest"
