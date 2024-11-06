@@ -22,3 +22,9 @@ body {
   display: grid;
   grid-template: 1fr / 1fr;
 }
+
+svg.lucide {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1px;
+}

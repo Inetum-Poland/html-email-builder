@@ -1,0 +1,172 @@
+:root {
+  --gjs-main-color: var(--inetum-blue);
+  --gjs-primary-color: var(--inetum-blue);
+  --gjs-main-font: Inter, system-ui, sans-serif;
+  --gjs-left-width: max(280px, 15%);
+  --gjs-canvas-top: 64px;
+}
+
+#gjs {
+  .gjs-one-bg {
+    background: var(--gjs-main-color) !important;
+  }
+
+  .gjs-two-color {
+    color: white !important;
+  }
+
+  .gjs-four-color {
+    color: var(--inetum-green) !important;
+  }
+
+  .gjs-four-color-h:hover {
+    color: var(--inetum-orange) !important;
+  }
+
+  .gjs-mdl-dialog {
+    font-weight: normal;
+  }
+
+  .gjs-category-title,
+  .gjs-layer-title,
+  .gjs-block-category .gjs-title,
+  .gjs-sm-sector-title,
+  .gjs-trait-category .gjs-title,
+  .gjs-sm-header,
+  .gjs-traits-label,
+  .gjs-trt-header {
+    font-weight: normal !important;
+    background-color: transparent !important;
+    letter-spacing: 0 !important;
+    border-bottom: none !important;
+  }
+
+  .gjs-block svg,
+  .gjs-pn-btn svg {
+    fill: transparent;
+  }
+
+  .gjs-pn-panels {
+    width: 100% !important;
+    height: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) var(--gjs-left-width);
+    grid-template-rows: var(--gjs-canvas-top) auto !important;
+    grid-column-gap: 0px !important;
+    grid-row-gap: 0px !important;
+
+    .gjs-pn-panel {
+      top: unset !important;
+      left: unset !important;
+      right: unset !important;
+      bottom: unset !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none !important;
+
+      .gjs-pn-buttons {
+        padding: 0 8px;
+        height: 100%;
+        display: flex;
+        gap: 8px;
+
+        .gjs-pn-btn {
+          margin: 0 !important;
+          color: currentColor;
+
+          &.gjs-pn-active {
+            color: var(--inetum-green);
+          }
+
+          &:focus-visible {
+            outline: none;
+            color: var(--inetum-orange) !important;
+          }
+
+          &.gjs-pn-active {
+            background-color: transparent !important;
+            box-shadow: none !important;
+          }
+        }
+      }
+
+      &.gjs-pn-device-manager {
+        grid-area: 1 / 1 / 2 / 2 !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .gjs-pn-buttons {
+          justify-content: flex-start;
+        }
+      }
+
+      &.gjs-pn-toolbar {
+        grid-area: 1 / 2 / 2 / 3 !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .gjs-pn-buttons {
+          justify-content: flex-end;
+        }
+      }
+
+      &.gjs-pn-tab-switcher {
+        grid-area: 1 / 3 / 2 / 4 !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .gjs-pn-buttons {
+          justify-content: space-around;
+        }
+      }
+
+      &.gjs-pn-views-container {
+        grid-area: 2 / 3 / 3 / 4 !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        box-shadow: none !important;
+
+        .gjs-layer-item {
+          border: none !important;
+          padding: 8px 16px;
+        }
+
+        .gjs-blocks-c {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 8px;
+          padding: 8px;
+
+          .gjs-block {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border: 0;
+            box-shadow: none;
+
+            &:hover {
+              box-shadow: none;
+            }
+
+            .gjs-block__media {
+              width: 32px;
+            }
+
+            .gjs-block-label {
+              font-size: inherit;
+              font-weight: normal;
+              font-family: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}
