@@ -1,0 +1,275 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders the Device Manager panel 1`] = `
+{
+  "buttons": [
+    {
+      "attributes": {
+        "title": "Toggle borders",
+      },
+      "command": "sw-visibility",
+      "id": "toggle-borders",
+      "label": "
+<svg
+  class="lucide lucide-scan"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+</svg>
+",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Export HTML",
+      },
+      "id": "export-html",
+      "label": "
+<svg
+  class="lucide lucide-file-code-2"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="m5 12-3 3 3 3" />
+  <path d="m9 18 3-3-3-3" />
+</svg>
+",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Export JSON",
+      },
+      "id": "export-json",
+      "label": "
+<svg
+  class="lucide lucide-file-json-2"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M4 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1" />
+  <path d="M8 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1" />
+</svg>
+",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Undo",
+      },
+      "command": "core:undo",
+      "id": "undo",
+      "label": "
+<svg
+  class="lucide lucide-undo"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7v6h6" />
+  <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13" />
+</svg>
+",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Redo",
+      },
+      "command": "core:redo",
+      "id": "redo",
+      "label": "
+<svg
+  class="lucide lucide-redo"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M21 7v6h-6" />
+  <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7" />
+</svg>
+",
+      "tagName": "button",
+    },
+  ],
+  "id": "toolbar",
+}
+`;
+
+exports[`renders the Toolbar panel 1`] = `
+{
+  "buttons": [
+    {
+      "attributes": {
+        "title": "Toggle borders",
+      },
+      "command": "sw-visibility",
+      "id": "toggle-borders",
+      "label": "
+<svg
+  class="lucide lucide-scan"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+</svg>
+",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Export HTML",
+      },
+      "id": "export-html",
+      "label": "
+<svg
+  class="lucide lucide-file-code-2"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="m5 12-3 3 3 3" />
+  <path d="m9 18 3-3-3-3" />
+</svg>
+",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Export JSON",
+      },
+      "id": "export-json",
+      "label": "
+<svg
+  class="lucide lucide-file-json-2"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M4 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1" />
+  <path d="M8 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1" />
+</svg>
+",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Undo",
+      },
+      "command": "core:undo",
+      "id": "undo",
+      "label": "
+<svg
+  class="lucide lucide-undo"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7v6h6" />
+  <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13" />
+</svg>
+",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Redo",
+      },
+      "command": "core:redo",
+      "id": "redo",
+      "label": "
+<svg
+  class="lucide lucide-redo"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M21 7v6h-6" />
+  <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7" />
+</svg>
+",
+      "tagName": "button",
+    },
+  ],
+  "id": "toolbar",
+}
+`;

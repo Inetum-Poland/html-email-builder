@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders the Hero block 1`] = `
+{
+  "activate": true,
+  "content": "
+    <mj-hero mode="fixed-height" height="470px" background-width="600px" background-url="https://placehold.co/600x400?text=Background%20Image" padding="100px 0">
+      <mj-text align="center" font-size="3rem" line-height="1.15">
+        Heading
+      </mj-text>
+      <mj-button href="#" align="center">
+        Call to action ⟶
+      </mj-button>
+    </mj-hero>",
+  "label": "Hero",
+  "media": "
+<svg
+  class="lucide lucide-megaphone"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m3 11 18-5v12L3 14v-3z" />
+  <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+</svg>
+",
+}
+`;
