@@ -1,31 +1,11 @@
+import en from "./locale/en.json" with { type: "json" };
+
 export default defineI18nConfig(() => ({
   defaultLocale: "en",
   legacy: false,
   locale: "en",
   locales: ["en"],
   messages: {
-    en: {
-      addBlocks: "Add blocks",
-      button: "Button",
-      callToAction: "Call to action ⟶",
-      column: "{n} column | {n} columns",
-      content: "Content",
-      desktop: "Desktop",
-      editComponentSettings: "Edit component settings",
-      exportHTML: "Export HTML",
-      exportJSON: "Export JSON",
-      heading: "Heading",
-      hero: "Hero",
-      image: "Image",
-      insertTextHere: "Insert text here...",
-      mobile: "Mobile",
-      redo: "Redo",
-      styleComponent: "Style component",
-      tablet: "Tablet",
-      text: "Text",
-      toggleBorders: "Toggle borders",
-      undo: "Undo",
-      viewLayers: "View layers",
-    },
+    en,
   },
 }));
