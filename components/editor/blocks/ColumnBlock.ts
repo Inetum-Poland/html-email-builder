@@ -1,9 +1,8 @@
-import { useI18n } from "vue-i18n";
 import type { BlockProperties } from "grapesjs";
 import { Square, Columns2, Columns3, Columns4 } from "lucide-static";
 
 const createContent = (count: number) => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
 
   return `
   <mj-section>
@@ -20,7 +19,7 @@ const icons = new Map([
 ]);
 
 export const ColumnBlock = (count: 1 | 2 | 3 | 4): BlockProperties => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
 
   return {
     select: true,

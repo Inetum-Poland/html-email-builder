@@ -1,9 +1,8 @@
-import { useI18n } from "vue-i18n";
 import type { BlockProperties } from "grapesjs";
 import { Megaphone } from "lucide-static";
 
 export const HeroBlock = (): BlockProperties => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
 
   return {
     label: t("hero"),

@@ -2,7 +2,7 @@ import type { PanelProperties } from "grapesjs";
 import { Paintbrush, Settings, Layers, Blocks } from "lucide-static";
 
 export const TabSwitcher = (): PanelProperties => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
 
   return {
     id: "tab-switcher",

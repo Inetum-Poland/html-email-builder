@@ -1,4 +1,3 @@
-import { useI18n } from "vue-i18n";
 import type { BlockProperties } from "grapesjs";
 import {
   Heading1,
@@ -28,7 +27,7 @@ const sizes = new Map([
 ]);
 
 export const HeadingBlock = (level: 1 | 2 | 3 | 4 | 5 | 6): BlockProperties => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
   const fontSize = sizes.get(level) || 1;
   const lineHeight = 1.15;
 

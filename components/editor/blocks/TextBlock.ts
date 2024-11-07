@@ -1,9 +1,8 @@
-import { useI18n } from "vue-i18n";
 import type { BlockProperties } from "grapesjs";
 import { Text } from "lucide-static";
 
 export const TextBlock = (): BlockProperties => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
   const lineHeight = 1.5;
 
   return {

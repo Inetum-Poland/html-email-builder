@@ -1,4 +1,3 @@
-import { useI18n } from "vue-i18n";
 import type { Editor, PanelProperties } from "grapesjs";
 import { Monitor, Tablet, TabletSmartphone } from "lucide-static";
 
@@ -26,7 +25,7 @@ const toggle = (device: Device) => {
 };
 
 export const DeviceManager = (): PanelProperties => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
 
   return {
     id: "device-manager",

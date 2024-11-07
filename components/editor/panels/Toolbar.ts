@@ -2,7 +2,7 @@ import type { PanelProperties } from "grapesjs";
 import { Scan, FileCode2, Undo, Redo, FileJson2 } from "lucide-static";
 
 export const Toolbar = (): PanelProperties => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
 
   return {
     id: "toolbar",

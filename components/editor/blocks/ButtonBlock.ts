@@ -1,9 +1,8 @@
-import { useI18n } from "vue-i18n";
 import type { BlockProperties } from "grapesjs";
 import { SquarePlus } from "lucide-static";
 
 export const ButtonBlock = (): BlockProperties => {
-  const { t } = useI18n();
+  const { $i18n: { t } } = useNuxtApp();
 
   return {
     label: t("button"),
