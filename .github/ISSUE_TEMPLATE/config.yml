@@ -1,0 +1,9 @@
+---
+blank_issues_enabled: true
+contact_links:
+  - name: FAQ
+    url: https://github.com/Inetum-Poland/internal-terraform/wiki/FAQ
+    about: At first, please check the FAQ.
+  - name: Wiki
+    url: https://github.com/Inetum-Poland/internal-terraform/wiki
+    about: If you still have questions, please check/search the wiki.
