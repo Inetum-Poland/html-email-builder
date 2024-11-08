@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     port: 3333,
   },
   compatibilityDate: "2024-04-03",
+  telemetry: false,
   eslint: {
     config: {
       stylistic: {
