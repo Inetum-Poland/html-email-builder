@@ -61,6 +61,7 @@ exports[`renders the Toolbar panel 1`] = `
       "attributes": {
         "title": "Export JSON",
       },
+      "command": [Function],
       "id": "export-json",
       "label": "
 <svg

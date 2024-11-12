@@ -2,13 +2,21 @@ import type { Editor } from "grapesjs";
 import { Clipboard, ClipboardCheck, FileDown, FileCheck } from "lucide-static";
 
 export enum Format {
-  MJML = "MJML",
   HTML = "HTML",
+  JSON = "JSON",
+  MJML = "MJML",
 }
 
 const fileFormatMap = new Map([
-  [Format.MJML, "txt"],
   [Format.HTML, "html"],
+  [Format.JSON, "json"],
+  [Format.MJML, "txt"],
+]);
+
+const modeMap = new Map([
+  [Format.HTML, "htmlmixed"],
+  [Format.JSON, "javascript"],
+  [Format.MJML, "htmlmixed"],
 ]);
 
 const CopyButton = (format: Format, data: string) => {
@@ -66,7 +74,7 @@ export const CodePreview = (
   data: string
 ) => {
   const options = {
-    codeName: "htmlmixed",
+    codeName: modeMap.get(format),
     theme: "vars",
     lineWrapping: false,
   };

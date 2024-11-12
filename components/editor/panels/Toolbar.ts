@@ -33,17 +33,16 @@ export const Toolbar = (): PanelProperties => {
         tagName: "button",
       },
       {
-        // todo: add JSON export
         attributes: { title: t("exportJSON") },
-        // command: (editor: Editor) => {
-        //   editor.Modal.setTitle("Components JSON")
-        //     .setContent(
-        //       `<textarea style="width:100%; height: 250px;">
-        //     ${JSON.stringify(editor.getComponents())}
-        //   </textarea>`
-        //     )
-        //     .open();
-        // },
+        command: (editor: Editor) => {
+          const json = JSON.stringify(editor.getComponents(), null, 2);
+
+          const wrapper = document.createElement("div");
+          wrapper.className = "code-preview";
+          wrapper.append(CodePreview(editor, Format.JSON, json));
+
+          editor.Modal.setTitle(t("exportProjectState")).setContent(wrapper).open();
+        },
         id: "export-json",
         label: FileJson2,
         tagName: "button",

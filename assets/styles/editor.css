@@ -56,6 +56,7 @@
     border-radius: 8px !important;
     padding: 16px;
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: auto auto;
     gap: 16px;
 
@@ -222,12 +223,13 @@
   }
 
   .code-preview {
-    display: grid;
+    display: flex;
     gap: 16px;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     height: 50vh;
 
     .code-block {
+      flex: 1;
       height: 100%;
       overflow: auto;
       border-radius: 4px;
