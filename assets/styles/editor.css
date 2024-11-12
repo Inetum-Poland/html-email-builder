@@ -1,9 +1,36 @@
+@import "codemirror-theme-vars/base.css";
+
 :root {
   --gjs-main-color: var(--inetum-blue);
   --gjs-primary-color: var(--inetum-blue);
   --gjs-main-font: Inter, system-ui, sans-serif;
   --gjs-left-width: max(280px, 15%);
   --gjs-canvas-top: 64px;
+
+  --cm-scheme: dark;
+  --cm-foreground: #e4f0fb;
+  --cm-background: #1b1e28;
+  --cm-line-number-gutter: #1b1e28;
+  --cm-comment: #758575;
+  --cm-string: #add7ff;
+  --cm-literal: #429988;
+  --cm-keyword: #5de4c7;
+  --cm-function: #a1b567;
+  --cm-deleted: #d0679d;
+  --cm-namespace: #e4f0fb;
+  --cm-class: #add7ff;
+  --cm-builtin: #5de4c7;
+  --cm-property: #e4f0fb;
+  --cm-punctuation: #858585;
+  --cm-decorator: #bd8f8f;
+  --cm-number: #6394bf;
+  --cm-boolean: #1c6b48;
+  --cm-variable: #c2b36e;
+  --cm-regex: #a6accd;
+  --cm-json-property: #6b8b9e;
+  --cm-line-number: #888888;
+  --cm-line-highlight-background: #444444;
+  --cm-selection-background: #444444;
 }
 
 #gjs {
@@ -25,6 +52,30 @@
 
   .gjs-mdl-dialog {
     font-weight: normal;
+    text-shadow: none !important;
+    border-radius: 8px !important;
+    padding: 16px;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 16px;
+
+    .gjs-mdl-header,
+    .gjs-mdl-content {
+      padding: 0;
+    }
+
+    .gjs-mdl-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: none !important;
+
+      .gjs-mdl-btn-close {
+        position: relative !important;
+        right: 0 !important;
+        top: 0 !important;
+      }
+    }
   }
 
   .gjs-category-title,
@@ -165,6 +216,67 @@
               font-family: inherit;
             }
           }
+        }
+      }
+    }
+  }
+
+  .code-preview {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    height: 50vh;
+
+    .code-block {
+      height: 100%;
+      overflow: auto;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+
+      .buttons-wrapper {
+        border-bottom: 1px solid var(--inetum-blue);
+        background-color: #1b1e28;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+        gap: 8px;
+        display: flex;
+        flex-direction: row;
+
+        .button {
+          cursor: pointer;
+          height: 32px;
+          font-family: inherit;
+          background-color: transparent;
+          outline: none;
+          color: white;
+          box-shadow: none;
+          border: 1px solid var(--inetum-green);
+          border-radius: 4px;
+          display: flex;
+          padding: 0 6px 0 2px;
+          gap: 4px;
+          align-items: center;
+
+          svg {
+            height: 22px;
+          }
+
+          &:hover,
+          &:focus-visible {
+            background-color: var(--inetum-green);
+          }
+        }
+      }
+
+      .CodeMirror {
+        height: 100%;
+        margin: 0;
+        line-height: 1.5;
+
+        .CodeMirror-scrollbar-filler {
+          display: none !important;
         }
       }
     }

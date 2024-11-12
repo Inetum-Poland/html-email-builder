@@ -28,3 +28,25 @@ svg.lucide {
   height: 28px;
   stroke-width: 1px;
 }
+
+::-webkit-scrollbar {
+  width: 3px !important;
+  height: 3px !important;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.75) !important;
+}

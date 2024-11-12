@@ -48,6 +48,9 @@ importers:
       '@vue/test-utils':
         specifier: ^2.4.6
         version: 2.4.6
+      codemirror-theme-vars:
+        specifier: ^0.1.2
+        version: 0.1.2
       happy-dom:
         specifier: ^15.10.2
         version: 15.10.2
@@ -2325,6 +2328,9 @@ packages:
 
   codemirror-formatting@1.0.0:
     resolution: {integrity: sha512-br9yM6eJI3pJHekEnoyHaBEb1B7XxxDjju+vRyBe8QGLp5saTIXXkZ+eFCTqXSAtI8QEZDFVEX2/SOjH2sVWRQ==}
+
+  codemirror-theme-vars@0.1.2:
+    resolution: {integrity: sha512-WTau8X2q58b0SOAY9DO+iQVw8JKVEgyQIqArp2D732tcc+pobbMta3bnVMdQdmgwuvNrOFFr6HoxPRoQOgooFA==}
 
   codemirror@5.63.0:
     resolution: {integrity: sha512-KlLWRPggDg2rBD1Mx7/EqEhaBdy+ybBCVh/efgjBDsPpMeEu6MbTAJzIT4TuCzvmbTEgvKOGzVT6wdBTNusqrg==}
@@ -8140,6 +8146,8 @@ snapshots:
   cluster-key-slot@1.1.2: {}
 
   codemirror-formatting@1.0.0: {}
+
+  codemirror-theme-vars@0.1.2: {}
 
   codemirror@5.63.0: {}
 

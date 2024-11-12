@@ -1,33 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`renders the Column block with 1 column 1`] = `
-{
-  "content": "
-  <mj-section>
-    <mj-column><mj-text>Insert text here...</mj-text></mj-column>
-  </mj-section>
-  ",
-  "label": "1 column",
-  "media": "
-<svg
-  class="lucide lucide-square"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <rect width="18" height="18" x="3" y="3" rx="2" />
-</svg>
-",
-  "select": true,
-}
-`;
-
 exports[`renders the Column block with 1 column(s) 1`] = `
 {
   "content": "
@@ -57,35 +29,6 @@ exports[`renders the Column block with 1 column(s) 1`] = `
 `;
 
 exports[`renders the Column block with 2 column(s) 1`] = `
-{
-  "content": "
-  <mj-section>
-    <mj-column><mj-text>Insert text here...</mj-text></mj-column><mj-column><mj-text>Insert text here...</mj-text></mj-column>
-  </mj-section>
-  ",
-  "label": "2 columns",
-  "media": "
-<svg
-  class="lucide lucide-columns-2"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <rect width="18" height="18" x="3" y="3" rx="2" />
-  <path d="M12 3v18" />
-</svg>
-",
-  "select": true,
-}
-`;
-
-exports[`renders the Column block with 2 columns 1`] = `
 {
   "content": "
   <mj-section>
@@ -144,68 +87,7 @@ exports[`renders the Column block with 3 column(s) 1`] = `
 }
 `;
 
-exports[`renders the Column block with 3 columns 1`] = `
-{
-  "content": "
-  <mj-section>
-    <mj-column><mj-text>Insert text here...</mj-text></mj-column><mj-column><mj-text>Insert text here...</mj-text></mj-column><mj-column><mj-text>Insert text here...</mj-text></mj-column>
-  </mj-section>
-  ",
-  "label": "3 columns",
-  "media": "
-<svg
-  class="lucide lucide-columns-3"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <rect width="18" height="18" x="3" y="3" rx="2" />
-  <path d="M9 3v18" />
-  <path d="M15 3v18" />
-</svg>
-",
-  "select": true,
-}
-`;
-
 exports[`renders the Column block with 4 column(s) 1`] = `
-{
-  "content": "
-  <mj-section>
-    <mj-column><mj-text>Insert text here...</mj-text></mj-column><mj-column><mj-text>Insert text here...</mj-text></mj-column><mj-column><mj-text>Insert text here...</mj-text></mj-column><mj-column><mj-text>Insert text here...</mj-text></mj-column>
-  </mj-section>
-  ",
-  "label": "4 columns",
-  "media": "
-<svg
-  class="lucide lucide-columns-4"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <rect width="18" height="18" x="3" y="3" rx="2" />
-  <path d="M7.5 3v18" />
-  <path d="M12 3v18" />
-  <path d="M16.5 3v18" />
-</svg>
-",
-  "select": true,
-}
-`;
-
-exports[`renders the Column block with 4 columns 1`] = `
 {
   "content": "
   <mj-section>
