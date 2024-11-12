@@ -35,7 +35,7 @@ export const Toolbar = (): PanelProperties => {
       {
         attributes: { title: t("exportJSON") },
         command: (editor: Editor) => {
-          const json = JSON.stringify(editor.getComponents(), null, 2);
+          const json = JSON.stringify(editor.getProjectData(), null, 2);
 
           const wrapper = document.createElement("div");
           wrapper.className = "code-preview";
