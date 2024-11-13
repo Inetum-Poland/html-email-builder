@@ -34,6 +34,8 @@
 }
 
 #gjs {
+  max-height: 100vh;
+
   .gjs-one-bg {
     background: var(--gjs-main-color) !important;
   }
@@ -181,6 +183,62 @@
         width: 100%;
         height: 100%;
         box-shadow: none !important;
+        scrollbar-gutter: stable both-edges;
+
+        input,
+        select,
+        option {
+          font-family: inherit;
+          font-size: inherit;
+        }
+
+        .gjs-field-color input {
+          font-family: inherit;
+        }
+
+        .gjs-field {
+          border: 1px solid rgba(0, 0, 0, 0.25);
+          border-radius: 3px;
+        }
+
+        .gjs-sm-label.gjs-four-color {
+          font-weight: 600;
+        }
+
+        .gjs-field-colorp {
+          padding: 0;
+          border-radius: 0 3px 3px 0;
+          overflow: hidden;
+          width: 25px;
+        }
+
+        label.fa::before {
+          font-weight: 200 !important;
+        }
+
+        .gjs-radio-items {
+          display: flex;
+          border-radius: 3px;
+          gap: 0;
+
+          .gjs-radio-item {
+            border: none;
+
+            .gjs-radio-item-label {
+              min-height: 25px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 3px;
+            }
+
+            input:checked + .gjs-radio-item-label {
+              background-color: var(--inetum-green);
+              font-weight: 600;
+            }
+          }
+        }
 
         .gjs-layer-item {
           border: none !important;
@@ -217,6 +275,100 @@
               font-family: inherit;
             }
           }
+        }
+
+        .gjs-sm-sectors {
+          .gjs-sm-sector {
+            font-weight: inherit;
+
+            &.gjs-sm-open {
+              border-bottom: none !important;
+              margin-bottom: 16px;
+            }
+
+            .gjs-sm-sector-caret {
+              padding: 8px;
+            }
+
+            .gjs-sm-sector-label {
+              margin-left: 0;
+            }
+
+            .gjs-sm-sector-title {
+              padding: 0;
+              font-weight: 600 !important;
+            }
+
+            & > .gjs-sm-properties {
+              padding: 8px 34px !important;
+            }
+
+            .gjs-sm-label {
+              margin: 0 0 5px 0;
+            }
+
+            .gjs-sm-composite .gjs-sm-properties {
+              display: grid;
+              grid-template-columns: auto auto;
+              gap: 8px;
+            }
+
+            .gjs-sm-properties {
+              padding: 8px;
+              row-gap: 8px;
+
+              .gjs-sm-property {
+                width: 100%;
+                padding: 0;
+
+                .gjs-sm-btn {
+                  cursor: pointer;
+                  height: 27px;
+                  font-size: inherit;
+                  font-family: inherit;
+                  background-color: transparent;
+                  outline: none;
+                  color: white;
+                  box-shadow: none;
+                  border: 1px solid var(--inetum-green);
+                  border-radius: 4px;
+                  display: flex;
+                  padding: 0 6px 0 2px;
+                  gap: 4px;
+                  justify-content: center;
+                  font-weight: 500;
+                  align-items: center;
+
+                  svg {
+                    height: 22px;
+                  }
+
+                  &:hover,
+                  &:focus-visible {
+                    background-color: var(--inetum-green);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .gjs-traits-label {
+          padding: 4px 8px;
+          font-weight: 600 !important;
+          margin: 0 8px 8px;
+          width: fit-content;
+          border-radius: 4px;
+        }
+
+        .gjs-trt-trait {
+          font-weight: normal;
+          padding: 0;
+        }
+
+        .gjs-traits-empty-c.gjs-traits-c {
+          padding: 0 16px;
+          gap: 8px;
         }
       }
     }
