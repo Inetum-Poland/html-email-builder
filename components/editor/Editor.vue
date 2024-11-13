@@ -11,12 +11,19 @@ import grapesJS from "grapesjs";
 import grapesJSMJML from "grapesjs-mjml";
 import { ColumnBlock, TextBlock, HeadingBlock, HeroBlock, ImageBlock, ButtonBlock } from "./blocks";
 import { DeviceManager, TabSwitcher, Toolbar } from "./panels";
+import { WelcomeModal } from "./modals";
+import { exportProject, Format } from "./panels/components/CodePreview";
 
 onMounted(() => {
   const editor = grapesJS.init({
     fromElement: true,
-    storageManager: false,
     container: "#gjs",
+    storageManager: {
+      autoload: false,
+    },
+    modal: {
+      backdrop: false,
+    },
     height: "100%",
     plugins: [grapesJSMJML],
     telemetry: false,
@@ -27,7 +34,16 @@ onMounted(() => {
     },
   });
 
-  const { Blocks, Panels } = editor;
+  const { Blocks, Panels, Keymaps } = editor;
+
+  editor.on("load", () => WelcomeModal(editor));
+
+  Keymaps.add("ns:save-project", "⌘+s, ctrl+s", () => {
+    const json = JSON.stringify(editor.getProjectData(), null, 2);
+    exportProject(Format.JSON, json);
+  }, {
+    prevent: true,
+  });
 
   Panels.removePanel("devices-c");
   Panels.removePanel("options");

@@ -19,6 +19,18 @@ const modeMap = new Map([
   [Format.MJML, "htmlmixed"],
 ]);
 
+export const exportProject = (format: Format, data: string) => {
+  const date = new Date().toISOString().slice(0, 10);
+  const a = document.createElement("a");
+  const file = new Blob([data], { type: "text/plain" });
+
+  a.href = window.URL.createObjectURL(file);
+  a.download = `${date}-${format}.${fileFormatMap.get(format)}`;
+  a.click();
+
+  window.URL.revokeObjectURL(a.href);
+};
+
 const CopyButton = (format: Format, data: string) => {
   const { $i18n: { t } } = useNuxtApp();
 
@@ -41,7 +53,6 @@ const CopyButton = (format: Format, data: string) => {
 
 const DownloadButton = (format: Format, data: string) => {
   const { $i18n: { t } } = useNuxtApp();
-  const date = new Date().toISOString().slice(0, 10);
 
   const button = document.createElement("button");
   button.className = "button";
@@ -52,15 +63,7 @@ const DownloadButton = (format: Format, data: string) => {
   setDownload();
 
   button.onclick = () => {
-    const a = document.createElement("a");
-    const file = new Blob([data], { type: "text/plain" });
-
-    a.href = window.URL.createObjectURL(file);
-    a.download = `${date}-${format}.${fileFormatMap.get(format)}`;
-    a.click();
-
-    window.URL.revokeObjectURL(a.href);
-
+    exportProject(format, data);
     setDownloaded();
     setTimeout(setDownload, 3000);
   };

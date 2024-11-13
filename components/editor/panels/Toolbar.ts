@@ -1,6 +1,6 @@
 import type { Editor, PanelProperties } from "grapesjs";
 import { Scan, FileCode2, Undo, Redo, FileJson2 } from "lucide-static";
-import { CodePreview, Format } from "./components/CodePreview";
+import { CodePreview, exportProject, Format } from "./components/CodePreview";
 
 export const Toolbar = (): PanelProperties => {
   const { $i18n: { t } } = useNuxtApp();
@@ -33,7 +33,7 @@ export const Toolbar = (): PanelProperties => {
         tagName: "button",
       },
       {
-        attributes: { title: t("exportJSON") },
+        attributes: { title: t("exportJSON"), class: "button-group-left" },
         command: (editor: Editor) => {
           const json = JSON.stringify(editor.getProjectData(), null, 2);
 
@@ -43,8 +43,18 @@ export const Toolbar = (): PanelProperties => {
 
           editor.Modal.setTitle(t("exportProjectState")).setContent(wrapper).open();
         },
-        id: "export-json",
+        id: "export-json-modal",
         label: FileJson2,
+        tagName: "button",
+      },
+      {
+        attributes: { title: t("exportProjectState"), class: "button-group-right" },
+        command: (editor: Editor) => {
+          const json = JSON.stringify(editor.getProjectData(), null, 2);
+          exportProject(Format.JSON, json);
+        },
+        id: "export-json",
+        label: t("saveProject"),
         tagName: "button",
       },
       {

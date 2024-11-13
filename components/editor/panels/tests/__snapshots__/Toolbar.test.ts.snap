@@ -59,10 +59,11 @@ exports[`renders the Toolbar panel 1`] = `
     },
     {
       "attributes": {
+        "class": "button-group-left",
         "title": "Export JSON",
       },
       "command": [Function],
-      "id": "export-json",
+      "id": "export-json-modal",
       "label": "
 <svg
   class="lucide lucide-file-json-2"
@@ -82,6 +83,16 @@ exports[`renders the Toolbar panel 1`] = `
   <path d="M8 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1" />
 </svg>
 ",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "class": "button-group-right",
+        "title": "Export project state",
+      },
+      "command": [Function],
+      "id": "export-json",
+      "label": "Save project",
       "tagName": "button",
     },
     {
