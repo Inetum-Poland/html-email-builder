@@ -3,7 +3,14 @@
 exports[`renders the Hero block 1`] = `
 {
   "activate": true,
-  "content": "<mj-image src="https://placehold.co/600x400?text=Image"/>",
+  "content": "
+      <mj-image
+        src="https://placehold.co/600x400?text=Image"
+        padding-left="0px"
+        padding-right="0px"
+        padding-bottom="0px"
+        padding-top="0px"
+      >",
   "label": "Image",
   "media": "
 <svg

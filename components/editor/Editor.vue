@@ -13,6 +13,7 @@ import { ColumnBlock, TextBlock, HeadingBlock, HeroBlock, ImageBlock, ButtonBloc
 import { DeviceManager, TabSwitcher, Toolbar } from "./panels";
 import { WelcomeModal } from "./modals";
 import { exportProject, Format } from "./panels/components/CodePreview";
+import { uploadFile } from "./utils/uploadFile";
 
 onMounted(() => {
   const editor = grapesJS.init({
@@ -24,6 +25,7 @@ onMounted(() => {
     modal: {
       backdrop: false,
     },
+    assetManager: { uploadFile },
     height: "100%",
     plugins: [grapesJSMJML],
     telemetry: false,
