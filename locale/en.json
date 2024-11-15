@@ -7,6 +7,8 @@
   "continueFromAutosave": "Continue from autosave",
   "copied": "Copied",
   "copy": "Copy",
+  "copyDocument": "Copy document",
+  "copyFormattedDocument": "Copy formatted document",
   "createEmail": "Create new email",
   "createNewProject": "Create new project",
   "desktop": "Desktop",

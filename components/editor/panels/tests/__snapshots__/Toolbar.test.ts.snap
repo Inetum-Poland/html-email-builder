@@ -5,37 +5,11 @@ exports[`renders the Toolbar panel 1`] = `
   "buttons": [
     {
       "attributes": {
-        "title": "Toggle borders",
-      },
-      "command": "sw-visibility",
-      "id": "toggle-borders",
-      "label": "
-<svg
-  class="lucide lucide-scan"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
-  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
-  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
-  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
-</svg>
-",
-      "tagName": "button",
-    },
-    {
-      "attributes": {
+        "class": "button-group-left",
         "title": "Export HTML",
       },
       "command": [Function],
-      "id": "export-html",
+      "id": "export-html-modal",
       "label": "
 <svg
   class="lucide lucide-file-code-2"
@@ -55,6 +29,17 @@ exports[`renders the Toolbar panel 1`] = `
   <path d="m9 18 3-3-3-3" />
 </svg>
 ",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "class": "button-group-right",
+        "id": "copy-document-button",
+        "title": "Copy formatted document",
+      },
+      "command": [Function],
+      "id": "export-html",
+      "label": "Copy document",
       "tagName": "button",
     },
     {
@@ -93,6 +78,33 @@ exports[`renders the Toolbar panel 1`] = `
       "command": [Function],
       "id": "export-json",
       "label": "Save project",
+      "tagName": "button",
+    },
+    {
+      "attributes": {
+        "title": "Toggle borders",
+      },
+      "command": "sw-visibility",
+      "id": "toggle-borders",
+      "label": "
+<svg
+  class="lucide lucide-scan"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+</svg>
+",
       "tagName": "button",
     },
     {

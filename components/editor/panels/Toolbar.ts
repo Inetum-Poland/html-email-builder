@@ -9,14 +9,7 @@ export const Toolbar = (): PanelProperties => {
     id: "toolbar",
     buttons: [
       {
-        attributes: { title: t("toggleBorders") },
-        command: "sw-visibility",
-        id: "toggle-borders",
-        label: Scan,
-        tagName: "button",
-      },
-      {
-        attributes: { title: t("exportHTML") },
+        attributes: { title: t("exportHTML"), class: "button-group-left" },
         command: (editor: Editor) => {
           const html = editor.Commands.run("mjml-code-to-html").html;
           const mjml = editor.Commands.run("mjml-code");
@@ -28,8 +21,32 @@ export const Toolbar = (): PanelProperties => {
 
           editor.Modal.setTitle(t("exportCode")).setContent(wrapper).open();
         },
-        id: "export-html",
+        id: "export-html-modal",
         label: FileCode2,
+        tagName: "button",
+      },
+      {
+        attributes: {
+          title: t("copyFormattedDocument"),
+          id: "copy-document-button",
+          class: "button-group-right",
+        },
+        command: async (editor: Editor) => {
+          const button = document.querySelector("#copy-document-button");
+
+          if (!button) {
+            return;
+          }
+
+          const data = editor.Commands.run("mjml-code-to-html").html;
+          const html = new Blob([data], { type: "text/html" });
+          const content = new ClipboardItem({ "text/html": html });
+          await navigator.clipboard.write([content]);
+          button.innerHTML = t("copied");
+          setTimeout(() => (button.innerHTML = t("copyDocument")), 3000);
+        },
+        id: "export-html",
+        label: t("copyDocument"),
         tagName: "button",
       },
       {
@@ -55,6 +72,13 @@ export const Toolbar = (): PanelProperties => {
         },
         id: "export-json",
         label: t("saveProject"),
+        tagName: "button",
+      },
+      {
+        attributes: { title: t("toggleBorders") },
+        command: "sw-visibility",
+        id: "toggle-borders",
+        label: Scan,
         tagName: "button",
       },
       {

@@ -163,6 +163,7 @@
             border-radius: 0 6px 6px 0;
             font-family: inherit;
             font-size: inherit;
+            min-width: 120px;
             margin-left: -8px !important;
             padding: 0 10px;
             white-space: nowrap;
