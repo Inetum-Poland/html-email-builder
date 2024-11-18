@@ -65,7 +65,11 @@ export const Toolbar = (): PanelProperties => {
         tagName: "button",
       },
       {
-        attributes: { title: t("exportProjectState"), class: "button-group-right" },
+        attributes: {
+          title: t("exportProjectState"),
+          class: "button-group-right",
+          id: "export-project-button",
+        },
         command: (editor: Editor) => {
           const json = JSON.stringify(editor.getProjectData(), null, 2);
           exportProject(Format.JSON, json);

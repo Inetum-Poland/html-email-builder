@@ -32,7 +32,7 @@ export const TabSwitcher = (): PanelProperties => {
         label: Layers,
         command: "open-layers",
         togglable: false,
-        attributes: { title: t("viewLayers") },
+        attributes: { id: "view-layers", title: t("viewLayers") },
         tagName: "button",
       },
       {
@@ -40,7 +40,7 @@ export const TabSwitcher = (): PanelProperties => {
         label: Blocks,
         command: "open-blocks",
         togglable: false,
-        attributes: { title: t("addBlocks") },
+        attributes: { id: "add-blocks", title: t("addBlocks") },
         tagName: "button",
       },
     ],

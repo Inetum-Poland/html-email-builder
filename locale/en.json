@@ -24,9 +24,11 @@
   "image": "Image",
   "insertTextHere": "Insert text here...",
   "mobile": "Mobile",
+  "okay!": "Okay!",
   "openExistingProject": "Open existing project from file",
   "redo": "Redo",
   "saveProject": "Save project",
+  "showDemoTour": "Show demo tour",
   "styleComponent": "Style component",
   "tablet": "Tablet",
   "text": "Text",
@@ -36,5 +38,51 @@
   "meta": {
     "description": "Build HTML emails with a drag-and-drop interface",
     "title": "HTML Email Builder"
+  },
+  "demo": {
+    "buildingAnEmail": {
+      "title": "Building an email",
+      "description": "With this tool, using a drag-and-drop interface and predefined blocks, you can build an HTML email template that is safe to use in email clients."
+    },
+    "previewMode": {
+      "title": "Preview mode",
+      "description": "The result is responsive. Using the preview mode, you can see what the email will look like on different devices."
+    },
+    "saveChanges": {
+      "title": "Save changes",
+      "description": "The generated MJML markup gets translated into HTML, which you can use in your emails. The project state is saved in a JSON file."
+    },
+    "copyToOutlook": {
+      "title": "Copy to Outlook",
+      "description": "To paste the email into Outlook, click \"<b>Copy document</b>\" and paste the contents into a new message. <b>If the formatting looks wrong, search for the option \"Set default paste\" and set \"Pasting from other apps\" to \"Keep source formatting\".</b>"
+    },
+    "saveAs": {
+      "title": "Save as",
+      "description": "Use this button to save your project as a file on your disk. This file contains all the assets that you're using in the project and can be imported back into the app. Your changes will also be automatically saved in the browser to prevent data loss."
+    },
+    "styleComponents": {
+      "title": "Style components",
+      "description": "You can customize the styling of a component using the settings in this panel."
+    },
+    "editHTMLAttributes": {
+      "title": "Edit HTML attributes",
+      "description": "In this panel, you can change the HTML attributes of a component, for example the alt attribute to provide alt text for images or the href attribute to turn something into a link."
+    },
+    "viewLayers": {
+      "title": "View layers",
+      "description": "This panel shows the layer view. This can be useful when trying to locate a layout issue."
+    },
+    "addBlocks1": {
+      "title": "Add blocks",
+      "description": "This panel contains all the blocks that you can add into the document."
+    },
+    "addBlocks2": {
+      "title": "Add blocks",
+      "description": "You can drag the blocks into the email. Generally, sections with text and images should be wrapped in columns."
+    },
+    "addImages": {
+      "title": "Add images",
+      "description": "You can provide source URLs for the images, or upload them from your drive directly. In that case, they will be scaled to a maximum resolution and embedded into the document. To keep the size of the document lower, it is recommended to host the images somewhere else and only provide the URLs."
+    }
   }
 }

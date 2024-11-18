@@ -73,6 +73,7 @@ exports[`renders the Toolbar panel 1`] = `
     {
       "attributes": {
         "class": "button-group-right",
+        "id": "export-project-button",
         "title": "Export project state",
       },
       "command": [Function],

@@ -1,5 +1,6 @@
 import type { Editor } from "grapesjs";
-import { FileInput, FilePen, FilePlus2 } from "lucide-static";
+import { FileInput, FilePen, FilePlus2, MessageCircleQuestion } from "lucide-static";
+import { demo } from "../demo/demo";
 
 const Button = (title: string, onClick: () => void) => {
   const button = document.createElement("button");
@@ -26,6 +27,11 @@ export const WelcomeModal = (editor: Editor) => {
     Button(`${FileInput} ${t("openExistingProject")}`, () => {
       const input = document.querySelector("#file-input") as HTMLInputElement;
       input.click();
+    }),
+    Button(`${MessageCircleQuestion} ${t("showDemoTour")}`, async () => {
+      // todo: load demo project
+      editor.Modal.close();
+      demo(editor);
     }),
   ];
 

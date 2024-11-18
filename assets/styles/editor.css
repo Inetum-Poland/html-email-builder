@@ -184,6 +184,7 @@
 
         .gjs-pn-buttons {
           justify-content: flex-start;
+          width: min-content;
         }
       }
 
@@ -192,9 +193,12 @@
         position: relative;
         width: 100%;
         height: 100%;
+        display: flex;
+        justify-content: flex-end;
 
         .gjs-pn-buttons {
           justify-content: flex-end;
+          width: min-content;
         }
       }
 
@@ -280,7 +284,7 @@
         .gjs-blocks-c {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 8px;
+          gap: 32px 8px;
           padding: 8px;
 
           .gjs-block {
@@ -292,6 +296,7 @@
             align-items: center;
             border: 0;
             box-shadow: none;
+            min-height: 0;
 
             &:hover {
               box-shadow: none;
@@ -597,6 +602,41 @@
           }
         }
       }
+    }
+  }
+}
+
+.demo-popover {
+  *, button {
+    font-family: inherit;
+    font-size: var(--gjs-font-size);
+  }
+
+  .driver-popover {
+    border-radius: 4px;
+  }
+
+  .driver-popover-prev-btn, .driver-popover-next-btn {
+    cursor: pointer;
+    height: 100%;
+    font-family: inherit;
+    background-color: transparent;
+    outline: none;
+    color: var(--inetum-green);
+    box-shadow: none;
+    border: 1px solid var(--inetum-green);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    text-shadow: none;
+    width: max-content;
+    padding: 6px 12px;
+    align-items: center;
+
+    &:hover,
+    &:focus-visible {
+      color: white;
+      background-color: var(--inetum-green);
     }
   }
 }

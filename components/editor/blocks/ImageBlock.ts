@@ -7,6 +7,7 @@ export const ImageBlock = (): BlockProperties => {
   return {
     label: t("image"),
     media: Image,
+    attributes: { id: "image-block" },
     content: `
       <mj-image
         src="https://placehold.co/600x400?text=${t("image")}"

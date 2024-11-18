@@ -61,6 +61,7 @@ exports[`renders the Tab Switcher panel 1`] = `
     },
     {
       "attributes": {
+        "id": "view-layers",
         "title": "View layers",
       },
       "command": "open-layers",
@@ -88,6 +89,7 @@ exports[`renders the Tab Switcher panel 1`] = `
     },
     {
       "attributes": {
+        "id": "add-blocks",
         "title": "Add blocks",
       },
       "command": "open-blocks",
