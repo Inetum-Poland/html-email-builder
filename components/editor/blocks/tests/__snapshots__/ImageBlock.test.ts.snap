@@ -6,6 +6,7 @@ exports[`renders the Hero block 1`] = `
   "attributes": {
     "id": "image-block",
   },
+  "category": "Generic blocks",
   "content": "
       <mj-image
         src="https://placehold.co/600x400?text=Image"

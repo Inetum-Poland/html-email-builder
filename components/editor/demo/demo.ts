@@ -99,7 +99,7 @@ export const demo = (editor: Editor) => {
         },
       },
       {
-        element: ".gjs-blocks-no-cat",
+        element: ".gjs-blocks-cs",
         popover: {
           title: t("demo.addBlocks2.title"),
           description: t("demo.addBlocks2.description"),
@@ -110,6 +110,13 @@ export const demo = (editor: Editor) => {
         popover: {
           title: t("demo.addImages.title"),
           description: t("demo.addImages.description"),
+        },
+      },
+      {
+        element: "#table-block",
+        popover: {
+          title: t("demo.addTables.title"),
+          description: t("demo.addTables.description"),
           nextBtnText: t("okay!"),
         },
       },

@@ -10,5 +10,6 @@ export const TextBlock = (): BlockProperties => {
     media: Text,
     content: `<mj-text line-height="${lineHeight}">${t("insertTextHere")}</mj-text>`,
     activate: true,
+    category: t("genericBlocks"),
   };
 };

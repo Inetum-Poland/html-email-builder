@@ -17,5 +17,6 @@ export const ImageBlock = (): BlockProperties => {
         padding-top="0px"
       >`,
     activate: true,
+    category: t("genericBlocks"),
   };
 };

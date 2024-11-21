@@ -2,6 +2,9 @@
   "addBlocks": "Add blocks",
   "button": "Button",
   "callToAction": "Call to action ⟶",
+  "cell": "Cell",
+  "cellImage": "Cell image",
+  "cellText": "Cell text",
   "column": "{n} column | {n} columns",
   "content": "Content",
   "continueFromAutosave": "Continue from autosave",
@@ -19,17 +22,20 @@
   "exportHTML": "Export HTML",
   "exportJSON": "Export JSON",
   "exportProjectState": "Export project state",
+  "genericBlocks": "Generic blocks",
   "heading": "Heading",
-  "hero": "Hero",
   "image": "Image",
   "insertTextHere": "Insert text here...",
   "mobile": "Mobile",
   "okay!": "Okay!",
   "openExistingProject": "Open existing project from file",
   "redo": "Redo",
+  "row": "Row",
   "saveProject": "Save project",
   "showDemoTour": "Show demo tour",
   "styleComponent": "Style component",
+  "table": "Table",
+  "tableBlocks": "Table blocks",
   "tablet": "Tablet",
   "text": "Text",
   "toggleBorders": "Toggle borders",
@@ -83,6 +89,10 @@
     "addImages": {
       "title": "Add images",
       "description": "You can provide source URLs for the images, or upload them from your drive directly. In that case, they will be scaled to a maximum resolution and embedded into the document. To keep the size of the document lower, it is recommended to host the images somewhere else and only provide the URLs."
+    },
+    "addTables": {
+      "title": "Add tables",
+      "description": "Tables aren't responsive, but guarantee that the columns won't collapse into rows. Tables only accept components from the Table section. When working with tables, it may be convenient to toggle on component borders in the Toolbar."
     }
   }
 }

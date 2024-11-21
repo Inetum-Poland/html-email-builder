@@ -3,6 +3,7 @@
 exports[`renders the Text block 1`] = `
 {
   "activate": true,
+  "category": "Generic blocks",
   "content": "<mj-text line-height="1.5">Insert text here...</mj-text>",
   "label": "Text",
   "media": "

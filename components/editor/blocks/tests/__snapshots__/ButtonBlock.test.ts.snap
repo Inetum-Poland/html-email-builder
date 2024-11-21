@@ -2,6 +2,7 @@
 
 exports[`renders the Button block 1`] = `
 {
+  "category": "Generic blocks",
   "content": "<mj-button>Button</mj-button>",
   "label": "Button",
   "media": "

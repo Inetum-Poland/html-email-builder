@@ -283,7 +283,7 @@
 
         .gjs-blocks-c {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 32px 8px;
           padding: 8px;
 
@@ -413,6 +413,17 @@
         }
       }
     }
+  }
+
+  .gjs-toolbar {
+    border-radius: 4px;
+  }
+
+  .gjs-category-open,
+  .gjs-block-category.gjs-open,
+  .gjs-sm-sector.gjs-sm-open,
+  .gjs-trait-category.gjs-open {
+    border-bottom: none!important;
   }
 
   .code-preview {
@@ -607,7 +618,8 @@
 }
 
 .demo-popover {
-  *, button {
+  *,
+  button {
     font-family: inherit;
     font-size: var(--gjs-font-size);
   }
@@ -616,7 +628,8 @@
     border-radius: 4px;
   }
 
-  .driver-popover-prev-btn, .driver-popover-next-btn {
+  .driver-popover-prev-btn,
+  .driver-popover-next-btn {
     cursor: pointer;
     height: 100%;
     font-family: inherit;

@@ -6,6 +6,7 @@ exports[`renders the H1 heading 1`] = `
   "attributes": {
     "title": "Heading 1",
   },
+  "category": "Generic blocks",
   "content": "
     <mj-text font-size="2rem" line-height="1.15">
       Heading
@@ -39,6 +40,7 @@ exports[`renders the H2 heading 1`] = `
   "attributes": {
     "title": "Heading 2",
   },
+  "category": "Generic blocks",
   "content": "
     <mj-text font-size="1.5rem" line-height="1.15">
       Heading
@@ -72,6 +74,7 @@ exports[`renders the H3 heading 1`] = `
   "attributes": {
     "title": "Heading 3",
   },
+  "category": "Generic blocks",
   "content": "
     <mj-text font-size="1.17rem" line-height="1.15">
       Heading
@@ -106,6 +109,7 @@ exports[`renders the H4 heading 1`] = `
   "attributes": {
     "title": "Heading 4",
   },
+  "category": "Generic blocks",
   "content": "
     <mj-text font-size="1rem" line-height="1.15">
       Heading
@@ -140,6 +144,7 @@ exports[`renders the H5 heading 1`] = `
   "attributes": {
     "title": "Heading 5",
   },
+  "category": "Generic blocks",
   "content": "
     <mj-text font-size="0.83rem" line-height="1.15">
       Heading
@@ -174,6 +179,7 @@ exports[`renders the H6 heading 1`] = `
   "attributes": {
     "title": "Heading 6",
   },
+  "category": "Generic blocks",
   "content": "
     <mj-text font-size="0.67rem" line-height="1.15">
       Heading

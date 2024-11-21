@@ -9,7 +9,19 @@
 <script setup lang="ts">
 import grapesJS from "grapesjs";
 import grapesJSMJML from "grapesjs-mjml";
-import { ColumnBlock, TextBlock, HeadingBlock, HeroBlock, ImageBlock, ButtonBlock } from "./blocks";
+import {
+  ButtonBlock,
+  CellBlock,
+  CellImageBlock,
+  CellTextBlock,
+  ColumnBlock,
+  HeadingBlock,
+  ImageBlock,
+  RowBlock,
+  TableBlock,
+  TablePlugin,
+  TextBlock,
+} from "./blocks";
 import { DeviceManager, TabSwitcher, Toolbar } from "./panels";
 import { WelcomeModal } from "./modals";
 import { exportProject, Format } from "./panels/components/CodePreview";
@@ -27,12 +39,12 @@ onMounted(() => {
     },
     assetManager: { uploadFile },
     height: "100%",
-    plugins: [grapesJSMJML],
+    plugins: [grapesJSMJML, TablePlugin],
     telemetry: false,
     pluginsOpts: {
       [grapesJSMJML as any]: {
         blocks: [],
-      }
+      },
     },
   });
 
@@ -60,14 +72,17 @@ onMounted(() => {
   Blocks.add("mj-1-column", ColumnBlock(1));
   Blocks.add("mj-2-columns", ColumnBlock(2));
   Blocks.add("mj-3-columns", ColumnBlock(3));
-  Blocks.add("mj-4-columns", ColumnBlock(4));
   Blocks.add("mj-text", TextBlock());
+  Blocks.add("mj-button", ButtonBlock());
+  Blocks.add("mj-image", ImageBlock());
   Blocks.add("mj-heading-1", HeadingBlock(1));
   Blocks.add("mj-heading-2", HeadingBlock(2));
   Blocks.add("mj-heading-3", HeadingBlock(3));
-  Blocks.add("mj-hero", HeroBlock());
-  Blocks.add("mj-image", ImageBlock());
-  Blocks.add("mj-button", ButtonBlock());
+  Blocks.add("mj-table", TableBlock());
+  Blocks.add("mj-table-row", RowBlock());
+  Blocks.add("mj-table-cell", CellBlock());
+  Blocks.add("mj-table-cell-text", CellTextBlock());
+  Blocks.add("mj-table-cell-image", CellImageBlock());
 });
 </script>
 

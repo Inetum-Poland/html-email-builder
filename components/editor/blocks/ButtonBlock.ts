@@ -8,5 +8,6 @@ export const ButtonBlock = (): BlockProperties => {
     label: t("button"),
     media: SquarePlus,
     content: `<mj-button>${t("button")}</mj-button>`,
+    category: t("genericBlocks"),
   };
 };
