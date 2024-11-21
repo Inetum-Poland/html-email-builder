@@ -1,0 +1,1500 @@
+{
+  "assets": [
+    {
+      "type": "image",
+      "src": "https://placehold.co/300x200?text=Image",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    }
+  ],
+  "styles": [
+    {
+      "selectors": [],
+      "selectorsAdd": "#outlook a",
+      "style": {
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px"
+      }
+    },
+    {
+      "selectors": [],
+      "selectorsAdd": "body",
+      "style": {
+        "margin-top": "0px",
+        "margin-right": "0px",
+        "margin-bottom": "0px",
+        "margin-left": "0px",
+        "padding-top": "0px",
+        "padding-right": "0px",
+        "padding-bottom": "0px",
+        "padding-left": "0px",
+        "text-size-adjust": "100%"
+      }
+    },
+    {
+      "selectors": [],
+      "selectorsAdd": "table, td",
+      "style": {
+        "border-collapse": "collapse"
+      }
+    },
+    {
+      "selectors": [],
+      "selectorsAdd": "img",
+      "style": {
+        "border-top-width": "0px",
+        "border-right-width": "0px",
+        "border-bottom-width": "0px",
+        "border-left-width": "0px",
+        "border-top-style": "initial",
+        "border-right-style": "initial",
+        "border-bottom-style": "initial",
+        "border-left-style": "initial",
+        "border-top-color": "initial",
+        "border-right-color": "initial",
+        "border-bottom-color": "initial",
+        "border-left-color": "initial",
+        "border-image-source": "initial",
+        "border-image-slice": "initial",
+        "border-image-width": "initial",
+        "border-image-outset": "initial",
+        "border-image-repeat": "initial",
+        "height": "auto",
+        "line-height": "100%",
+        "outline-color": "initial",
+        "outline-style": "none",
+        "outline-width": "initial",
+        "text-decoration-line": "none",
+        "text-decoration-thickness": "initial",
+        "text-decoration-style": "initial",
+        "text-decoration-color": "initial"
+      }
+    },
+    {
+      "selectors": [],
+      "selectorsAdd": "p",
+      "style": {
+        "display": "block",
+        "margin-top": "13px",
+        "margin-right": "0px",
+        "margin-bottom": "13px",
+        "margin-left": "0px"
+      }
+    },
+    {
+      "selectors": [
+        "mj-column-per-100"
+      ],
+      "style": {
+        "width": "100% !important",
+        "max-width": "100%"
+      },
+      "mediaText": "only screen and (min-width: 480px)",
+      "atRuleType": "media"
+    },
+    {
+      "selectors": [],
+      "selectorsAdd": ".moz-text-html .mj-column-per-100",
+      "style": {
+        "width": "100% !important",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selectors": [
+        "mj-column-per-33-333333333333336"
+      ],
+      "style": {
+        "width": "33.3333% !important",
+        "max-width": "33.3333%"
+      },
+      "mediaText": "only screen and (min-width: 480px)",
+      "atRuleType": "media"
+    },
+    {
+      "selectors": [],
+      "selectorsAdd": ".moz-text-html .mj-column-per-33-333333333333336",
+      "style": {
+        "width": "33.3333% !important",
+        "max-width": "33.3333%"
+      }
+    },
+    {
+      "selectors": [
+        "mj-column-per-50"
+      ],
+      "style": {
+        "width": "50% !important",
+        "max-width": "50%"
+      },
+      "mediaText": "only screen and (min-width: 480px)",
+      "atRuleType": "media"
+    },
+    {
+      "selectors": [],
+      "selectorsAdd": ".moz-text-html .mj-column-per-50",
+      "style": {
+        "width": "50% !important",
+        "max-width": "50%"
+      }
+    },
+    {
+      "selectors": [
+        "mj-column-per-25"
+      ],
+      "style": {
+        "width": "25% !important",
+        "max-width": "25%"
+      },
+      "mediaText": "only screen and (min-width: 480px)",
+      "atRuleType": "media"
+    },
+    {
+      "selectors": [],
+      "selectorsAdd": ".moz-text-html .mj-column-per-25",
+      "style": {
+        "width": "25% !important",
+        "max-width": "25%"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "frames": [
+        {
+          "component": {
+            "type": "wrapper",
+            "stylable": [
+              "background",
+              "background-color",
+              "background-image",
+              "background-repeat",
+              "background-attachment",
+              "background-position",
+              "background-size"
+            ],
+            "components": [
+              {
+                "tagName": "mjml",
+                "type": "mjml",
+                "components": [
+                  {
+                    "tagName": "mj-body",
+                    "type": "mj-body",
+                    "style": {
+                      "width": "600px",
+                      "background-color": "#fcfcfc"
+                    },
+                    "attributes": {
+                      "width": "600px",
+                      "background-color": "#fcfcfc",
+                      "style": "width:600px;background-color:#fcfcfc;"
+                    },
+                    "components": [
+                      {
+                        "type": "mj-raw",
+                        "components": [
+                          {
+                            "type": "table",
+                            "style": {
+                              "width": "100%",
+                              "max-width": "600px",
+                              "margin": "10px auto auto auto"
+                            },
+                            "attributes": {
+                              "style": "width:100%;max-width:600px;margin:10px auto auto auto;"
+                            },
+                            "components": [
+                              {
+                                "type": "tbody",
+                                "droppable": [
+                                  "tr"
+                                ],
+                                "style": {
+                                  "margin": "0 0px 0px 0px"
+                                },
+                                "attributes": {
+                                  "style": "margin:0 0px 0px 0px;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "row",
+                                    "draggable": [
+                                      "thead",
+                                      "tbody",
+                                      "tfoot"
+                                    ],
+                                    "droppable": [
+                                      "th",
+                                      "td"
+                                    ],
+                                    "components": [
+                                      {
+                                        "type": "cell",
+                                        "draggable": [
+                                          "tr"
+                                        ],
+                                        "attributes": {
+                                          "style": "padding:2px;"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "style": {
+                                              "margin": "0 0 0 25px"
+                                            },
+                                            "attributes": {
+                                              "style": "margin:0 0 0 25px;"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "text",
+                                                "style": {
+                                                  "font-family": "Georgia, serif",
+                                                  "font-size": "16px"
+                                                },
+                                                "attributes": {
+                                                  "draggable": "true",
+                                                  "style": "font-family:Georgia, serif;font-size:16px;"
+                                                },
+                                                "components": [
+                                                  {
+                                                    "type": "textnode",
+                                                    "content": "✦"
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "type": "text",
+                                                "style": {
+                                                  "font-family": "Georgia, serif",
+                                                  "font-size": "13px"
+                                                },
+                                                "attributes": {
+                                                  "style": "font-family:Georgia, serif;font-size:13px;"
+                                                },
+                                                "components": [
+                                                  {
+                                                    "type": "textnode",
+                                                    "content": " HTML Email Builder"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "cell",
+                                        "draggable": [
+                                          "tr"
+                                        ],
+                                        "style": {
+                                          "text-align": "right",
+                                          "align": "right"
+                                        },
+                                        "attributes": {
+                                          "style": "text-align:right;align:right;"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "style": {
+                                              "text-align": "right",
+                                              "align": "right"
+                                            },
+                                            "attributes": {
+                                              "style": "text-align:right;align:right;"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "text",
+                                                "style": {
+                                                  "font-family": "Georgia, serif",
+                                                  "font-size": "13px",
+                                                  "text-align": "right",
+                                                  "align": "right",
+                                                  "margin": "0 25px 0 0"
+                                                },
+                                                "attributes": {
+                                                  "style": "font-family:Georgia, serif;font-size:13px;text-align:right;align:right;margin:0 25px 0 0;"
+                                                },
+                                                "components": [
+                                                  {
+                                                    "type": "textnode",
+                                                    "content": "User guide"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "mj-section",
+                        "type": "mj-section",
+                        "style": {
+                          "padding-left": "0px",
+                          "padding-right": "0px",
+                          "padding-top": "20px",
+                          "padding-bottom": "0px",
+                          "text-align": "center"
+                        },
+                        "attributes": {
+                          "padding-left": "0px",
+                          "padding-right": "0px",
+                          "padding-top": "20px",
+                          "padding-bottom": "0px",
+                          "text-align": "center",
+                          "style": "padding-left:0px;padding-right:0px;padding-top:20px;padding-bottom:0px;text-align:center;"
+                        },
+                        "components": [
+                          {
+                            "tagName": "mj-column",
+                            "type": "mj-column",
+                            "style": {
+                              "vertical-align": "top"
+                            },
+                            "attributes": {
+                              "vertical-align": "top",
+                              "style": "vertical-align:top;"
+                            },
+                            "components": [
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "font-size": "2rem",
+                                  "line-height": "1.15",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "align": "left",
+                                  "font-family": "Georgia, serif"
+                                },
+                                "attributes": {
+                                  "font-size": "2rem",
+                                  "line-height": "1.15",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "align": "left",
+                                  "font-family": "Georgia, serif",
+                                  "style": "font-size:2rem;line-height:1.15;padding-top:10px;padding-bottom:0px;padding-right:25px;padding-left:25px;align:left;font-family:Georgia, serif;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "HTML Email Builder"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "line-height": "150%",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "font-size": "13px",
+                                  "align": "left",
+                                  "font-family": "Georgia, serif"
+                                },
+                                "attributes": {
+                                  "line-height": "150%",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "font-size": "13px",
+                                  "align": "left",
+                                  "font-family": "Georgia, serif",
+                                  "style": "line-height:150%;padding-top:10px;padding-bottom:10px;padding-right:25px;padding-left:25px;font-size:13px;align:left;font-family:Georgia, serif;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "With this tool, using a drag-and-drop interface and predefined blocks, you can build an HTML email template that is safe to use in email clients. The result is responsive. Using the preview mode, you can see what the email will look like on different devices. The generated MJML markup gets translated into HTML, which you can use in your emails. The project state is saved in a JSON file that contains all the settings and images that you're using in the project and can be imported back into the app. Your changes will also be automatically saved in the browser to prevent data loss."
+                                  },
+                                  {
+                                    "tagName": "br",
+                                    "void": true
+                                  },
+                                  {
+                                    "tagName": "br",
+                                    "void": true
+                                  },
+                                  {
+                                    "type": "textnode",
+                                    "content": "To paste the email into Outlook, click \""
+                                  },
+                                  {
+                                    "tagName": "b",
+                                    "type": "text",
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Copy document"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "textnode",
+                                    "content": "\" and paste the contents into a new message. "
+                                  },
+                                  {
+                                    "type": "text",
+                                    "components": [
+                                      {
+                                        "tagName": "b",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "If the formatting looks wrong, in Outlook, search for the option \"Set default paste\" and set \"Pasting from other apps\" to \"Keep source formatting\". "
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "attributes": {
+                                          "draggable": "true"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Another option is to use a third-party plugin, such as "
+                                          },
+                                          {
+                                            "type": "link",
+                                            "attributes": {
+                                              "href": "https://appsource.microsoft.com/en-us/product/office/wa200002918",
+                                              "__p": "undefined",
+                                              "target": "_blank"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "Insert HTML by Designmodo"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "type": "textnode",
+                                            "content": ", and paste the exported HTML code there."
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "br",
+                                        "void": true
+                                      },
+                                      {
+                                        "tagName": "br",
+                                        "void": true
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": "You can customize the styles of any component using the settings in the "
+                                      },
+                                      {
+                                        "tagName": "b",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Style components "
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": "panel. In the next panel, "
+                                      },
+                                      {
+                                        "tagName": "b",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Edit component settings"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": ", you can change the HTML attributes of a component, for example the alt attribute to provide alt text for images or the href attribute to turn something into a link. The "
+                                      },
+                                      {
+                                        "tagName": "b",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Layer view "
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": "panel shows how the components are nested within each other. This can be useful when trying to locate a layout issue. The final panel, "
+                                      },
+                                      {
+                                        "tagName": "b",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Add blocks"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": ", contains all the blocks that you can drag into the email. Generally, sections with text and images should be wrapped in columns."
+                                      },
+                                      {
+                                        "tagName": "br",
+                                        "void": true
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "line-height": "150%",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "font-size": "13px",
+                                  "align": "left",
+                                  "font-family": "Georgia, serif"
+                                },
+                                "attributes": {
+                                  "line-height": "150%",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "font-size": "13px",
+                                  "align": "left",
+                                  "font-family": "Georgia, serif",
+                                  "style": "line-height:150%;padding-top:10px;padding-bottom:10px;padding-right:25px;padding-left:25px;font-size:13px;align:left;font-family:Georgia, serif;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "You can use standard keyboard shortcuts to work with the project:"
+                                      },
+                                      {
+                                        "tagName": "br",
+                                        "void": true
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": "    • Ctrl + Z or ⌘ + Z to "
+                                      },
+                                      {
+                                        "tagName": "b",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Undo"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "br",
+                                        "void": true
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": "    • Ctrl + Shift + Z or ⌘ + Shift + Z to "
+                                      },
+                                      {
+                                        "tagName": "b",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Redo"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "br",
+                                        "void": true
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": "    • Ctrl + S or ⌘ + S to "
+                                      },
+                                      {
+                                        "tagName": "b",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Save"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "textnode",
+                                        "content": " the project file"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "mj-button",
+                                "type": "mj-button",
+                                "style": {
+                                  "background-color": "#222222",
+                                  "border-radius": "99px 99px 99px 99px",
+                                  "font-size": "13px",
+                                  "font-weight": "400",
+                                  "color": "#ffffff",
+                                  "padding-top": "0px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "border": "1px solid #222222",
+                                  "vertical-align": "middle",
+                                  "href": "https://grapesjs.com/"
+                                },
+                                "attributes": {
+                                  "background-color": "#222222",
+                                  "border-radius": "99px 99px 99px 99px",
+                                  "font-size": "13px",
+                                  "font-weight": "400",
+                                  "color": "#ffffff",
+                                  "padding-top": "0px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "border": "1px solid #222222",
+                                  "vertical-align": "middle",
+                                  "href": "https://grapesjs.com/",
+                                  "style": "background-color:#222222;border-radius:99px 99px 99px 99px;font-size:13px;font-weight:400;color:#ffffff;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;align:center;font-family:Georgia, serif;border:1px solid #222222;vertical-align:middle;href:https://grapesjs.com/;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "See more about GrapesJS "
+                                  },
+                                  {
+                                    "type": "text",
+                                    "style": {
+                                      "font-size": "20px"
+                                    },
+                                    "attributes": {
+                                      "style": "font-size:20px;"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "↗"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "mj-button",
+                                "type": "mj-button",
+                                "style": {
+                                  "background-color": "transparent",
+                                  "border-radius": "99px 99px 99px 99px",
+                                  "font-size": "13px",
+                                  "font-weight": "400",
+                                  "color": "#222222",
+                                  "padding-top": "8px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "border": "1px solid #222222",
+                                  "href": "https://mjml.io/",
+                                  "vertical-align": "middle"
+                                },
+                                "attributes": {
+                                  "background-color": "transparent",
+                                  "border-radius": "99px 99px 99px 99px",
+                                  "font-size": "13px",
+                                  "font-weight": "400",
+                                  "color": "#222222",
+                                  "padding-top": "8px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "border": "1px solid #222222",
+                                  "href": "https://mjml.io/",
+                                  "vertical-align": "middle",
+                                  "style": "background-color:transparent;border-radius:99px 99px 99px 99px;font-size:13px;font-weight:400;color:#222222;padding-top:8px;padding-bottom:0px;padding-right:0px;padding-left:0px;align:center;font-family:Georgia, serif;border:1px solid #222222;href:https://mjml.io/;vertical-align:middle;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "See more about MJML "
+                                  },
+                                  {
+                                    "type": "text",
+                                    "style": {
+                                      "font-size": "20px"
+                                    },
+                                    "attributes": {
+                                      "style": "font-size:20px;"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "↗"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "line-height": "1.5",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "font-size": "13px",
+                                  "align": "center"
+                                },
+                                "attributes": {
+                                  "line-height": "1.5",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "font-size": "13px",
+                                  "align": "center",
+                                  "style": "line-height:1.5;padding-top:10px;padding-bottom:10px;padding-right:25px;padding-left:25px;font-size:13px;align:center;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "style": {
+                                      "font-family": "Verdana, Geneva, sans-serif",
+                                      "font-size": "16px",
+                                      "font-weight": "700"
+                                    },
+                                    "attributes": {
+                                      "style": "font-family:Verdana, Geneva, sans-serif;font-size:16px;font-weight:700;"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "✦"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "font-size": "1.5rem",
+                                  "line-height": "1.15",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "font-style": "italic"
+                                },
+                                "attributes": {
+                                  "font-size": "1.5rem",
+                                  "line-height": "1.15",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "font-style": "italic",
+                                  "style": "font-size:1.5rem;line-height:1.15;padding-top:10px;padding-bottom:10px;padding-right:25px;padding-left:25px;align:center;font-family:Georgia, serif;font-style:italic;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "Images"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "mj-section",
+                        "type": "mj-section",
+                        "style": {
+                          "padding-left": "25px",
+                          "padding-right": "25px",
+                          "padding-top": "0px",
+                          "padding-bottom": "10px",
+                          "text-align": "center"
+                        },
+                        "attributes": {
+                          "padding-left": "25px",
+                          "padding-right": "25px",
+                          "padding-top": "0px",
+                          "padding-bottom": "10px",
+                          "text-align": "center",
+                          "style": "padding-left:25px;padding-right:25px;padding-top:0px;padding-bottom:10px;text-align:center;"
+                        },
+                        "components": [
+                          {
+                            "tagName": "mj-column",
+                            "type": "mj-column",
+                            "style": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-bottom": "0px",
+                              "padding-right": "5px"
+                            },
+                            "attributes": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-bottom": "0px",
+                              "padding-right": "5px",
+                              "style": "vertical-align:top;padding-top:0px;padding-bottom:0px;padding-right:5px;"
+                            },
+                            "components": [
+                              {
+                                "tagName": "mj-image",
+                                "type": "mj-image",
+                                "style": {
+                                  "src": "https://placehold.co/300x200?text=Image",
+                                  "padding-left": "0px",
+                                  "padding-right": "0px",
+                                  "padding-bottom": "0px",
+                                  "padding-top": "0px",
+                                  "align": "center"
+                                },
+                                "attributes": {
+                                  "src": "https://placehold.co/300x200?text=Image",
+                                  "padding-left": "0px",
+                                  "padding-right": "0px",
+                                  "padding-bottom": "0px",
+                                  "padding-top": "0px",
+                                  "align": "center",
+                                  "style": "src:https://placehold.co/300x200?text=Image;padding-left:0px;padding-right:0px;padding-bottom:0px;padding-top:0px;align:center;"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "mj-column",
+                            "type": "mj-column",
+                            "style": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-right": "0px",
+                              "padding-bottom": "0px",
+                              "padding-left": "5px"
+                            },
+                            "attributes": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-right": "0px",
+                              "padding-bottom": "0px",
+                              "padding-left": "5px",
+                              "style": "vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:5px;"
+                            },
+                            "components": [
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "line-height": "150%",
+                                  "padding-top": "14px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "font-size": "13px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif"
+                                },
+                                "attributes": {
+                                  "line-height": "150%",
+                                  "padding-top": "14px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "font-size": "13px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "style": "line-height:150%;padding-top:14px;padding-bottom:0px;padding-right:0px;padding-left:0px;font-size:13px;align:center;font-family:Georgia, serif;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "You can provide source URLs for the images, or upload them from your drive directly. In that case, they will be scaled to a maximum resolution (600px × 400px) and embedded into the document. To keep the size of the document smaller, it is recommended to host the images somewhere else and only provide the URLs."
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "mj-section",
+                        "type": "mj-section",
+                        "style": {
+                          "padding-left": "25px",
+                          "padding-right": "25px",
+                          "padding-top": "0px",
+                          "padding-bottom": "0px",
+                          "text-align": "center"
+                        },
+                        "attributes": {
+                          "padding-left": "25px",
+                          "padding-right": "25px",
+                          "padding-top": "0px",
+                          "padding-bottom": "0px",
+                          "text-align": "center",
+                          "style": "padding-left:25px;padding-right:25px;padding-top:0px;padding-bottom:0px;text-align:center;"
+                        },
+                        "components": [
+                          {
+                            "tagName": "mj-column",
+                            "type": "mj-column",
+                            "style": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-bottom": "0px",
+                              "padding-right": "5px"
+                            },
+                            "attributes": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-bottom": "0px",
+                              "padding-right": "5px",
+                              "style": "vertical-align:top;padding-top:0px;padding-bottom:0px;padding-right:5px;"
+                            },
+                            "components": [
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "line-height": "150%",
+                                  "padding-top": "14px",
+                                  "padding-bottom": "14px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "font-size": "13px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif"
+                                },
+                                "attributes": {
+                                  "line-height": "150%",
+                                  "padding-top": "14px",
+                                  "padding-bottom": "14px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "font-size": "13px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "style": "line-height:150%;padding-top:14px;padding-bottom:14px;padding-right:0px;padding-left:0px;font-size:13px;align:center;font-family:Georgia, serif;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "Double click on a placeholder image to open the "
+                                  },
+                                  {
+                                    "tagName": "b",
+                                    "type": "text",
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Asset Manager"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "textnode",
+                                    "content": ". The images that are uploaded from a drive get saved in the project file automatically and will get retrieved when you load the project again from a file or from the autosave. In addition to adding images into the body of the email., you can also change the background image of any component. "
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "mj-column",
+                            "type": "mj-column",
+                            "style": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-right": "0px",
+                              "padding-bottom": "0px",
+                              "padding-left": "5px"
+                            },
+                            "attributes": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-right": "0px",
+                              "padding-bottom": "0px",
+                              "padding-left": "5px",
+                              "style": "vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:5px;"
+                            },
+                            "components": [
+                              {
+                                "tagName": "mj-image",
+                                "type": "mj-image",
+                                "style": {
+                                  "src": "https://placehold.co/300x200?text=Image",
+                                  "padding-left": "0px",
+                                  "padding-right": "0px",
+                                  "padding-bottom": "0px",
+                                  "padding-top": "0px",
+                                  "align": "center"
+                                },
+                                "attributes": {
+                                  "src": "https://placehold.co/300x200?text=Image",
+                                  "padding-left": "0px",
+                                  "padding-right": "0px",
+                                  "padding-bottom": "0px",
+                                  "padding-top": "0px",
+                                  "align": "center",
+                                  "style": "src:https://placehold.co/300x200?text=Image;padding-left:0px;padding-right:0px;padding-bottom:0px;padding-top:0px;align:center;"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "mj-section",
+                        "type": "mj-section",
+                        "style": {
+                          "padding-left": "0px",
+                          "padding-right": "0px",
+                          "padding-top": "0px",
+                          "padding-bottom": "0px",
+                          "text-align": "center",
+                          "background-color": "#222222",
+                          "border": "0 solid #000000"
+                        },
+                        "attributes": {
+                          "padding-left": "0px",
+                          "padding-right": "0px",
+                          "padding-top": "0px",
+                          "padding-bottom": "0px",
+                          "text-align": "center",
+                          "background-color": "#222222",
+                          "border": "0 solid #000000",
+                          "style": "padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;text-align:center;background-color:#222222;border:0 solid #000000;"
+                        }
+                      },
+                      {
+                        "tagName": "mj-section",
+                        "type": "mj-section",
+                        "style": {
+                          "padding-left": "0px",
+                          "padding-right": "0px",
+                          "padding-top": "0px",
+                          "padding-bottom": "20px",
+                          "text-align": "center"
+                        },
+                        "attributes": {
+                          "padding-left": "0px",
+                          "padding-right": "0px",
+                          "padding-top": "0px",
+                          "padding-bottom": "20px",
+                          "text-align": "center",
+                          "style": "padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:20px;text-align:center;"
+                        },
+                        "components": [
+                          {
+                            "tagName": "mj-column",
+                            "type": "mj-column",
+                            "style": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-right": "0px",
+                              "padding-bottom": "0px",
+                              "padding-left": "0px"
+                            },
+                            "attributes": {
+                              "vertical-align": "top",
+                              "padding-top": "0px",
+                              "padding-right": "0px",
+                              "padding-bottom": "0px",
+                              "padding-left": "0px",
+                              "style": "vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;"
+                            },
+                            "components": [
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "line-height": "1.5",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "font-size": "13px",
+                                  "align": "center"
+                                },
+                                "attributes": {
+                                  "line-height": "1.5",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "font-size": "13px",
+                                  "align": "center",
+                                  "style": "line-height:1.5;padding-top:10px;padding-bottom:10px;padding-right:25px;padding-left:25px;font-size:13px;align:center;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "style": {
+                                      "font-family": "Verdana, Geneva, sans-serif",
+                                      "font-size": "16px",
+                                      "font-weight": "700"
+                                    },
+                                    "attributes": {
+                                      "style": "font-family:Verdana, Geneva, sans-serif;font-size:16px;font-weight:700;"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "✦"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "font-size": "1.5rem",
+                                  "line-height": "1.15",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "font-style": "italic"
+                                },
+                                "attributes": {
+                                  "font-size": "1.5rem",
+                                  "line-height": "1.15",
+                                  "padding-top": "10px",
+                                  "padding-bottom": "10px",
+                                  "padding-right": "25px",
+                                  "padding-left": "25px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "font-style": "italic",
+                                  "style": "font-size:1.5rem;line-height:1.15;padding-top:10px;padding-bottom:10px;padding-right:25px;padding-left:25px;align:center;font-family:Georgia, serif;font-style:italic;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "Tables"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "mj-text",
+                                "type": "mj-text",
+                                "style": {
+                                  "line-height": "150%",
+                                  "padding-top": "14px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "font-size": "13px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif"
+                                },
+                                "attributes": {
+                                  "line-height": "150%",
+                                  "padding-top": "14px",
+                                  "padding-bottom": "0px",
+                                  "padding-right": "0px",
+                                  "padding-left": "0px",
+                                  "font-size": "13px",
+                                  "align": "center",
+                                  "font-family": "Georgia, serif",
+                                  "style": "line-height:150%;padding-top:14px;padding-bottom:0px;padding-right:0px;padding-left:0px;font-size:13px;align:center;font-family:Georgia, serif;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "Tables aren't responsive, but they guarantee that the columns won't collapse into rows. Tables only accept components from the Table section. When working with tables, it may be convenient to toggle on component borders in the Toolbar."
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "mj-raw",
+                        "components": [
+                          {
+                            "type": "table",
+                            "attributes": {
+                              "style": "margin:auto;max-width:600px;width:100%;"
+                            },
+                            "components": [
+                              {
+                                "type": "tbody",
+                                "droppable": [
+                                  "tr"
+                                ],
+                                "components": [
+                                  {
+                                    "type": "row",
+                                    "draggable": [
+                                      "thead",
+                                      "tbody",
+                                      "tfoot"
+                                    ],
+                                    "droppable": [
+                                      "th",
+                                      "td"
+                                    ],
+                                    "components": [
+                                      {
+                                        "type": "cell",
+                                        "draggable": [
+                                          "tr"
+                                        ],
+                                        "attributes": {
+                                          "style": "padding:2px;"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "image",
+                                            "resizable": {
+                                              "ratioDefault": 1
+                                            },
+                                            "style": {
+                                              "width": "100%",
+                                              "height": "auto",
+                                              "display": "block"
+                                            },
+                                            "attributes": {
+                                              "src": "https://placehold.co/300x150?text=1",
+                                              "style": "width:100%;height:auto;display:block;"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "cell",
+                                        "draggable": [
+                                          "tr"
+                                        ],
+                                        "attributes": {
+                                          "style": "padding:2px;"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "image",
+                                            "resizable": {
+                                              "ratioDefault": 1
+                                            },
+                                            "style": {
+                                              "width": "100%",
+                                              "height": "auto",
+                                              "display": "block"
+                                            },
+                                            "attributes": {
+                                              "src": "https://placehold.co/300x150?text=2",
+                                              "style": "width:100%;height:auto;display:block;"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "row",
+                                    "draggable": [
+                                      "thead",
+                                      "tbody",
+                                      "tfoot"
+                                    ],
+                                    "droppable": [
+                                      "th",
+                                      "td"
+                                    ],
+                                    "components": [
+                                      {
+                                        "type": "cell",
+                                        "draggable": [
+                                          "tr"
+                                        ],
+                                        "attributes": {
+                                          "style": "padding:2px;"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "image",
+                                            "resizable": {
+                                              "ratioDefault": 1
+                                            },
+                                            "style": {
+                                              "width": "100%",
+                                              "height": "auto",
+                                              "display": "block"
+                                            },
+                                            "attributes": {
+                                              "src": "https://placehold.co/300x150?text=3",
+                                              "style": "width:100%;height:auto;display:block;"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "cell",
+                                        "draggable": [
+                                          "tr"
+                                        ],
+                                        "attributes": {
+                                          "style": "padding:2px;"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "image",
+                                            "resizable": {
+                                              "ratioDefault": 1
+                                            },
+                                            "style": {
+                                              "width": "100%",
+                                              "height": "auto",
+                                              "display": "block"
+                                            },
+                                            "attributes": {
+                                              "src": "https://placehold.co/300x150?text=4",
+                                              "style": "width:100%;height:auto;display:block;"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "mj-raw",
+                        "components": [
+                          {
+                            "type": "table",
+                            "style": {
+                              "width": "100%",
+                              "max-width": "600px",
+                              "margin": "10px auto auto auto"
+                            },
+                            "attributes": {
+                              "style": "width:100%;max-width:600px;margin:10px auto auto auto;"
+                            },
+                            "components": [
+                              {
+                                "type": "tbody",
+                                "droppable": [
+                                  "tr"
+                                ],
+                                "style": {
+                                  "margin": "0 0px 0px 0px"
+                                },
+                                "attributes": {
+                                  "style": "margin:0 0px 0px 0px;"
+                                },
+                                "components": [
+                                  {
+                                    "type": "row",
+                                    "draggable": [
+                                      "thead",
+                                      "tbody",
+                                      "tfoot"
+                                    ],
+                                    "droppable": [
+                                      "th",
+                                      "td"
+                                    ],
+                                    "classes": [
+                                      "row"
+                                    ],
+                                    "components": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "head": {
+              "type": "head"
+            },
+            "docEl": {
+              "tagName": "html"
+            }
+          },
+          "id": "LYZflOsS2FZcuEaX"
+        }
+      ],
+      "id": "tHmIHofdtjYZmpnJ"
+    }
+  ],
+  "symbols": [],
+  "dataSources": []
+}

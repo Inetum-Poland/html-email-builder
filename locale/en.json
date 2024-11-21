@@ -92,7 +92,7 @@
     },
     "addTables": {
       "title": "Add tables",
-      "description": "Tables aren't responsive, but guarantee that the columns won't collapse into rows. Tables only accept components from the Table section. When working with tables, it may be convenient to toggle on component borders in the Toolbar."
+      "description": "Tables aren't responsive, but they guarantee that the columns won't collapse into rows. Tables only accept components from the Table section. When working with tables, it may be convenient to toggle on component borders in the Toolbar."
     }
   }
 }

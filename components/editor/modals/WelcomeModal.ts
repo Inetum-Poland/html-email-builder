@@ -1,6 +1,7 @@
 import type { Editor } from "grapesjs";
 import { FileInput, FilePen, FilePlus2, MessageCircleQuestion } from "lucide-static";
 import { demo } from "../demo/demo";
+import guide from "../demo/user-guide.json";
 
 const Button = (title: string, onClick: () => void) => {
   const button = document.createElement("button");
@@ -29,7 +30,7 @@ export const WelcomeModal = (editor: Editor) => {
       input.click();
     }),
     Button(`${MessageCircleQuestion} ${t("showDemoTour")}`, async () => {
-      // todo: load demo project
+      editor.loadProjectData(guide);
       editor.Modal.close();
       demo(editor);
     }),
