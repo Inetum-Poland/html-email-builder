@@ -85,9 +85,7 @@
       }
     },
     {
-      "selectors": [
-        "mj-column-per-100"
-      ],
+      "selectors": ["mj-column-per-100"],
       "style": {
         "width": "100% !important",
         "max-width": "100%"
@@ -104,9 +102,7 @@
       }
     },
     {
-      "selectors": [
-        "mj-column-per-33-333333333333336"
-      ],
+      "selectors": ["mj-column-per-33-333333333333336"],
       "style": {
         "width": "33.3333% !important",
         "max-width": "33.3333%"
@@ -123,9 +119,7 @@
       }
     },
     {
-      "selectors": [
-        "mj-column-per-50"
-      ],
+      "selectors": ["mj-column-per-50"],
       "style": {
         "width": "50% !important",
         "max-width": "50%"
@@ -142,9 +136,7 @@
       }
     },
     {
-      "selectors": [
-        "mj-column-per-25"
-      ],
+      "selectors": ["mj-column-per-25"],
       "style": {
         "width": "25% !important",
         "max-width": "25%"
@@ -210,9 +202,7 @@
                             "components": [
                               {
                                 "type": "tbody",
-                                "droppable": [
-                                  "tr"
-                                ],
+                                "droppable": ["tr"],
                                 "style": {
                                   "margin": "0 0px 0px 0px"
                                 },
@@ -222,21 +212,12 @@
                                 "components": [
                                   {
                                     "type": "row",
-                                    "draggable": [
-                                      "thead",
-                                      "tbody",
-                                      "tfoot"
-                                    ],
-                                    "droppable": [
-                                      "th",
-                                      "td"
-                                    ],
+                                    "draggable": ["thead", "tbody", "tfoot"],
+                                    "droppable": ["th", "td"],
                                     "components": [
                                       {
                                         "type": "cell",
-                                        "draggable": [
-                                          "tr"
-                                        ],
+                                        "draggable": ["tr"],
                                         "attributes": {
                                           "style": "padding:2px;"
                                         },
@@ -295,9 +276,7 @@
                                       },
                                       {
                                         "type": "cell",
-                                        "draggable": [
-                                          "tr"
-                                        ],
+                                        "draggable": ["tr"],
                                         "style": {
                                           "text-align": "right",
                                           "align": "right"
@@ -1431,27 +1410,16 @@
                             "components": [
                               {
                                 "type": "tbody",
-                                "droppable": [
-                                  "tr"
-                                ],
+                                "droppable": ["tr"],
                                 "components": [
                                   {
                                     "type": "row",
-                                    "draggable": [
-                                      "thead",
-                                      "tbody",
-                                      "tfoot"
-                                    ],
-                                    "droppable": [
-                                      "th",
-                                      "td"
-                                    ],
+                                    "draggable": ["thead", "tbody", "tfoot"],
+                                    "droppable": ["th", "td"],
                                     "components": [
                                       {
                                         "type": "cell",
-                                        "draggable": [
-                                          "tr"
-                                        ],
+                                        "draggable": ["tr"],
                                         "attributes": {
                                           "style": "padding:2px;"
                                         },
@@ -1475,9 +1443,7 @@
                                       },
                                       {
                                         "type": "cell",
-                                        "draggable": [
-                                          "tr"
-                                        ],
+                                        "draggable": ["tr"],
                                         "attributes": {
                                           "style": "padding:2px;"
                                         },
@@ -1503,21 +1469,12 @@
                                   },
                                   {
                                     "type": "row",
-                                    "draggable": [
-                                      "thead",
-                                      "tbody",
-                                      "tfoot"
-                                    ],
-                                    "droppable": [
-                                      "th",
-                                      "td"
-                                    ],
+                                    "draggable": ["thead", "tbody", "tfoot"],
+                                    "droppable": ["th", "td"],
                                     "components": [
                                       {
                                         "type": "cell",
-                                        "draggable": [
-                                          "tr"
-                                        ],
+                                        "draggable": ["tr"],
                                         "attributes": {
                                           "style": "padding:2px;"
                                         },
@@ -1541,9 +1498,7 @@
                                       },
                                       {
                                         "type": "cell",
-                                        "draggable": [
-                                          "tr"
-                                        ],
+                                        "draggable": ["tr"],
                                         "attributes": {
                                           "style": "padding:2px;"
                                         },
@@ -1589,9 +1544,7 @@
                             "components": [
                               {
                                 "type": "tbody",
-                                "droppable": [
-                                  "tr"
-                                ],
+                                "droppable": ["tr"],
                                 "style": {
                                   "margin": "0 0px 0px 0px"
                                 },
@@ -1601,18 +1554,9 @@
                                 "components": [
                                   {
                                     "type": "row",
-                                    "draggable": [
-                                      "thead",
-                                      "tbody",
-                                      "tfoot"
-                                    ],
-                                    "droppable": [
-                                      "th",
-                                      "td"
-                                    ],
-                                    "classes": [
-                                      "row"
-                                    ],
+                                    "draggable": ["thead", "tbody", "tfoot"],
+                                    "droppable": ["th", "td"],
+                                    "classes": ["row"],
                                     "components": []
                                   }
                                 ]
