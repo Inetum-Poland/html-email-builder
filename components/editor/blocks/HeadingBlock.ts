@@ -7,6 +7,7 @@ import {
   Heading5,
   Heading6,
 } from "lucide-static";
+import { defaults } from "./defaults";
 
 const icons = new Map([
   [1, Heading1],
@@ -17,25 +18,15 @@ const icons = new Map([
   [6, Heading6],
 ]);
 
-const sizes = new Map([
-  [1, 2],
-  [2, 1.5],
-  [3, 1.17],
-  [4, 1],
-  [5, 0.83],
-  [6, 0.67],
-]);
-
 export const HeadingBlock = (level: 1 | 2 | 3 | 4 | 5 | 6): BlockProperties => {
   const { $i18n: { t } } = useNuxtApp();
-  const fontSize = sizes.get(level) || 1;
-  const lineHeight = 1.15;
+  const fontSize = defaults.headers[level];
 
   return {
     label: `H${level}`,
     media: icons.get(level),
     content: `
-    <mj-text font-size="${fontSize}rem" line-height="${lineHeight}">
+    <mj-text font-size="${fontSize}" font-weight="700">
       ${t("heading")}
     </mj-text>`,
     activate: true,

@@ -411,6 +411,19 @@
         .gjs-sm-preview-file {
           display: none;
         }
+
+        .gjs-block-category {
+          .gjs-title {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            font-weight: 600 !important;
+
+             .gjs-caret-icon {
+              padding: 8px;
+            }
+          }
+        }
       }
     }
   }
@@ -423,7 +436,7 @@
   .gjs-block-category.gjs-open,
   .gjs-sm-sector.gjs-sm-open,
   .gjs-trait-category.gjs-open {
-    border-bottom: none!important;
+    border-bottom: none !important;
   }
 
   .code-preview {

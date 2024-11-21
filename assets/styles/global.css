@@ -21,6 +21,7 @@ body {
   margin: 0;
   display: grid;
   grid-template: 1fr / 1fr;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 svg.lucide {

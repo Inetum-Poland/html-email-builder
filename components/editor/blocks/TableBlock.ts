@@ -6,6 +6,7 @@ import {
   LayoutGrid,
   Text,
 } from "lucide-static";
+import { defaults } from "./defaults";
 
 const textAttributes = [
   "color",
@@ -27,11 +28,7 @@ export const TablePlugin = (editor: Editor) => {
         copyable: false,
         draggable: false,
         droppable: false,
-        style: {
-          "margin": "auto",
-          "max-width": "600px",
-          "width": "100%",
-        },
+        style: defaults.table,
         stylable: ["margin", "max-width"],
       },
     },
@@ -71,9 +68,7 @@ export const TablePlugin = (editor: Editor) => {
       defaults: {
         components: { type: "text" },
         traits: ["id", "title", "colspan"],
-        style: {
-          padding: "2px",
-        },
+        style: defaults.cell,
         stylable: [
           "background-color",
           "border",
@@ -96,6 +91,7 @@ export const TablePlugin = (editor: Editor) => {
         draggable: ["td"],
         components: t("insertTextHere"),
         stylable: [...textAttributes],
+        style: defaults.text,
       },
     },
   });
@@ -104,7 +100,7 @@ export const TablePlugin = (editor: Editor) => {
     model: {
       defaults: {
         draggable: ["td"],
-        style: { width: "100%", height: "auto", display: "block" },
+        style: defaults.image,
         stylable: [
           "border-radius",
           "border",
@@ -121,6 +117,7 @@ export const TablePlugin = (editor: Editor) => {
     model: {
       activate: true,
       defaults: {
+        name: t("tableWrapper"),
         droppable: false,
         tagName: "mj-raw",
         components: `
@@ -142,106 +139,6 @@ export const TablePlugin = (editor: Editor) => {
               </td>
             </tr>
           </table>
-        `,
-      },
-    },
-  });
-};
-
-export const Table = (editor: Editor) => {
-  const { $i18n: { t } } = useNuxtApp();
-
-  editor.Components.addType("table", {
-    model: {
-      defaults: {
-        copyable: false,
-        draggable: false,
-        droppable: false,
-        style: { "width": "100%", "max-width": "600px", "margin": "auto" },
-      },
-    },
-  });
-
-  editor.Components.addType("tbody", {
-    model: {
-      defaults: {
-        copyable: false,
-        draggable: false,
-      },
-    },
-  });
-
-  editor.Components.addType("row", {
-    model: {
-      defaults: {
-        components: { type: "cell" },
-      },
-    },
-  });
-
-  editor.Components.addType("cell", {
-    isComponent(el) {
-      if (!["TD", "TH"].includes(el.tagName)) {
-        return false;
-      }
-
-      return ![...el.childNodes].every(
-        ({ nodeType, nodeName }) =>
-          nodeType === Node.TEXT_NODE || nodeName === "BR"
-      );
-    },
-    model: {
-      defaults: {
-        components: { type: "text" },
-      },
-    },
-  });
-
-  editor.Components.addType("text", {
-    model: {
-      defaults: {
-        tagName: "span",
-        droppable: ["*"],
-        draggable: ["td"],
-        components: t("insertTextHere"),
-      },
-    },
-  });
-
-  editor.Components.addType("image", {
-    model: {
-      defaults: {
-        draggable: ["td"],
-      },
-    },
-  });
-
-  editor.Components.addType("mj-raw", {
-    model: {
-      activate: true,
-      defaults: {
-        droppable: false,
-        name: "Table Wrapper",
-        tagName: "mj-raw",
-        components: `
-            <table>
-              <tr>
-              <td>
-              <img src="https://placehold.co/300x150?text=1"/>
-            </td>
-            <td>
-              <img src="https://placehold.co/300x150?text=2"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="https://placehold.co/300x150?text=3"/>
-            </td>
-            <td>
-              <img src="https://placehold.co/300x150?text=4"/>
-            </td>
-              </tr>
-            </table>
         `,
       },
     },
@@ -304,7 +201,7 @@ export const CellImageBlock = (): BlockProperties => {
     category: t("tableBlocks"),
     label: t("cellImage"),
     media: Image,
-    content: { type: "image" },
+    content: `<img src="https://placehold.co/300x150?text=${t("image")}">`,
     activate: true,
   };
 };

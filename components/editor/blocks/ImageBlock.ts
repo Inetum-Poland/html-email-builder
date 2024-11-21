@@ -8,14 +8,7 @@ export const ImageBlock = (): BlockProperties => {
     label: t("image"),
     media: Image,
     attributes: { id: "image-block" },
-    content: `
-      <mj-image
-        src="https://placehold.co/600x400?text=${t("image")}"
-        padding-left="0px"
-        padding-right="0px"
-        padding-bottom="0px"
-        padding-top="0px"
-      >`,
+    content: `<mj-image src="https://placehold.co/600x400?text=${t("image")}">`,
     activate: true,
     category: t("genericBlocks"),
   };

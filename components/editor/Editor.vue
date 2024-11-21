@@ -26,6 +26,7 @@ import { DeviceManager, TabSwitcher, Toolbar } from "./panels";
 import { WelcomeModal } from "./modals";
 import { exportProject, Format } from "./panels/components/CodePreview";
 import { uploadFile } from "./utils/uploadFile";
+import { defaults, setDefaults } from "./blocks/defaults";
 
 onMounted(() => {
   const editor = grapesJS.init({
@@ -41,6 +42,10 @@ onMounted(() => {
     height: "100%",
     plugins: [grapesJSMJML, TablePlugin],
     telemetry: false,
+    noticeOnUnload: true,
+    colorPicker: {
+      palette: defaults.palette,
+    },
     pluginsOpts: {
       [grapesJSMJML as any]: {
         blocks: [],
@@ -83,6 +88,8 @@ onMounted(() => {
   Blocks.add("mj-table-cell", CellBlock());
   Blocks.add("mj-table-cell-text", CellTextBlock());
   Blocks.add("mj-table-cell-image", CellImageBlock());
+
+  setDefaults(editor);
 });
 </script>
 

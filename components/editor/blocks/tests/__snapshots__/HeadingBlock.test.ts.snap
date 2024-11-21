@@ -8,7 +8,7 @@ exports[`renders the H1 heading 1`] = `
   },
   "category": "Generic blocks",
   "content": "
-    <mj-text font-size="2rem" line-height="1.15">
+    <mj-text font-size="28px" font-weight="700">
       Heading
     </mj-text>",
   "label": "H1",
@@ -42,7 +42,7 @@ exports[`renders the H2 heading 1`] = `
   },
   "category": "Generic blocks",
   "content": "
-    <mj-text font-size="1.5rem" line-height="1.15">
+    <mj-text font-size="21px" font-weight="700">
       Heading
     </mj-text>",
   "label": "H2",
@@ -76,7 +76,7 @@ exports[`renders the H3 heading 1`] = `
   },
   "category": "Generic blocks",
   "content": "
-    <mj-text font-size="1.17rem" line-height="1.15">
+    <mj-text font-size="16px" font-weight="700">
       Heading
     </mj-text>",
   "label": "H3",
@@ -111,7 +111,7 @@ exports[`renders the H4 heading 1`] = `
   },
   "category": "Generic blocks",
   "content": "
-    <mj-text font-size="1rem" line-height="1.15">
+    <mj-text font-size="14px" font-weight="700">
       Heading
     </mj-text>",
   "label": "H4",
@@ -146,7 +146,7 @@ exports[`renders the H5 heading 1`] = `
   },
   "category": "Generic blocks",
   "content": "
-    <mj-text font-size="0.83rem" line-height="1.15">
+    <mj-text font-size="12px" font-weight="700">
       Heading
     </mj-text>",
   "label": "H5",
@@ -181,7 +181,7 @@ exports[`renders the H6 heading 1`] = `
   },
   "category": "Generic blocks",
   "content": "
-    <mj-text font-size="0.67rem" line-height="1.15">
+    <mj-text font-size="10px" font-weight="700">
       Heading
     </mj-text>",
   "label": "H6",
