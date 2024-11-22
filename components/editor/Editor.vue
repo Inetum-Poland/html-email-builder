@@ -7,6 +7,7 @@
 </template>
 
 <script setup lang="ts">
+import type { Component } from "grapesjs";
 import grapesJS from "grapesjs";
 import grapesJSMJML from "grapesjs-mjml";
 import {
@@ -73,9 +74,16 @@ onMounted(() => {
     },
   });
 
-  Keymaps.add("ns:save-project", "⌘+s, ctrl+s", () => {
+  Keymaps.add("custom:save-project", "⌘+s, ctrl+s", () => {
     const json = JSON.stringify(editor.getProjectData(), null, 2);
     exportProject(Format.JSON, json);
+  }, {
+    prevent: true,
+  });
+
+  Keymaps.add("custom:select-all", "⌘+a, ctrl+a", () => {
+    const mjbody = editor.DomComponents.getComponent()?.getChildAt(0)?.getChildAt(0);
+    mjbody?.get("components")?.each((child: Component) => editor.selectAdd(child));
   }, {
     prevent: true,
   });

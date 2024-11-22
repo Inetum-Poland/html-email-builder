@@ -655,6 +655,36 @@
                                   },
                                   {
                                     "type": "textnode",
+                                    "content": "    • Ctrl + A or ⌘ + A to ",
+                                    "attributes": {
+                                      "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:150%;"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "b",
+                                    "type": "text",
+                                    "style": {
+                                      "line-height": "19.5px"
+                                    },
+                                    "attributes": {
+                                      "style": "line-height:19.5px;"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Select all",
+                                        "attributes": {
+                                          "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:150%;"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tagName": "br",
+                                    "void": true
+                                  },
+                                  {
+                                    "type": "textnode",
                                     "content": "    • Ctrl + Z or ⌘ + Z to ",
                                     "attributes": {
                                       "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:150%;"
@@ -667,6 +697,8 @@
                                       "line-height": "150%"
                                     },
                                     "attributes": {
+                                      "id": "i6w2zl",
+                                      "draggable": "true",
                                       "style": "line-height:150%;"
                                     },
                                     "components": [
