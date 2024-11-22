@@ -1,12 +1,19 @@
 import type { Editor, PanelProperties } from "grapesjs";
-import { Scan, FileCode2, Undo, Redo, FileJson2 } from "lucide-static";
+import {
+  Scan,
+  FileCode2,
+  Undo,
+  Redo,
+  FileJson2,
+  FileCheck2,
+} from "lucide-static";
 import { CodePreview, exportProject, Format } from "./components/CodePreview";
 
-export const Toolbar = (): PanelProperties => {
+export const StatePanel = (): PanelProperties => {
   const { $i18n: { t } } = useNuxtApp();
 
   return {
-    id: "toolbar",
+    id: "state-panel",
     buttons: [
       {
         attributes: { title: t("exportHTML"), class: "button-group-left" },
@@ -78,13 +85,16 @@ export const Toolbar = (): PanelProperties => {
         label: t("saveProject"),
         tagName: "button",
       },
-      {
-        attributes: { title: t("toggleBorders") },
-        command: "sw-visibility",
-        id: "toggle-borders",
-        label: Scan,
-        tagName: "button",
-      },
+    ],
+  };
+};
+
+export const UndoRedoPanel = (): PanelProperties => {
+  const { $i18n: { t } } = useNuxtApp();
+
+  return {
+    id: "undo-redo-panel",
+    buttons: [
       {
         attributes: { title: t("undo") },
         command: "core:undo",
@@ -97,6 +107,41 @@ export const Toolbar = (): PanelProperties => {
         command: "core:redo",
         id: "redo",
         label: Redo,
+        tagName: "button",
+      },
+    ],
+  };
+};
+
+export const ToggleAutosavePanel = (): PanelProperties => {
+  const { $i18n: { t } } = useNuxtApp();
+
+  return {
+    id: "toggle-autosave-panel",
+    buttons: [
+      {
+        active: true,
+        attributes: { title: t("toggleAutosave") },
+        command: "toggle-autosave",
+        id: "toggle-autosave",
+        label: FileCheck2,
+        tagName: "button",
+      },
+    ],
+  };
+};
+
+export const ToggleBordersPanel = (): PanelProperties => {
+  const { $i18n: { t } } = useNuxtApp();
+
+  return {
+    id: "toggle-borders-panel",
+    buttons: [
+      {
+        attributes: { title: t("toggleBorders") },
+        command: "sw-visibility",
+        id: "toggle-borders",
+        label: Scan,
         tagName: "button",
       },
     ],

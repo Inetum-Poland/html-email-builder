@@ -26,7 +26,7 @@ export const demo = (editor: Editor) => {
         },
       },
       {
-        element: ".gjs-pn-toolbar .gjs-pn-buttons",
+        element: ".gjs-pn-state-panel",
         popover: {
           title: t("demo.saveChanges.title"),
           description: t("demo.saveChanges.description"),
@@ -44,6 +44,13 @@ export const demo = (editor: Editor) => {
         popover: {
           title: t("demo.saveAs.title"),
           description: t("demo.saveAs.description"),
+        },
+      },
+      {
+        element: ".gjs-pn-toggle-autosave-panel",
+        popover: {
+          title: t("demo.toggleAutosave.title"),
+          description: t("demo.toggleAutosave.description"),
         },
       },
       {

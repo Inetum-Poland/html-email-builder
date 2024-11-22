@@ -22,7 +22,14 @@ import {
   TablePlugin,
   TextBlock,
 } from "./blocks";
-import { DeviceManager, TabSwitcher, Toolbar } from "./panels";
+import {
+  DeviceManager,
+  TabSwitcher,
+  StatePanel,
+  UndoRedoPanel,
+  ToggleAutosavePanel,
+  ToggleBordersPanel,
+} from "./panels";
 import { WelcomeModal } from "./modals";
 import { exportProject, Format } from "./panels/components/CodePreview";
 import { uploadFile } from "./utils/uploadFile";
@@ -53,9 +60,18 @@ onMounted(() => {
     },
   });
 
-  const { Blocks, Panels, Keymaps } = editor;
+  const { Blocks, Panels, Keymaps, Commands } = editor;
 
   editor.on("load", () => WelcomeModal(editor));
+
+  Commands.add("toggle-autosave", {
+    run(editor) {
+      editor.StorageManager.setAutosave(true);
+    },
+    stop(editor) {
+      editor.StorageManager.setAutosave(false);
+    },
+  });
 
   Keymaps.add("ns:save-project", "⌘+s, ctrl+s", () => {
     const json = JSON.stringify(editor.getProjectData(), null, 2);
@@ -71,7 +87,10 @@ onMounted(() => {
   Panels.removePanel("views");
 
   Panels.addPanel(DeviceManager());
-  Panels.addPanel(Toolbar());
+  Panels.addPanel(StatePanel());
+  Panels.addPanel(UndoRedoPanel());
+  Panels.addPanel(ToggleAutosavePanel());
+  Panels.addPanel(ToggleBordersPanel());
   Panels.addPanel(TabSwitcher());
 
   Blocks.add("mj-1-column", ColumnBlock(1));

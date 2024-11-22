@@ -39,6 +39,7 @@
   "tableWrapper": "Table wrapper",
   "tablet": "Tablet",
   "text": "Text",
+  "toggleAutosave": "Toggle autosave",
   "toggleBorders": "Toggle borders",
   "undo": "Undo",
   "viewLayers": "View layers",
@@ -65,7 +66,11 @@
     },
     "saveAs": {
       "title": "Save as",
-      "description": "Use this button to save your project as a file on your disk. This file contains all the assets that you're using in the project and can be imported back into the app. Your changes will also be automatically saved in the browser to prevent data loss."
+      "description": "Use this button to save your project as a file on your disk. This file contains all the assets that you're using in the project and can be imported back into the app."
+    },
+    "toggleAutosave": {
+      "title": "Toggle autosave",
+      "description": "Your changes will also be automatically saved in the browser to prevent data loss. You can enable or disable autosave with this button."
     },
     "styleComponents": {
       "title": "Style components",

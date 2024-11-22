@@ -104,8 +104,11 @@
     width: 100% !important;
     height: 100% !important;
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) var(--gjs-left-width);
+    grid-template-columns: 1fr repeat(4, min-content) var(--gjs-left-width);
     grid-template-rows: var(--gjs-canvas-top) auto !important;
+    grid-template-areas:
+      "device-manager state toggle-borders toggle-autosave undo-redo tab-switcher"
+      ". . . . . views-container";
     grid-column-gap: 0px !important;
     grid-row-gap: 0px !important;
 
@@ -177,24 +180,39 @@
       }
 
       &.gjs-pn-device-manager {
-        grid-area: 1 / 1 / 2 / 2 !important;
-        position: relative;
-        width: 100%;
-        height: 100%;
-
-        .gjs-pn-buttons {
-          justify-content: flex-start;
-          width: min-content;
-        }
+        grid-area: device-manager !important;
       }
 
-      &.gjs-pn-toolbar {
-        grid-area: 1 / 2 / 2 / 3 !important;
+      &.gjs-pn-state-panel {
+        grid-area: state !important;
+      }
+
+      &.gjs-pn-toggle-borders-panel {
+        grid-area: toggle-borders !important;
+      }
+
+      &.gjs-pn-toggle-autosave-panel {
+        grid-area: toggle-autosave !important;
+      }
+
+      &.gjs-pn-undo-redo-panel {
+        grid-area: undo-redo !important;
+      }
+
+      &.gjs-pn-tab-switcher {
+        grid-area: tab-switcher !important;
+      }
+
+      &.gjs-pn-device-manager,
+      &.gjs-pn-state-panel,
+      &.gjs-pn-toggle-borders-panel,
+      &.gjs-pn-toggle-autosave-panel,
+      &.gjs-pn-undo-redo-panel,
+      &.gjs-pn-toggle-borders-panel {
         position: relative;
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: flex-end;
 
         .gjs-pn-buttons {
           justify-content: flex-end;
@@ -203,7 +221,6 @@
       }
 
       &.gjs-pn-tab-switcher {
-        grid-area: 1 / 3 / 2 / 4 !important;
         position: relative;
         width: 100%;
         height: 100%;
@@ -214,7 +231,7 @@
       }
 
       &.gjs-pn-views-container {
-        grid-area: 2 / 3 / 3 / 4 !important;
+        grid-area: views-container !important;
         position: relative;
         width: 100%;
         height: 100%;
@@ -419,7 +436,7 @@
             align-items: center;
             font-weight: 600 !important;
 
-             .gjs-caret-icon {
+            .gjs-caret-icon {
               padding: 8px;
             }
           }
