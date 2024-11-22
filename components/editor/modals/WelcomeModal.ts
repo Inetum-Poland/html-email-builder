@@ -24,7 +24,11 @@ export const WelcomeModal = (editor: Editor) => {
       editor.loadProjectData(data);
       editor.Modal.close();
     }),
-    Button(`${FilePlus2} ${t("createNewProject")}`, () => editor.Modal.close()),
+    Button(`${FilePlus2} ${t("createNewProject")}`, () => {
+      const mjbody = editor.DomComponents.getComponent()?.getChildAt(0)?.getChildAt(0);
+      mjbody?.empty();
+      editor.Modal.close();
+    }),
     Button(`${FileInput} ${t("openExistingProject")}`, () => {
       const input = document.querySelector("#file-input") as HTMLInputElement;
       input.click();
