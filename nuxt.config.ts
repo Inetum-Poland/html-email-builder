@@ -33,6 +33,8 @@ export default defineNuxtConfig({
   },
   pwa: {
     manifest: {
+      name: "HTML Email Builder",
+      short_name: "HTML Email Builder",
       display: "fullscreen",
       theme_color: "#232d4b",
       icons: [
