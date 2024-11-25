@@ -577,7 +577,7 @@
                                   },
                                   {
                                     "type": "textnode",
-                                    "content": ", you can change the HTML attributes of a component, for example the alt attribute to provide alt text for images or the href attribute to turn something into a link. The ",
+                                    "content": ", you can change the HTML attributes of a component, for example the alt attribute to provide alt text for images or the href attribute for links. The ",
                                     "attributes": {
                                       "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:150%;"
                                     }
