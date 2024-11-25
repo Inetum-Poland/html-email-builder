@@ -1,0 +1,37 @@
+#gjs .gjs-mdl-dialog:has(.welcome-modal) {
+  max-width: fit-content;
+}
+
+#gjs .welcome-modal {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gjs-gap);
+
+  .button {
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--gjs-border-radius);
+    border: 1px solid var(--inetum-green);
+    box-shadow: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-family: inherit;
+    gap: 4px;
+    height: 32px;
+    justify-content: center;
+    min-width: 300px;
+    outline: none;
+    padding: 0 6px 0 2px;
+
+    svg {
+      height: 22px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--inetum-green);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+#gjs .gjs-mdl-dialog {
+  border-radius: 8px;
+  display: grid;
+  font-weight: normal;
+  gap: 16px;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  padding: 16px;
+  text-shadow: none;
+
+  .gjs-mdl-header,
+  .gjs-mdl-content {
+    padding: 0;
+  }
+
+  .gjs-mdl-header {
+    align-items: center;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+
+    .gjs-mdl-btn-close {
+      position: relative;
+      right: 0;
+      top: 0;
+    }
+  }
+}

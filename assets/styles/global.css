@@ -16,38 +16,38 @@
 }
 
 body {
-  width: auto;
-  min-height: 100svh;
-  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: grid;
   grid-template: 1fr / 1fr;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  min-height: 100svh;
+  width: auto;
 }
 
 svg.lucide {
-  width: 28px;
   height: 28px;
   stroke-width: 1px;
+  width: 28px;
 }
 
 ::-webkit-scrollbar {
-  width: 3px !important;
-  height: 3px !important;
+  height: 3px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent !important;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 2px !important;
-  background: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.75) !important;
+  background: rgba(255, 255, 255, 0.75);
 }

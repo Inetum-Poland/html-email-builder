@@ -1,0 +1,36 @@
+
+.demo-popover {
+  * {
+    font-family: inherit;
+    font-size: var(--gjs-font-size);
+  }
+
+  .driver-popover {
+    border-radius: var(--gjs-border-radius);
+  }
+
+  .driver-popover-prev-btn,
+  .driver-popover-next-btn {
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--gjs-border-radius);
+    border: 1px solid var(--inetum-green);
+    box-shadow: none;
+    color: var(--inetum-green);
+    cursor: pointer;
+    display: flex;
+    font-family: inherit;
+    height: 100%;
+    justify-content: center;
+    outline: none;
+    padding: var(--gjs-button-padding);
+    text-shadow: none;
+    width: max-content;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--inetum-green);
+      color: white;
+    }
+  }
+}
