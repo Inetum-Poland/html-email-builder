@@ -1,8 +1,8 @@
-#gjs .gjs-mdl-dialog:has(.welcome-modal) {
+#gjs .gjs-mdl-dialog:has(#welcome-modal) {
   max-width: fit-content;
 }
 
-#gjs .welcome-modal {
+#gjs #welcome-modal {
   align-items: center;
   display: flex;
   flex-direction: column;

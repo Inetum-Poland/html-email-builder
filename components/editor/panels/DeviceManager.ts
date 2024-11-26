@@ -17,12 +17,10 @@ const resetDevice = (editor: Editor) => {
   document.querySelector("#set-device-desktop")?.classList.add("gjs-pn-active");
 };
 
-const toggle = (device: Device) => {
-  return {
-    run: (editor: Editor) => setDevice(editor, device),
-    stop: resetDevice,
-  };
-};
+const toggle = (device: Device) => ({
+  run: (editor: Editor) => setDevice(editor, device),
+  stop: resetDevice,
+});
 
 export const DeviceManager = (): PanelProperties => {
   const { $i18n: { t } } = useNuxtApp();

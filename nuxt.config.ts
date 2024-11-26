@@ -13,6 +13,16 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => tag === "mjml" || /^(Mj[A-Z]|mj-)/.test(tag),
     },
   },
+  alias: {
+    "@blocks": "./components/editor/blocks/index.ts",
+    "@commands": "./components/editor/commands/commands.ts",
+    "@defaults": "./components/editor/blocks/defaults.ts",
+    "@keymaps": "./components/editor/keymaps/keymaps.ts",
+    "@modals": "./components/editor/modals/index.ts",
+    "@panels": "./components/editor/panels/index.ts",
+    "@types": "./components/editor/types.ts",
+    "@utils": "./components/editor/utils/index.ts",
+  },
   devServer: {
     port: 3333,
   },

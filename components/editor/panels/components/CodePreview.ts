@@ -1,35 +1,13 @@
 import type { Editor } from "grapesjs";
 import { Clipboard, ClipboardCheck, FileDown, FileCheck } from "lucide-static";
-
-export enum Format {
-  HTML = "HTML",
-  JSON = "JSON",
-  MJML = "MJML",
-}
-
-const fileFormatMap = new Map([
-  [Format.HTML, "html"],
-  [Format.JSON, "json"],
-  [Format.MJML, "txt"],
-]);
+import { exportProject } from "@utils";
+import { Format } from "@types";
 
 const modeMap = new Map([
   [Format.HTML, "htmlmixed"],
   [Format.JSON, "javascript"],
   [Format.MJML, "htmlmixed"],
 ]);
-
-export const exportProject = (format: Format, data: string) => {
-  const date = new Date().toISOString().slice(0, 10);
-  const a = document.createElement("a");
-  const file = new Blob([data], { type: "text/plain" });
-
-  a.href = window.URL.createObjectURL(file);
-  a.download = `${date}-${format}.${fileFormatMap.get(format)}`;
-  a.click();
-
-  window.URL.revokeObjectURL(a.href);
-};
 
 const CopyButton = (format: Format, data: string) => {
   const { $i18n: { t } } = useNuxtApp();

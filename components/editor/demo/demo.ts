@@ -1,7 +1,15 @@
 import type { Editor } from "grapesjs";
 import { driver } from "driver.js";
-import { WelcomeModal } from "../modals";
+import { WelcomeModal } from "@modals";
 import "driver.js/dist/driver.css";
+
+const click = (selector: string) => {
+  const button: HTMLElement | null = document.querySelector(selector);
+
+  if (button) {
+    button.click();
+  }
+};
 
 export const demo = (editor: Editor) => {
   const { $i18n: { t } } = useNuxtApp();
@@ -59,12 +67,7 @@ export const demo = (editor: Editor) => {
           title: t("demo.styleComponents.title"),
           description: t("demo.styleComponents.description"),
         },
-        onHighlightStarted: () => {
-          const button: HTMLElement | null = document.querySelector("#style-component");
-          if (button) {
-            button.click();
-          }
-        },
+        onHighlightStarted: () => click("#style-component")
       },
       {
         element: "#edit-component-settings",
@@ -72,12 +75,7 @@ export const demo = (editor: Editor) => {
           title: t("demo.editHTMLAttributes.title"),
           description: t("demo.editHTMLAttributes.description"),
         },
-        onHighlightStarted: () => {
-          const button: HTMLElement | null = document.querySelector("#edit-component-settings");
-          if (button) {
-            button.click();
-          }
-        },
+        onHighlightStarted: () => click("#edit-component-settings")
       },
       {
         element: "#view-layers",
@@ -85,12 +83,7 @@ export const demo = (editor: Editor) => {
           title: t("demo.viewLayers.title"),
           description: t("demo.viewLayers.description"),
         },
-        onHighlightStarted: () => {
-          const button: HTMLElement | null = document.querySelector("#view-layers");
-          if (button) {
-            button.click();
-          }
-        },
+        onHighlightStarted: () => click("#view-layers")
       },
       {
         element: "#add-blocks",
@@ -98,12 +91,7 @@ export const demo = (editor: Editor) => {
           title: t("demo.addBlocks1.title"),
           description: t("demo.addBlocks1.description"),
         },
-        onHighlightStarted: () => {
-          const button: HTMLElement | null = document.querySelector("#add-blocks");
-          if (button) {
-            button.click();
-          }
-        },
+        onHighlightStarted: () => click("#add-blocks")
       },
       {
         element: ".gjs-blocks-cs",

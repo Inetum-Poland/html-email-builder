@@ -7,9 +7,12 @@
 </template>
 
 <script setup lang="ts">
-import type { Component } from "grapesjs";
 import grapesJS from "grapesjs";
 import grapesJSMJML from "grapesjs-mjml";
+import { uploadImage } from "@utils";
+import { toggleAutosave } from "@commands";
+import { saveProject, selectAll } from "@keymaps";
+import { WelcomeModal } from "@modals";
 import {
   ButtonBlock,
   CellBlock,
@@ -22,7 +25,7 @@ import {
   TableBlock,
   TablePlugin,
   TextBlock,
-} from "./blocks";
+} from "@blocks";
 import {
   DeviceManager,
   TabSwitcher,
@@ -30,11 +33,8 @@ import {
   UndoRedoPanel,
   ToggleAutosavePanel,
   ToggleBordersPanel,
-} from "./panels";
-import { WelcomeModal } from "./modals";
-import { exportProject, Format } from "./panels/components/CodePreview";
-import { uploadFile } from "./utils/uploadFile";
-import { defaults, setDefaults } from "./blocks/defaults";
+} from "@panels";
+import { defaults, setDefaults } from "@defaults";
 
 onMounted(() => {
   const editor = grapesJS.init({
@@ -46,7 +46,7 @@ onMounted(() => {
     modal: {
       backdrop: false,
     },
-    assetManager: { uploadFile },
+    assetManager: { uploadFile: uploadImage },
     height: "100%",
     plugins: [grapesJSMJML, TablePlugin],
     telemetry: false,
@@ -65,28 +65,21 @@ onMounted(() => {
 
   editor.on("load", () => WelcomeModal(editor));
 
-  Commands.add("toggle-autosave", {
-    run(editor) {
-      editor.StorageManager.setAutosave(true);
-    },
-    stop(editor) {
-      editor.StorageManager.setAutosave(false);
-    },
-  });
+  Commands.add("toggle-autosave", toggleAutosave);
 
-  Keymaps.add("custom:save-project", "⌘+s, ctrl+s", () => {
-    const json = JSON.stringify(editor.getProjectData(), null, 2);
-    exportProject(Format.JSON, json);
-  }, {
-    prevent: true,
-  });
+  Keymaps.add(
+    "custom:save-project",
+    "⌘+s, ctrl+s",
+    () => saveProject(editor),
+    { prevent: true }
+  );
 
-  Keymaps.add("custom:select-all", "⌘+a, ctrl+a", () => {
-    const mjbody = editor.DomComponents.getComponent()?.getChildAt(0)?.getChildAt(0);
-    mjbody?.get("components")?.each((child: Component) => editor.selectAdd(child));
-  }, {
-    prevent: true,
-  });
+  Keymaps.add(
+    "custom:select-all",
+    "⌘+a, ctrl+a",
+    () => selectAll(editor),
+    { prevent: true }
+  );
 
   Panels.removePanel("devices-c");
   Panels.removePanel("options");
