@@ -24,8 +24,12 @@ const onClear = (editor: Editor) => {
 };
 
 const onUpload = (editor: Editor, wrapper: HTMLElement) => {
-  const callback = () => editor.Modal.close();
-  upload(editor, wrapper, callback);
+  const callback = (data: JSON) => {
+    editor.loadProjectData(data);
+    editor.Modal.close();
+  };
+
+  upload(wrapper, callback);
 };
 
 const onDemo = (editor: Editor) => {

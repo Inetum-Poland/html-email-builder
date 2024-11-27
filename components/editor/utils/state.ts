@@ -11,7 +11,7 @@ export const clear = (editor: Editor) => {
   mjbody?.empty();
 };
 
-export const upload = (editor: Editor, wrapper: HTMLElement, callback: () => void) => {
+export const upload = (wrapper: HTMLElement, callback: (data: JSON) => void) => {
   const fileInput = document.createElement("input");
   fileInput.type = "file";
   fileInput.className = "file-input";
@@ -28,8 +28,7 @@ export const upload = (editor: Editor, wrapper: HTMLElement, callback: () => voi
     reader.readAsText(event.target.files?.[0]);
     reader.onload = (e) => {
       const data = JSON.parse(e.target?.result?.toString() || "{}");
-      editor.loadProjectData(data);
-      callback();
+      callback(data);
     };
   };
 
