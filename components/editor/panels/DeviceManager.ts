@@ -1,19 +1,17 @@
 import type { Editor, PanelProperties } from "grapesjs";
 import { Monitor, Tablet, TabletSmartphone } from "lucide-static";
-
-enum Device {
-  Desktop = "Desktop",
-  Mobile = "Mobile portrait",
-  Tablet = "Tablet",
-}
+import { Device } from "@types";
 
 const setDevice = (editor: Editor, device: Device) => {
   editor.setDevice(device);
-  document.querySelector("#set-device-desktop")?.classList.remove("gjs-pn-active");
+
+  if (device !== Device.Desktop) {
+    document.querySelector("#set-device-desktop")?.classList.remove("gjs-pn-active");
+  }
 };
 
 const resetDevice = (editor: Editor) => {
-  editor.setDevice("Desktop");
+  editor.setDevice(Device.Desktop);
   document.querySelector("#set-device-desktop")?.classList.add("gjs-pn-active");
 };
 

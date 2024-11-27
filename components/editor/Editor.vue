@@ -36,11 +36,34 @@ import {
   ToggleBordersPanel,
 } from "@panels";
 import { defaults, setDefaults } from "@defaults";
+import { Device } from "@types";
 
 onMounted(() => {
   const editor = grapesJS.init({
     fromElement: true,
     container: "#gjs",
+    deviceManager: {
+      default: Device.Desktop,
+      devices: [
+        {
+          id: Device.Desktop,
+          name: Device.Desktop,
+          width: "",
+        },
+        {
+          id: Device.Mobile,
+          name: Device.Mobile,
+          width: "320px",
+          widthMedia: "480px",
+        },
+        {
+          id: Device.Tablet,
+          name: Device.Tablet,
+          width: "770px",
+          widthMedia: "992px",
+        },
+      ],
+    },
     storageManager: {
       autoload: false,
     },
