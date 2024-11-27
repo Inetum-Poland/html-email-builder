@@ -10,4 +10,4 @@ export {
   TableBlock,
   TablePlugin,
 } from "./TableBlock";
-export { TextBlock } from "./TextBlock";
+export { TextBlock, TextToolbar } from "./TextBlock";

@@ -25,6 +25,7 @@ import {
   TableBlock,
   TablePlugin,
   TextBlock,
+  TextToolbar,
 } from "@blocks";
 import {
   DeviceManager,
@@ -48,7 +49,7 @@ onMounted(() => {
     },
     assetManager: { uploadFile: uploadImage },
     height: "100%",
-    plugins: [grapesJSMJML, TablePlugin],
+    plugins: [grapesJSMJML, TablePlugin, TextToolbar],
     telemetry: false,
     noticeOnUnload: true,
     colorPicker: {

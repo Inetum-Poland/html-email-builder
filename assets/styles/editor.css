@@ -69,4 +69,18 @@
   .gjs-trait-category.gjs-open {
     border-bottom: none;
   }
+
+  .gjs-rte-action {
+    width: fit-content;
+
+    &.gjs-rte-disabled {
+      display: none;
+    }
+
+    svg.lucide {
+      stroke-width: 2px;
+      width: 17px;
+      height: auto;
+    }
+  }
 }
