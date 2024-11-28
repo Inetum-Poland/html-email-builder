@@ -5,7 +5,7 @@ import { Format } from "@types";
 
 const modeMap = new Map([
   [Format.HTML, "htmlmixed"],
-  [Format.JSON, "javascript"],
+  [Format.JSON, "application/json"],
   [Format.MJML, "htmlmixed"],
 ]);
 
