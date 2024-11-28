@@ -1,4 +1,5 @@
 import type { Editor } from "grapesjs";
+import beautify from "js-beautify";
 import { Format } from "@types";
 
 const fileFormatMap = new Map([
@@ -8,11 +9,13 @@ const fileFormatMap = new Map([
 ]);
 
 export const getHTML = (editor: Editor) => {
-  return editor.Commands.run("mjml-code-to-html").html;
+  const data = editor.Commands.run("mjml-code-to-html").html;
+  return beautify.html(data);
 };
 
 export const getMJML = (editor: Editor) => {
-  return editor.Commands.run("mjml-code");
+  const data = editor.Commands.run("mjml-code");
+  return beautify.html(data);
 };
 
 export const getJSONProjectData = (editor: Editor) => {

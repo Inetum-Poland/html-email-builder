@@ -9,6 +9,7 @@
 <script setup lang="ts">
 import grapesJS from "grapesjs";
 import grapesJSMJML from "grapesjs-mjml";
+import mjml2html from "mjml-browser";
 import { uploadImage } from "@utils";
 import { toggleAutosave } from "@commands";
 import { saveProject, selectAll } from "@keymaps";
@@ -81,6 +82,9 @@ onMounted(() => {
     pluginsOpts: {
       [grapesJSMJML as any]: {
         blocks: [],
+        mjmlParser: (input: string) => mjml2html(input, {
+          fonts: {},
+        }),
       },
     },
   });

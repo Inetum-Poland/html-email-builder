@@ -26,9 +26,15 @@ importers:
       grapesjs-mjml:
         specifier: ^1.0.6
         version: 1.0.6
+      js-beautify:
+        specifier: ^1.15.1
+        version: 1.15.1
       lucide-static:
         specifier: ^0.454.0
         version: 0.454.0
+      mjml-browser:
+        specifier: ^4.15.3
+        version: 4.15.3
       nuxt:
         specifier: ^3.13.2
         version: 3.13.2(@parcel/watcher@2.5.0)(@types/node@22.8.7)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.36.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.7)(terser@5.36.0))(webpack-sources@3.2.3)
@@ -42,6 +48,12 @@ importers:
       '@nuxt/test-utils':
         specifier: ^3.14.4
         version: 3.14.4(@vitest/ui@2.1.4(vitest@2.1.4))(@vue/test-utils@2.4.6)(h3@1.13.0)(happy-dom@15.10.2)(jsdom@25.0.1)(magicast@0.3.5)(nitropack@2.10.2(typescript@5.6.3)(webpack-sources@3.2.3))(rollup@4.24.4)(vite@5.4.10(@types/node@22.8.7)(terser@5.36.0))(vitest@2.1.4(@types/node@22.8.7)(@vitest/ui@2.1.4)(happy-dom@15.10.2)(jsdom@25.0.1)(terser@5.36.0))(vue-router@4.4.5(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@types/js-beautify':
+        specifier: ^1.14.3
+        version: 1.14.3
+      '@types/mjml-browser':
+        specifier: ^4.15.0
+        version: 4.15.0
       '@vite-pwa/assets-generator':
         specifier: ^0.2.6
         version: 0.2.6
@@ -1731,8 +1743,14 @@ packages:
   '@types/jquery@3.5.32':
     resolution: {integrity: sha512-b9Xbf4CkMqS02YH8zACqN1xzdxc3cO735Qe5AbSUFmyOiaWAbcpqh9Wna+Uk0vgACvoQHpWDg2rGdHkYPLmCiQ==}
 
+  '@types/js-beautify@1.14.3':
+    resolution: {integrity: sha512-FMbQHz+qd9DoGvgLHxeqqVPaNRffpIu5ZjozwV8hf9JAGpIOzuAf4wGbRSo8LNITHqGjmmVjaMggTT5P4v4IHg==}
+
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/mjml-browser@4.15.0':
+    resolution: {integrity: sha512-WNmr7LB4XfSM4pe+ES3zCcF4NY3hfPQxLNPn8v3GgNYc3u2rJbiQ56Ahswn/WF9kpO+M5jKd2jlq8u2ZAV0g6A==}
 
   '@types/mjml-core@4.15.1':
     resolution: {integrity: sha512-qu8dUksU8yXX18qMTFINkM4uoz7WQYC5F14lcWeSNmWbulaGG0KG19yeZwpx75b9RJXr8WI/FRHH0LyQTU9JbA==}
@@ -7559,7 +7577,13 @@ snapshots:
     dependencies:
       '@types/sizzle': 2.3.9
 
+  '@types/js-beautify@1.14.3': {}
+
   '@types/json-schema@7.0.15': {}
+
+  '@types/mjml-browser@4.15.0':
+    dependencies:
+      '@types/mjml-core': 4.15.1
 
   '@types/mjml-core@4.15.1': {}
 
