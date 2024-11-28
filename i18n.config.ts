@@ -8,4 +8,5 @@ export default defineI18nConfig(() => ({
   messages: {
     en,
   },
+  warnHtmlMessage: false,
 }));
