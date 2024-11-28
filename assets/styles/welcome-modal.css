@@ -33,5 +33,16 @@
     &:focus-visible {
       background-color: var(--inetum-green);
     }
+
+    &.invalid {
+      border: 1px solid var(--inetum-orange);
+      color: var(--inetum-orange);
+
+      &:hover,
+      &:focus-visible {
+        color: white;
+        background-color: var(--inetum-orange);
+      }
+    }
   }
 }

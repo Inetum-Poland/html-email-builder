@@ -11,7 +11,7 @@ export const clear = (editor: Editor) => {
   mjbody?.empty();
 };
 
-export const upload = (wrapper: HTMLElement, callback: (data: JSON) => void) => {
+export const upload = (wrapper: HTMLElement, callback: (data?: string) => void) => {
   const fileInput = document.createElement("input");
   fileInput.type = "file";
   fileInput.className = "file-input";
@@ -27,12 +27,19 @@ export const upload = (wrapper: HTMLElement, callback: (data: JSON) => void) => 
     const reader = new FileReader();
     reader.readAsText(event.target.files?.[0]);
     reader.onload = (e) => {
-      const data = JSON.parse(e.target?.result?.toString() || "{}");
+      const data = e.target?.result?.toString();
       callback(data);
+      input.remove();
     };
   };
 
   wrapper.append(fileInput);
   const input = document.querySelector("#file-input") as HTMLInputElement;
   input.click();
+};
+
+export const isValidProjectFile = (data: JSON | object) => {
+  const required = ["assets", "styles", "pages", "symbols", "dataSources"];
+  const present = Object.keys(data);
+  return typeof data === "object" && required.every((key) => present.includes(key));
 };

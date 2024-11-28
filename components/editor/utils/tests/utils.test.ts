@@ -7,6 +7,7 @@ import {
   exportProject,
   getMjBody,
   getMJML,
+  isValidProjectFile,
   selectChildren,
 } from "@utils";
 import { Format } from "@types";
@@ -150,5 +151,43 @@ describe("clear", () => {
 
 describe("upload", () => {
   test.todo("executes callback with the uploaded data", () => {
+  });
+});
+
+describe("isValidProjectFile", () => {
+  test("is true when file has all required properties", () => {
+    const data = {
+      assets: [],
+      styles: [],
+      pages: [],
+      symbols: [],
+      dataSources: []
+    };
+
+    expect(isValidProjectFile(data)).toBe(true);
+  });
+
+  test("is false when file does not have all required properties", () => {
+    const data = {
+      assets: [],
+      styles: [],
+      pages: [],
+    };
+
+    expect(isValidProjectFile(data)).toBe(false);
+  });
+
+  test("is true when file has extra properties", () => {
+    const data = {
+      assets: [],
+      styles: [],
+      pages: [],
+      symbols: [],
+      dataSources: [],
+      extra: [],
+      comment: "comment",
+    };
+
+    expect(isValidProjectFile(data)).toBe(true);
   });
 });
