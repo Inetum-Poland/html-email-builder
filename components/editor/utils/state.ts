@@ -8,7 +8,21 @@ export const restore = async (editor: Editor) => {
 
 export const clear = (editor: Editor) => {
   const mjbody = getMjBody(editor);
-  mjbody?.empty();
+
+  if (mjbody) {
+    const width = mjbody.attributes.attributes?.width;
+    mjbody.attributes.attributes = { width };
+    mjbody.attributes.style = { width };
+    mjbody.empty();
+  }
+
+  editor.loadProjectData({
+    ...editor.getProjectData(),
+    assets: [],
+    styles: [],
+    symbols: [],
+    dataSources: [],
+  });
 };
 
 export const upload = (wrapper: HTMLElement, callback: (data?: string) => void) => {
