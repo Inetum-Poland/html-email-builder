@@ -66,7 +66,7 @@ export const TablePlugin = (editor: Editor) => {
     },
     model: {
       defaults: {
-        components: { type: "text" },
+        components: { type: "table-text" },
         traits: ["id", "title", "colspan"],
         style: defaults.cell,
         stylable: [
@@ -83,9 +83,11 @@ export const TablePlugin = (editor: Editor) => {
     },
   });
 
-  editor.Components.addType("text", {
+  editor.Components.addType("table-text", {
+    extend: "text",
     model: {
       defaults: {
+        name: t("text"),
         tagName: "span",
         droppable: ["*"],
         draggable: ["td"],
@@ -189,7 +191,7 @@ export const CellTextBlock = (): BlockProperties => {
     category: t("tableBlocks"),
     label: t("cellText"),
     media: Text,
-    content: { type: "text" },
+    content: { type: "table-text" },
     activate: true,
   };
 };
