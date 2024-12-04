@@ -4,7 +4,7 @@ export const defaults = {
   "text": {
     "font-family": "Verdana, Geneva, sans-serif",
     "font-size": "14px",
-    "line-height": "150%",
+    "line-height": "125%",
   },
   "image": {
     display: "block",
@@ -55,6 +55,25 @@ export const setDefaults = (editor: Editor) => {
     model: {
       defaults: {
         style: defaults.text,
+      },
+    },
+  });
+
+  editor.Components.addType("link", {
+    model: {
+      defaults: {
+        style: {
+          "text-decoration": "none",
+        },
+        stylable: [
+          "color",
+          "font-family",
+          "font-size",
+          "font-style",
+          "font-weight",
+          "letter-spacing",
+          "text-decoration",
+        ],
       },
     },
   });
