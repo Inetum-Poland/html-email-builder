@@ -1,8 +1,47 @@
 <template>
-  <div id="gjs">
-    <mjml>
-      <mj-body />
-    </mjml>
+  <div id="grapes">
+    <div id="editor">
+      <mjml>
+        <mj-body />
+      </mjml>
+    </div>
+
+    <div id="top-bar" />
+    <div id="bottom-bar" />
+
+    <Tabs
+      name="layout-panel"
+      :tabs="[
+        {
+          id: 'blocks',
+          label: 'Blocks',
+        },
+        {
+          id: 'layers',
+          label: 'Layers',
+        }
+      ]"
+    />
+
+    <Tabs
+      name="component-panel"
+      :tabs="[
+        {
+          id: 'styles',
+          label: 'Styles',
+          hidden: true,
+        },
+        {
+          id: 'traits',
+          label: 'Attributes',
+        }
+      ]"
+    />
+
+    <div
+      id="export-menu"
+      popover
+    />
   </div>
 </template>
 
@@ -30,11 +69,13 @@ import {
 } from "@blocks";
 import {
   DeviceManager,
-  TabSwitcher,
-  StatePanel,
-  UndoRedoPanel,
+  ExportProject,
+  handleAutosave,
+  handleExport,
+  handleTabs,
   ToggleAutosavePanel,
-  ToggleBordersPanel,
+  ToggleBorders,
+  UndoRedo,
 } from "@panels";
 import { defaults, setDefaults } from "@defaults";
 import { Device } from "@types";
@@ -42,26 +83,39 @@ import { Device } from "@types";
 onMounted(() => {
   const editor = grapesJS.init({
     fromElement: true,
-    container: "#gjs",
+    canvas: {
+      styles: ["iframe.css"],
+    },
+    container: "#editor",
+    blockManager: {
+      appendTo: "#blocks-panel",
+    },
+    layerManager: {
+      appendTo: "#layers-panel"
+    },
+    styleManager: {
+      appendTo: "#styles-panel",
+    },
+    traitManager: {
+      appendTo: "#traits-panel"
+    },
     deviceManager: {
       default: Device.Desktop,
       devices: [
         {
           id: Device.Desktop,
           name: Device.Desktop,
-          width: "",
+          width: "min(1360px, 100%)",
         },
         {
           id: Device.Mobile,
           name: Device.Mobile,
-          width: "320px",
-          widthMedia: "480px",
+          width: "min(320px, 100%)",
         },
         {
           id: Device.Tablet,
           name: Device.Tablet,
-          width: "770px",
-          widthMedia: "992px",
+          width: "min(770px, 100%)",
         },
       ],
     },
@@ -115,12 +169,11 @@ onMounted(() => {
   Panels.removePanel("commands");
   Panels.removePanel("views");
 
+  Panels.addPanel(ToggleBorders());
   Panels.addPanel(DeviceManager());
-  Panels.addPanel(StatePanel());
-  Panels.addPanel(UndoRedoPanel());
+  Panels.addPanel(UndoRedo());
   Panels.addPanel(ToggleAutosavePanel());
-  Panels.addPanel(ToggleBordersPanel());
-  Panels.addPanel(TabSwitcher());
+  Panels.addPanel(ExportProject());
 
   Blocks.add("mj-1-column", ColumnBlock(1));
   Blocks.add("mj-2-columns", ColumnBlock(2));
@@ -137,6 +190,9 @@ onMounted(() => {
   Blocks.add("mj-table-cell-text", CellTextBlock());
   Blocks.add("mj-table-cell-image", CellImageBlock());
 
+  handleTabs(editor);
+  handleAutosave(editor);
+  handleExport(editor);
   setDefaults(editor);
 });
 </script>

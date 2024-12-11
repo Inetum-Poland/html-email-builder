@@ -10,24 +10,25 @@
   "cell": "Cell",
   "cellImage": "Cell image",
   "cellText": "Cell text",
+  "changesSaved": "Changes saved",
   "clearFormatting": "Clear formatting",
   "column": "{n} column | {n} columns",
   "content": "Content",
   "continueFromAutosave": "Continue from autosave",
   "copied": "Copied",
   "copy": "Copy",
-  "copyDocument": "Copy document",
-  "copyFormattedDocument": "Copy formatted document",
+  "copyHtmlCode": "Copy HTML code",
+  "copyJsonCode": "Copy project file code",
   "createEmail": "Create new email",
   "createNewProject": "Create new project",
   "desktop": "Desktop",
   "download": "Download",
   "downloaded": "Downloaded",
   "editComponentSettings": "Edit component settings",
-  "exportCode": "Export code",
-  "exportHTML": "Export HTML",
-  "exportJSON": "Export JSON",
-  "exportProjectState": "Export project state",
+  "export": "Export",
+  "exportHtmlDocument": "Export HTML document",
+  "exportJsonProjectFile": "Export project file",
+  "exportProject": "Export project",
   "genericBlocks": "Generic blocks",
   "heading": "Heading",
   "image": "Image",
@@ -38,6 +39,7 @@
   "link": "Link",
   "mobile": "Mobile",
   "noFileSpecified": "No file specified",
+  "notSavingChanges": "Not saving changes",
   "okay!": "Okay!",
   "openExistingProject": "Open existing project from file",
   "redo": "Redo",
@@ -69,15 +71,7 @@
     },
     "saveChanges": {
       "title": "Save changes",
-      "description": "The generated MJML markup gets translated into HTML, which you can use in your emails. The project state is saved in a JSON file."
-    },
-    "copyToOutlook": {
-      "title": "Copy to Outlook",
-      "description": "To paste the email into Outlook, click \"<b>Copy document</b>\" and paste the contents into a new message. <b>If the formatting looks wrong, search for the option \"Set default paste\" and set \"Pasting from other apps\" to \"Keep source formatting\".</b>"
-    },
-    "saveAs": {
-      "title": "Save as",
-      "description": "Use this button to save your project as a file on your disk. This file contains all the assets that you're using in the project and can be imported back into the app."
+      "description": "The generated document gets translated into HTML, which you can use in your emails. The project state is saved in a JSON project file."
     },
     "toggleAutosave": {
       "title": "Toggle autosave",
@@ -95,13 +89,9 @@
       "title": "View layers",
       "description": "This panel shows the layer view. This can be useful when trying to locate a layout issue."
     },
-    "addBlocks1": {
+    "addBlocks": {
       "title": "Add blocks",
-      "description": "This panel contains all the blocks that you can add into the document."
-    },
-    "addBlocks2": {
-      "title": "Add blocks",
-      "description": "You can drag the blocks into the email. Generally, sections with text and images should be wrapped in columns."
+      "description": "This panel contains all the blocks that you can add into the document. Generally, sections with text and images should be wrapped in columns."
     },
     "addImages": {
       "title": "Add images",

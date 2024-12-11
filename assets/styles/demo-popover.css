@@ -2,7 +2,7 @@
 .demo-popover {
   * {
     font-family: inherit;
-    font-size: var(--gjs-font-size);
+    font-size: 12px;
   }
 
   .driver-popover {

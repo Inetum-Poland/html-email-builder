@@ -1,0 +1,55 @@
+.tabset {
+  padding: 0 var(--gjs-gap);
+  scrollbar-gutter: stable both-edges;
+}
+
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2) {
+  display: block;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  padding-bottom: calc(4 * var(--gjs-gap));
+  cursor: pointer;
+  font-size: 1rem;
+  top: 0;
+  padding-top: calc(2 * var(--gjs-gap));
+  background: var(--gjs-components-background);
+  z-index: 11;
+  position: sticky;
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(2 * var(--gjs-gap));
+  width: 100%;
+  height: 2px;
+  background-color: #e7e9ed;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after,
+input:focus-visible + label::after {
+  background: var(--inetum-green);
+}
+
+.tabset > input:disabled + label {
+  pointer-events: none;
+  opacity: 0.5;
+}

@@ -1,8 +1,6 @@
 export { DeviceManager } from "./DeviceManager";
-export { TabSwitcher } from "./TabSwitcher";
-export {
-  StatePanel,
-  UndoRedoPanel,
-  ToggleAutosavePanel,
-  ToggleBordersPanel,
-} from "./Toolbar";
+export { LayoutTabs, ComponentTabs, handleTabs } from "./Tabs";
+export { UndoRedo } from "./UndoRedo";
+export { ToggleAutosavePanel, handleAutosave } from "./ToggleAutosave";
+export { ExportProject, handleExport } from "./ExportProject";
+export { ToggleBorders } from "./ToggleBorders";

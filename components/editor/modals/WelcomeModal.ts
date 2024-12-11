@@ -6,7 +6,7 @@ import {
   FileX2,
   MessageCircleQuestion,
 } from "lucide-static";
-import { clear, isValidProjectFile, restore, upload } from "@utils";
+import { clear, getMjBody, isValidProjectFile, restore, upload } from "@utils";
 import { demo } from "../demo/demo";
 import guide from "../demo/user-guide.json";
 
@@ -77,6 +77,7 @@ const onUpload = (editor: Editor, wrapper: HTMLElement) => {
 const onDemo = (editor: Editor) => {
   editor.loadProjectData(guide);
   editor.Modal.close();
+  editor.select(getMjBody(editor));
   demo(editor);
 };
 
@@ -85,6 +86,7 @@ export const WelcomeModal = (editor: Editor) => {
 
   const wrapper = document.createElement("div");
   wrapper.id = "welcome-modal";
+  wrapper.className = "button-list";
 
   const buttons = [
     Button({

@@ -1,5 +1,4 @@
 @import "./asset-manager.css";
-@import "./code-preview.css";
 @import "./demo-popover.css";
 @import "./dialog.css";
 @import "./panels.css";
@@ -9,27 +8,49 @@
   /* overwrites */
   --gjs-canvas-top: 64px;
   --gjs-left-width: max(280px, 15%);
-  --gjs-main-color: var(--inetum-blue);
+  --gjs-main-color: white;
   --gjs-main-font: Inter, system-ui, sans-serif;
   --gjs-primary-color: var(--inetum-blue);
+  --gjs-arrow-color: currentColor;
+  --gjs-font-size: 1rem;
 
   /* custom variables */
-  --gjs-border-radius: 4px;
+  --gjs-border-radius: 1em;
   --gjs-border: 1px solid rgba(0, 0, 0, 0.25);
   --gjs-button-padding: 6px 12px;
   --gjs-gap: 8px;
   --gjs-font-weight-bold: 600;
+  --gjs-canvas-background: #f6f8fa;
+  --gjs-shadow-large: rgba(0, 0, 0, 0.03) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+  --gjs-shadow-small: rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+  --gjs-components-background: #ffffff;
+  --gjs-border-color: #f2f3f4;
+  --gjs-border: 1px solid var(--gjs-border-color);
+  --gjs-selected-background: #f6f8fa;
 }
 
-#gjs {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gjs-canvas-background: #2b2b2b;
+    --gjs-shadow-large: rgba(0, 0, 0, 0.1) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.5) 0px 0px 0px 1px;
+    --gjs-components-background: #0c0c0c;
+    --gjs-border-color: #2b2b2b;
+    --gjs-border: 1px solid var(--gjs-border-color);
+    --gjs-selected-background: #222;
+  }
+}
+
+#grapes {
   max-height: 100vh;
 
   .gjs-one-bg {
-    background: var(--gjs-main-color);
+    background: var(--gjs-components-background);
   }
 
   .gjs-two-color {
-    color: white;
+    color: var(--color);
   }
 
   .gjs-four-color {
@@ -70,17 +91,77 @@
     border-bottom: none;
   }
 
-  .gjs-rte-action {
-    width: fit-content;
+  .gjs-rte-toolbar {
+    border-color: var(--gjs-border-color);
+    box-shadow: var(--gjs-shadow-large);
+    border-radius: var(--gjs-border-radius);
 
-    &.gjs-rte-disabled {
-      display: none;
+    .gjs-rte-action {
+      width: fit-content;
+      border-color: var(--gjs-border-color);
+
+      &:hover {
+        color: var(--inetum-orange);
+      }
+
+      &.gjs-rte-active {
+        color: var(--inetum-green);
+        background-color: var(--gjs-selected-background);
+
+        svg.lucide {
+          stroke-width: 2px;
+        }
+      }
+
+      &.gjs-rte-disabled {
+        display: none;
+      }
+
+      svg.lucide {
+        stroke-width: 1px;
+        width: 16px;
+        height: auto;
+      }
     }
+  }
+}
 
-    svg.lucide {
-      stroke-width: 2px;
-      width: 17px;
-      height: auto;
+.gjs-cv-canvas__frames {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gjs-cv-canvas {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+.gjs-cv-canvas-bg {
+  background-color: var(--gjs-canvas-background);
+
+  .gjs-frames {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: calc(2 * var(--gjs-gap)) calc(10 * var(--gjs-gap));
+    scrollbar-gutter: stable both-edges;
+
+    .gjs-frame-wrapper {
+      position: relative;
+
+      .gjs-frame {
+        box-shadow: var(--gjs-shadow-large);
+        border-radius: 4px;
+      }
     }
   }
 }

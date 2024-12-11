@@ -1,8 +1,8 @@
-#gjs .gjs-mdl-dialog:has(#welcome-modal) {
-  max-width: fit-content;
-}
+  #grapes .gjs-mdl-dialog:has(.button-list) {
+    max-width: fit-content;
+  }
 
-#gjs #welcome-modal {
+#grapes .button-list {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -12,9 +12,9 @@
     align-items: center;
     background-color: transparent;
     border-radius: var(--gjs-border-radius);
-    border: 1px solid var(--inetum-green);
-    box-shadow: none;
-    color: white;
+    border: var(--gjs-border);
+    box-shadow: var(--gjs-shadow-small);
+    color: inherit;
     cursor: pointer;
     display: flex;
     font-family: inherit;
@@ -31,7 +31,7 @@
 
     &:hover,
     &:focus-visible {
-      background-color: var(--inetum-green);
+      color: var(--inetum-green);
     }
 
     &.invalid {

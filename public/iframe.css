@@ -1,0 +1,39 @@
+:root {
+  --scroll-thumb: #dddddd;
+  --scroll-thumb-hover: #dddddd;
+  --scroll-track: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --scroll-thumb: #686868;
+    --scroll-thumb-hover: #dddddd;
+    --scroll-track: #ffffff;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 3px !important;
+  width: 3px !important;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-track) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb) !important;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover) !important;
+}
+
+[contenteditable="true"] {
+  outline: none;
+}

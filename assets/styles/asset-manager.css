@@ -1,24 +1,35 @@
-#gjs .gjs-asset-manager {
-  background-color: var(--gjs-secondary-dark-color);
+#grapes .gjs-asset-manager {
   border-radius: var(--gjs-border-radius);
-  border: var(--gjs-border);
   display: flex;
+  flex-direction: column;
+
+  &:has(.gjs-am-assets:empty) {
+    .gjs-am-file-uploader > form {
+      height: 193px;
+    }
+  }
 
   .gjs-am-file-uploader {
     box-sizing: border-box;
-    flex: 1;
     width: 100%;
-    width: 50%;
 
     > form {
-      background-color: transparent;
+      background-color: rgba(0, 170, 156, 0.1);
       border-radius: var(--gjs-border-radius);
-      border: 1px dashed rgba(255, 255, 255, 0.25);
-      margin: 16px;
+      border: 2px dashed var(--inetum-green);
+      color: var(--inetum-green);
+      height: 100px;
+
+      input {
+        cursor: copy;
+        height: 100%;
+        padding: 0;
+      }
 
       #gjs-am-title {
         align-items: center;
         display: flex;
+        font-weight: 500;
         height: 100%;
         justify-content: center;
         padding: 0;
@@ -28,16 +39,19 @@
     }
   }
 
+  .gjs-am-assets {
+    height: unset;
+    flex-wrap: nowrap;
+  }
+
   .gjs-am-assets-cont {
     background-color: transparent;
     border-radius: 0;
     box-sizing: border-box;
-    flex: 1;
     height: 100%;
     overflow: auto;
-    padding: 16px;
+    padding: 0;
     width: 100%;
-    width: 50%;
 
     .gjs-am-assets-header {
       margin-bottom: 8px;
@@ -59,24 +73,16 @@
         }
 
         button {
+          margin: 0;
           align-items: center;
-          background-color: transparent;
+          padding: var(--gjs-gap);
+          box-shadow: var(--gjs-shadow-large);
           border-radius: var(--gjs-border-radius);
-          border: 1px solid var(--inetum-green);
-          box-shadow: none;
-          color: white;
-          cursor: pointer;
-          display: flex;
-          font-family: inherit;
-          height: 100%;
-          justify-content: center;
-          outline: none;
-          padding: var(--gjs-button-padding);
-          width: max-content;
+          background: var(--inetum-green);
+          color: #ffffff;
 
-          &:hover,
-          &:focus-visible {
-            background-color: var(--inetum-green);
+          &:hover {
+            color: #ffffff;
           }
         }
 
@@ -85,5 +91,42 @@
         }
       }
     }
+
+    .gjs-am-asset {
+      border: none;
+      width: unset;
+
+      .gjs-am-meta {
+        display: none;
+      }
+
+      &:hover .gjs-am-close {
+        z-index: 2;
+        opacity: 1;
+        color: #ff00ab;
+        background: white;
+        border-radius: 100%;
+        width: 16px;
+        height: 16px;
+        top: 8px;
+        right: 8px;
+        display: flex;
+        justify-content: center;
+        mix-blend-mode: luminosity;
+        font-size: 16px;
+        user-select: none;
+        align-items: center;
+      }
+
+      .gjs-am-preview-cont {
+        height: 80px;
+        width: 80px;
+        border-radius: 4px;
+      }
+    }
   }
+}
+
+.gjs-editor-cont ::-webkit-scrollbar-track {
+  background: transparent;
 }

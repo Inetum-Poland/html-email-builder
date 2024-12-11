@@ -1,12 +1,13 @@
-#gjs .gjs-mdl-dialog {
+#grapes .gjs-mdl-dialog {
   border-radius: 8px;
   display: grid;
-  font-weight: normal;
-  gap: 16px;
+  font-weight: 500;
+  gap: calc(2 * var(--gjs-gap));
   grid-template-columns: 100%;
   grid-template-rows: auto auto;
-  padding: 16px;
+  padding: calc(2 * var(--gjs-gap));
   text-shadow: none;
+  width: 400px;
 
   .gjs-mdl-header,
   .gjs-mdl-content {

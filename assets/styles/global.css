@@ -4,9 +4,26 @@
   --inetum-blue: #232d4b;
   --inetum-green: #00aa9b;
   --inetum-orange: #f14540;
+  --background: #f6f8fa;
+  --scroll-thumb: #dddddd;
+  --scroll-thumb-hover: #dddddd;
+  --font-size-large: 16px;
+  --font-size: 14px;
+  --font-size-small: 12px;
+  --color: #222222;
 
   font-family: Inter, system-ui, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
+  font-size: var(--font-size);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #f9f9fa;
+    --background: #1b1b1b;
+    --scroll-thumb: #686868;
+    --scroll-thumb-hover: #dddddd;
+  }
 }
 
 @supports (font-variation-settings: normal) {
@@ -16,7 +33,8 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color);
+  background-color: var(--background);
   display: grid;
   grid-template: 1fr / 1fr;
   margin: 0;
@@ -44,10 +62,24 @@ svg.lucide {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--scroll-thumb) !important;
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--scroll-thumb-hover) !important;
+}
+
+*:focus-visible {
+  outline-color: var(--inetum-green);
+  outline-width: 2px;
+  outline-offset: -3px;
+}
+
+[hidden] {
+  visibility: hidden !important;
+}
+
+button, label, iframe {
+  user-select: none;
 }

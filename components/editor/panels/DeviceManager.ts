@@ -25,6 +25,7 @@ export const DeviceManager = (): PanelProperties => {
 
   return {
     id: "device-manager",
+    appendTo: "#top-bar",
     buttons: [
       {
         active: true,

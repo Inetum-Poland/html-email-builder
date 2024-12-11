@@ -16,7 +16,7 @@ let editor: Editor;
 
 beforeEach(async (done: () => void) => {
   editor = grapesJS.init({
-    container: "#gjs",
+    container: "#editor",
     plugins: [grapesJSMJML],
   });
 
