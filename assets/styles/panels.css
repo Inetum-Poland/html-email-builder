@@ -93,6 +93,7 @@
     border-bottom: var(--gjs-border);
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   #top-bar {

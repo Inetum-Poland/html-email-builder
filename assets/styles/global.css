@@ -18,13 +18,11 @@
   font-size: var(--font-size);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color: #f9f9fa;
-    --background: #1b1b1b;
-    --scroll-thumb: #686868;
-    --scroll-thumb-hover: #dddddd;
-  }
+[theme="dark"] {
+  --color: #f9f9fa;
+  --background: #1b1b1b;
+  --scroll-thumb: #686868;
+  --scroll-thumb-hover: #dddddd;
 }
 
 @supports (font-variation-settings: normal) {
@@ -81,6 +79,8 @@ svg.lucide {
   visibility: hidden !important;
 }
 
-button, label, iframe {
+button,
+label,
+iframe {
   user-select: none;
 }

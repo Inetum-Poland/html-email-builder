@@ -4,14 +4,6 @@
   --scroll-track: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --scroll-thumb: #686868;
-    --scroll-thumb-hover: #dddddd;
-    --scroll-track: #ffffff;
-  }
-}
-
 ::-webkit-scrollbar {
   height: 3px !important;
   width: 3px !important;

@@ -21,10 +21,8 @@
   --logo-color-arrow: #00aa9b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --logo-color-main: #ffffff;
-    --logo-color-arrow: #00aa9b;
-  }
+[theme="dark"] {
+  --logo-color-main: #ffffff;
+  --logo-color-arrow: #00aa9b;
 }
 </style>

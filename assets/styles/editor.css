@@ -30,16 +30,14 @@
   --gjs-selected-background: #f6f8fa;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --gjs-canvas-background: #2b2b2b;
-    --gjs-shadow-large: rgba(0, 0, 0, 0.1) 0px 6px 24px 0px,
-      rgba(0, 0, 0, 0.5) 0px 0px 0px 1px;
-    --gjs-components-background: #0c0c0c;
-    --gjs-border-color: #2b2b2b;
-    --gjs-border: 1px solid var(--gjs-border-color);
-    --gjs-selected-background: #222;
-  }
+[theme="dark"] {
+  --gjs-canvas-background: #2b2b2b;
+  --gjs-shadow-large: rgba(0, 0, 0, 0.1) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.5) 0px 0px 0px 1px;
+  --gjs-components-background: #0c0c0c;
+  --gjs-border-color: #2b2b2b;
+  --gjs-border: 1px solid var(--gjs-border-color);
+  --gjs-selected-background: #222;
 }
 
 #grapes {

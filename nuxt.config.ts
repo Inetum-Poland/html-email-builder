@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxt/eslint",
     "@vite-pwa/nuxt",
+    "@vueuse/nuxt",
   ],
   ssr: false,
   app: {

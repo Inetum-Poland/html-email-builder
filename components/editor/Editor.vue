@@ -8,6 +8,7 @@
 
     <div id="nav-bar">
       <Logo />
+      <ThemeToggle />
     </div>
     <div id="top-bar" />
     <div id="bottom-bar" />
