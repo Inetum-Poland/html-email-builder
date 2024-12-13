@@ -18,11 +18,11 @@
       :tabs="[
         {
           id: 'blocks',
-          label: 'Blocks',
+          label: t('blocks'),
         },
         {
           id: 'layers',
-          label: 'Layers',
+          label: t('layers'),
         }
       ]"
     />
@@ -32,12 +32,12 @@
       :tabs="[
         {
           id: 'styles',
-          label: 'Styles',
+          label: t('styles'),
           hidden: true,
         },
         {
           id: 'traits',
-          label: 'Attributes',
+          label: t('attributes'),
         }
       ]"
     />
