@@ -99,7 +99,7 @@
   #top-bar {
     grid-area: top-bar;
     display: grid;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100%;
     gap: var(--gjs-gap);
     justify-content: space-between;
@@ -112,6 +112,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:first-child {
+        justify-content: flex-start;
+      }
+
+      &:last-child {
+        justify-content: flex-end;
+      }
     }
 
     .gjs-pn-panel {
