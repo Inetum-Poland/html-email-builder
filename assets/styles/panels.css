@@ -355,26 +355,22 @@
   }
 }
 
-#export-button {
-  anchor-name: --export-menu-anchor;
-}
-
 #export-menu {
   background-color: var(--gjs-border-color);
   border-radius: var(--gjs-border-radius);
-  border: 0;
   border: var(--gjs-border);
   box-shadow: var(--gjs-shadow-large);
   display: flex;
   flex-direction: column;
   gap: 1px;
-  inset-block-start: anchor(--export-menu-anchor top);
-  inset-inline-start: anchor(--export-menu-anchor end);
   margin: 0;
   padding: 0;
-  position-anchor: --export-menu-anchor;
-  transform: translateY(calc(-100% - 0.5 * var(--gjs-gap))) translateX(-100%);
   width: fit-content;
+  position: absolute;
+  right: calc(var(--gjs-left-width) + var(--gjs-gap));
+  left: auto;
+  bottom: calc(var(--gjs-canvas-top) - 1.5 * var(--gjs-gap));
+  top: auto;
 
   .button {
     background-color: var(--gjs-components-background);
