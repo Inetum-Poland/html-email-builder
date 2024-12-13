@@ -463,7 +463,7 @@
                                   },
                                   {
                                     "type": "textnode",
-                                    "content": "You can customize the styles of any component using the settings in the ",
+                                    "content": "You can add components in the ",
                                     "attributes": {
                                       "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                     }
@@ -471,16 +471,10 @@
                                   {
                                     "tagName": "b",
                                     "type": "text",
-                                    "style": {
-                                      "line-height": "150%"
-                                    },
-                                    "attributes": {
-                                      "style": "line-height:150%;"
-                                    },
                                     "components": [
                                       {
                                         "type": "textnode",
-                                        "content": "Style components",
+                                        "content": "Blocks ",
                                         "attributes": {
                                           "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                         }
@@ -489,7 +483,7 @@
                                   },
                                   {
                                     "type": "textnode",
-                                    "content": " panel. In the next panel, ",
+                                    "content": "panel. The ",
                                     "attributes": {
                                       "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                     }
@@ -498,15 +492,15 @@
                                     "tagName": "b",
                                     "type": "text",
                                     "style": {
-                                      "line-height": "150%"
+                                      "line-height": "19.5px"
                                     },
                                     "attributes": {
-                                      "style": "line-height:150%;"
+                                      "style": "line-height:19.5px;"
                                     },
                                     "components": [
                                       {
                                         "type": "textnode",
-                                        "content": "Edit component settings",
+                                        "content": "Layers ",
                                         "attributes": {
                                           "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                         }
@@ -515,7 +509,7 @@
                                   },
                                   {
                                     "type": "textnode",
-                                    "content": ", you can change the HTML attributes of a component, for example the alt attribute to provide alt text for images or the href attribute for links. The ",
+                                    "content": "panel shows how the components are nested within each other. This can be useful when trying to locate a layout issue. In the ",
                                     "attributes": {
                                       "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                     }
@@ -523,16 +517,10 @@
                                   {
                                     "tagName": "b",
                                     "type": "text",
-                                    "style": {
-                                      "line-height": "150%"
-                                    },
-                                    "attributes": {
-                                      "style": "line-height:150%;"
-                                    },
                                     "components": [
                                       {
                                         "type": "textnode",
-                                        "content": "Layer view",
+                                        "content": "Styles",
                                         "attributes": {
                                           "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                         }
@@ -541,7 +529,7 @@
                                   },
                                   {
                                     "type": "textnode",
-                                    "content": " panel shows how the components are nested within each other. This can be useful when trying to locate a layout issue. The final panel, ",
+                                    "content": " panel, you can customize the styles of any component, and in the ",
                                     "attributes": {
                                       "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                     }
@@ -549,16 +537,10 @@
                                   {
                                     "tagName": "b",
                                     "type": "text",
-                                    "style": {
-                                      "line-height": "150%"
-                                    },
-                                    "attributes": {
-                                      "style": "line-height:150%;"
-                                    },
                                     "components": [
                                       {
                                         "type": "textnode",
-                                        "content": "Add blocks",
+                                        "content": "Attributes",
                                         "attributes": {
                                           "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                         }
@@ -567,7 +549,7 @@
                                   },
                                   {
                                     "type": "textnode",
-                                    "content": ", contains all the blocks that you can drag into the email. Generally, sections with text and images should be wrapped in columns.",
+                                    "content": " panel, you can change the HTML attributes of a component, for example the alt attribute to provide alt text for images or the href attribute for links.",
                                     "attributes": {
                                       "style": "font-family:Verdana, Geneva, sans-serif;font-size:14px;line-height:125%;"
                                     }
