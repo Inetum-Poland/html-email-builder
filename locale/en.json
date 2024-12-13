@@ -60,6 +60,11 @@
     "description": "Build HTML emails with a drag-and-drop interface",
     "title": "HTML Email Builder"
   },
+  "credit": {
+    "madeWithLove": "Made with ❤️ at Inetum Poland",
+    "by": "by {'@'}dominika.goral",
+    "year": "2024"
+  },
   "demo": {
     "buildingAnEmail": {
       "title": "Building an email",

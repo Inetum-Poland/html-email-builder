@@ -6,6 +6,9 @@
       </mjml>
     </div>
 
+    <div id="nav-bar">
+      <Logo />
+    </div>
     <div id="top-bar" />
     <div id="bottom-bar" />
 
@@ -37,6 +40,16 @@
         }
       ]"
     />
+
+    <div id="credit">
+      <p>
+        {{ t("credit.madeWithLove") }}
+        <br>
+        {{ t("credit.by") }}
+        <br>
+        {{ t("credit.year") }}
+      </p>
+    </div>
 
     <div
       id="export-menu"
@@ -79,6 +92,8 @@ import {
 } from "@panels";
 import { defaults, setDefaults } from "@defaults";
 import { Device } from "@types";
+
+const { $i18n: { t } } = useNuxtApp();
 
 onMounted(() => {
   const editor = grapesJS.init({

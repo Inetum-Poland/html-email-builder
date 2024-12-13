@@ -11,6 +11,7 @@
   --font-size: 14px;
   --font-size-small: 12px;
   --color: #222222;
+  --nav-height: 48px;
 
   font-family: Inter, system-ui, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
