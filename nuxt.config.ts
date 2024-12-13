@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt",
   ],
   ssr: false,
+  app: {
+    baseURL: process.env.BASE_URL,
+  },
   css: ["~/assets/styles/global.css"],
   vue: {
     compilerOptions: {

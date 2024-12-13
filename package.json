@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build --prerender",
     "dev": "nuxt dev",
+    "deploy": "cross-env BASE_URL=/html-email-builder/ nuxt build --prerender",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -34,6 +35,7 @@
     "@vite-pwa/assets-generator": "^0.2.6",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/test-utils": "^2.4.6",
+    "cross-env": "^7.0.3",
     "happy-dom": "^15.10.2",
     "typescript": "^5.6.3",
     "vitest": "^2.1.4"
