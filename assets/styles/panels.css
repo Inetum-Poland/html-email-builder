@@ -313,6 +313,10 @@
     color: inherit;
   }
 
+  select option {
+    background-color: var(--gjs-components-background);
+  }
+
   .gjs-field.gjs-field-color {
     display: flex;
     overflow: hidden;
