@@ -15,31 +15,31 @@
     "icons:generate": "pwa-assets-generator --preset minimal-2023 public/logo.svg"
   },
   "dependencies": {
-    "@nuxt/eslint": "^0.6.1",
+    "@nuxt/eslint": "^0.6.2",
     "@nuxtjs/i18n": "9.0.0-rc.2",
     "@vite-pwa/nuxt": "^0.10.6",
     "driver.js": "^1.3.1",
-    "grapesjs": "^0.22.2",
+    "grapesjs": "^0.22.4",
     "grapesjs-mjml": "^1.0.6",
     "js-beautify": "^1.15.1",
     "lucide-static": "^0.454.0",
     "mjml-browser": "^4.15.3",
-    "nuxt": "^3.13.2",
+    "nuxt": "^3.15.0",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxt/test-utils": "^3.14.4",
+    "@nuxt/test-utils": "^3.15.1",
     "@types/js-beautify": "^1.14.3",
     "@types/mjml-browser": "^4.15.0",
     "@vite-pwa/assets-generator": "^0.2.6",
-    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue": "^5.2.1",
     "@vue/test-utils": "^2.4.6",
-    "@vueuse/core": "^12.0.0",
-    "@vueuse/nuxt": "^12.0.0",
+    "@vueuse/core": "^12.2.0",
+    "@vueuse/nuxt": "^12.2.0",
     "cross-env": "^7.0.3",
-    "happy-dom": "^15.10.2",
-    "typescript": "^5.6.3",
-    "vitest": "^2.1.4"
+    "happy-dom": "^15.11.7",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   }
 }
