@@ -141,6 +141,10 @@
         .gjs-pn-btn {
           border-radius: 0;
           border: none;
+
+          &.gjs-pn-active {
+            color: var(--inetum-green);
+          }
         }
       }
     }
