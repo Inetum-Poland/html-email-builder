@@ -4,3 +4,4 @@ export { HeadingBlock } from "./HeadingBlock";
 export { ImageBlock } from "./ImageBlock";
 export { TablePlugin } from "./TableBlock";
 export { TextBlock, TextToolbar } from "./TextBlock";
+export { DividerBlock } from "./DividerBlock";
