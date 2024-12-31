@@ -77,6 +77,16 @@ export const defaults = {
     "font-weight": "400",
     "text-decoration": "underline",
   },
+  divider: {
+    "align": "center",
+    "border-color": "#00a79d",
+    "border-width": "2px",
+    "padding-bottom": "8px",
+    "padding-left": "8px",
+    "padding-right": "8px",
+    "padding-top": "8px",
+    "width": "100%",
+  },
   palette: [
     ["#00a79d", "#232d4b", "#d4007b", "#ffffff", "#000000", "transparent"],
   ],

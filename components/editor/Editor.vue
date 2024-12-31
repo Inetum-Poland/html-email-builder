@@ -78,6 +78,7 @@ import {
   TablePlugin,
   TextBlock,
   TextToolbar,
+  DividerBlock
 } from "@blocks";
 import {
   DeviceManager,
@@ -156,6 +157,7 @@ onMounted(() => {
       HeadingBlock(1),
       HeadingBlock(2),
       HeadingBlock(3),
+      DividerBlock,
       handleTabs,
       handleAutosave,
       handleExport,
