@@ -10,6 +10,15 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     baseURL: process.env.BASE_URL,
+    head: {
+      link: [
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "favicon.ico",
+        },
+      ],
+    },
   },
   css: ["~/assets/styles/global.css"],
   vue: {
