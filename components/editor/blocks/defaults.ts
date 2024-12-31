@@ -1,25 +1,50 @@
 import type { Editor } from "grapesjs";
 
 export const defaults = {
-  "text": {
+  text: {
+    "color": "#000000",
     "font-family": "Verdana, Geneva, sans-serif",
     "font-size": "14px",
-    "line-height": "125%",
+    "line-height": "1.5",
+    "padding-bottom": "8px",
+    "padding-left": "0px",
+    "padding-right": "0px",
+    "padding-top": "8px",
   },
-  "image": {
-    display: "block",
-    height: "auto",
-    width: "100%",
+  image: {
+    "display": "block",
+    "height": "auto",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "margin-right": "0px",
+    "margin-top": "0px",
+    "max-width": "100%",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "padding-right": "0px",
+    "padding-top": "0px",
   },
-  "table": {
+  table: {
+    "background-color": "transparent",
+    "border-collapse": "separate",
+    "border-spacing": "1px",
     "margin": "auto",
-    "max-width": "600px",
+    "table-layout": "fixed",
     "width": "100%",
   },
-  "cell": {
-    padding: "2px",
+  cell: {
+    "background-color": "transparent",
+    "border-color": "transparent",
+    "border-style": "none",
+    "border-width": "0",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "padding-right": "0px",
+    "padding-top": "0px",
+    "text-align": "left",
+    "vertical-align": "middle",
   },
-  "headers": {
+  headers: {
     1: "28px",
     2: "21px",
     3: "16px",
@@ -27,69 +52,87 @@ export const defaults = {
     5: "12px",
     6: "10px",
   },
-  "mj-image": {
-    "padding-bottom": "0px",
+  button: {
+    "align": "center",
+    "background-color": "#19647E",
+    "border-color": "transparent",
+    "border-radius": "4px",
+    "border-style": "none",
+    "border-width": "0",
+    "color": "#ffffff",
+    "font-family": "Verdana, Geneva, sans-serif",
+    "font-size": "14px",
+    "height": "auto",
+    "line-height": "125%",
+    "padding-bottom": "8px",
     "padding-left": "0px",
     "padding-right": "0px",
-    "padding-top": "0px",
+    "padding-top": "8px",
+    "text-align": "center",
+    "width": "auto",
   },
-  "button": {
-    "background-color": "#19647E",
-    "border-radius": "4px",
+  link: {
+    "color": "#00a79d",
+    "font-style": "normal",
+    "font-weight": "400",
+    "text-decoration": "underline",
   },
-  "palette": [
+  palette: [
     ["#00a79d", "#232d4b", "#d4007b", "#ffffff", "#000000", "transparent"],
   ],
 };
 
 export const setDefaults = (editor: Editor) => {
-  editor.Components.addType("mj-text", {
+  editor.Components.addType("wrapper", {
     model: {
       defaults: {
-        style: defaults.text,
+        stylable: false,
       },
     },
   });
 
-  editor.Components.addType("textnode", {
+  editor.Components.addType("mjml", {
     model: {
       defaults: {
-        style: defaults.text,
+        traits: [],
       },
     },
   });
 
-  editor.Components.addType("link", {
+  editor.Components.addType("mj-body", {
     model: {
       defaults: {
-        style: {
-          "text-decoration": "none",
+        "stylable": ["background-color", "padding"],
+        "style": {
+          "background-color": "transparent",
+          "padding-bottom": "8px",
+          "padding-left": "0px",
+          "padding-right": "0px",
+          "padding-top": "8px",
         },
-        stylable: [
-          "color",
-          "font-family",
-          "font-size",
-          "font-style",
-          "font-weight",
-          "letter-spacing",
-          "text-decoration",
-        ],
+        "style-default": {
+          "background-color": "transparent",
+          "padding-bottom": "8px",
+          "padding-left": "0px",
+          "padding-right": "0px",
+          "padding-top": "8px",
+        },
       },
     },
   });
 
-  editor.Components.addType("mj-image", {
+  editor.Components.addType("mj-section", {
     model: {
       defaults: {
-        style: defaults["mj-image"],
-      },
-    },
-  });
-
-  editor.Components.addType("mj-button", {
-    model: {
-      defaults: {
-        style: { ...defaults.button, ...defaults.text }
+        stylable: ["background-color", "padding"],
+        traits: [],
+        style: {
+          "background-color": "transparent",
+          "padding-bottom": "0",
+          "padding-left": "8px",
+          "padding-right": "8px",
+          "padding-top": "0",
+        },
       },
     },
   });

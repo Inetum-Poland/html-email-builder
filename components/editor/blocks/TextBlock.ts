@@ -1,15 +1,12 @@
-import type { BlockProperties, Editor } from "grapesjs";
+import type { Editor } from "grapesjs";
 import {
-  AlignCenter,
-  AlignJustify,
-  AlignLeft,
-  AlignRight,
   Bold,
-  Eraser,
   Italic,
   Link,
   Text,
+  Underline,
 } from "lucide-static";
+import { defaults } from "@defaults";
 
 enum ButtonState {
   ACTIVE = 1,
@@ -49,6 +46,12 @@ export const TextToolbar = (editor: Editor) => {
       result: (rte) => rte.exec("italic"),
     });
 
+    rte.add("underline", {
+      icon: Underline,
+      attributes: { title: t("underline") },
+      result: (rte) => rte.exec("underline"),
+    });
+
     rte.add("link", {
       icon: Link,
       attributes: { title: t("link") },
@@ -61,47 +64,60 @@ export const TextToolbar = (editor: Editor) => {
           ? rte.exec("unlink")
           : rte.insertHTML(`<a href="">${rte.selection()}</a>`, { select: true }),
     });
-
-    rte.add("clearFormatting", {
-      icon: Eraser,
-      attributes: { title: t("clearFormatting") },
-      result: (rte) => rte.exec("removeFormat"),
-    });
-
-    rte.add("justifyLeft", {
-      icon: AlignLeft,
-      attributes: { title: t("alignLeft") },
-      result: (rte) => rte.exec("justifyLeft"),
-    });
-
-    rte.add("justifyCenter", {
-      icon: AlignCenter,
-      attributes: { title: t("alignCenter") },
-      result: (rte) => rte.exec("justifyCenter"),
-    });
-
-    rte.add("justifyRight", {
-      icon: AlignRight,
-      attributes: { title: t("alignRight") },
-      result: (rte) => rte.exec("justifyRight"),
-    });
-
-    rte.add("justifyFull", {
-      icon: AlignJustify,
-      attributes: { title: t("alignJustify") },
-      result: (rte) => rte.exec("justifyFull"),
-    });
   });
 };
 
-export const TextBlock = (): BlockProperties => {
+export const TextBlock = (editor: Editor) => {
   const { $i18n: { t } } = useNuxtApp();
 
-  return {
+  editor.Components.addType("textnode", {
+    model: {
+      defaults: {
+        style: defaults.text,
+        stylable: [
+          "color",
+          "font-family",
+          "font-size",
+          "padding",
+        ],
+      },
+    },
+  });
+
+  editor.Components.addType("mj-text", {
+    model: {
+      defaults: {
+        style: defaults.text,
+        stylable: [
+          "align",
+          "color",
+          "font-family",
+          "font-size",
+          "padding",
+        ],
+      },
+    },
+  });
+
+  editor.Components.addType("link", {
+    model: {
+      defaults: {
+        style: defaults.link,
+        stylable: [
+          "color",
+          "font-style",
+          "font-weight",
+          "text-decoration",
+        ],
+      },
+    },
+  });
+
+  editor.Blocks.add("mj-text", {
     label: t("text"),
     media: Text,
     content: `<mj-text>${t("insertTextHere")}</mj-text>`,
     activate: true,
     category: t("genericBlocks"),
-  };
+  });
 };

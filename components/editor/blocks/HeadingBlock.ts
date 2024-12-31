@@ -1,4 +1,4 @@
-import type { BlockProperties } from "grapesjs";
+import type { Editor } from "grapesjs";
 import {
   Heading1,
   Heading2,
@@ -18,11 +18,11 @@ const icons = new Map([
   [6, Heading6],
 ]);
 
-export const HeadingBlock = (level: 1 | 2 | 3 | 4 | 5 | 6): BlockProperties => {
+export const HeadingBlock = (level: 1 | 2 | 3 | 4 | 5 | 6) => (editor: Editor) => {
   const { $i18n: { t } } = useNuxtApp();
   const fontSize = defaults.headers[level];
 
-  return {
+  editor.Blocks.add(`mj-heading-${level}`, {
     label: `H${level}`,
     media: icons.get(level),
     content: `
@@ -32,5 +32,5 @@ export const HeadingBlock = (level: 1 | 2 | 3 | 4 | 5 | 6): BlockProperties => {
     activate: true,
     attributes: { title: `${t("heading")} ${level}` },
     category: t("genericBlocks"),
-  };
+  });
 };

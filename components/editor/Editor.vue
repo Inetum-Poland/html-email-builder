@@ -69,14 +69,9 @@ import { saveProject, selectAll } from "@keymaps";
 import { WelcomeModal } from "@modals";
 import {
   ButtonBlock,
-  CellBlock,
-  CellImageBlock,
-  CellTextBlock,
   ColumnBlock,
   HeadingBlock,
   ImageBlock,
-  RowBlock,
-  TableBlock,
   TablePlugin,
   TextBlock,
   TextToolbar,
@@ -111,6 +106,7 @@ onMounted(() => {
     },
     styleManager: {
       appendTo: "#styles-panel",
+      clearProperties: false,
     },
     traitManager: {
       appendTo: "#traits-panel"
@@ -143,7 +139,24 @@ onMounted(() => {
     },
     assetManager: { uploadFile: uploadImage },
     height: "100%",
-    plugins: [grapesJSMJML, TablePlugin, TextToolbar],
+    plugins: [
+      grapesJSMJML,
+      TextToolbar,
+      ColumnBlock(1),
+      ColumnBlock(2),
+      ColumnBlock(3),
+      TextBlock,
+      ButtonBlock,
+      ImageBlock,
+      HeadingBlock(1),
+      HeadingBlock(2),
+      HeadingBlock(3),
+      TablePlugin,
+      handleTabs,
+      handleAutosave,
+      handleExport,
+      setDefaults,
+    ],
     telemetry: false,
     noticeOnUnload: true,
     colorPicker: {
@@ -152,6 +165,7 @@ onMounted(() => {
     pluginsOpts: {
       [grapesJSMJML as any]: {
         blocks: [],
+        columnsPadding: "0 0",
         mjmlParser: (input: string) => mjml2html(input, {
           fonts: {},
         }),
@@ -159,7 +173,7 @@ onMounted(() => {
     },
   });
 
-  const { Blocks, Panels, Keymaps, Commands } = editor;
+  const { Panels, Keymaps, Commands } = editor;
 
   editor.on("load", () => WelcomeModal(editor));
 
@@ -190,26 +204,6 @@ onMounted(() => {
   Panels.addPanel(UndoRedo());
   Panels.addPanel(ToggleAutosavePanel());
   Panels.addPanel(ExportProject());
-
-  Blocks.add("mj-1-column", ColumnBlock(1));
-  Blocks.add("mj-2-columns", ColumnBlock(2));
-  Blocks.add("mj-3-columns", ColumnBlock(3));
-  Blocks.add("mj-text", TextBlock());
-  Blocks.add("mj-button", ButtonBlock());
-  Blocks.add("mj-image", ImageBlock());
-  Blocks.add("mj-heading-1", HeadingBlock(1));
-  Blocks.add("mj-heading-2", HeadingBlock(2));
-  Blocks.add("mj-heading-3", HeadingBlock(3));
-  Blocks.add("mj-table", TableBlock());
-  Blocks.add("mj-table-row", RowBlock());
-  Blocks.add("mj-table-cell", CellBlock());
-  Blocks.add("mj-table-cell-text", CellTextBlock());
-  Blocks.add("mj-table-cell-image", CellImageBlock());
-
-  handleTabs(editor);
-  handleAutosave(editor);
-  handleExport(editor);
-  setDefaults(editor);
 });
 </script>
 

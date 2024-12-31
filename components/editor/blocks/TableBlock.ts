@@ -1,4 +1,4 @@
-import type { BlockProperties, Editor } from "grapesjs";
+import type { Editor } from "grapesjs";
 import {
   BetweenHorizonalEnd,
   BetweenVerticalEnd,
@@ -6,18 +6,7 @@ import {
   LayoutGrid,
   Text,
 } from "lucide-static";
-import { defaults } from "./defaults";
-
-const textAttributes = [
-  "color",
-  "font-family",
-  "font-size",
-  "font-style",
-  "font-weight",
-  "letter-spacing",
-  "line-height",
-  "text-decoration",
-];
+import { defaults } from "@defaults";
 
 export const TablePlugin = (editor: Editor) => {
   const { $i18n: { t } } = useNuxtApp();
@@ -29,7 +18,7 @@ export const TablePlugin = (editor: Editor) => {
         draggable: false,
         droppable: false,
         style: defaults.table,
-        stylable: ["margin", "max-width"],
+        stylable: ["background-color"],
       },
     },
   });
@@ -39,7 +28,8 @@ export const TablePlugin = (editor: Editor) => {
       defaults: {
         copyable: false,
         draggable: false,
-        stylable: ["background-color", "text-align", ...textAttributes],
+        stylable: false,
+        traits: [],
       },
     },
   });
@@ -48,7 +38,8 @@ export const TablePlugin = (editor: Editor) => {
     model: {
       defaults: {
         components: { type: "cell" },
-        stylable: ["background-color", "text-align", ...textAttributes],
+        stylable: false,
+        traits: [],
       },
     },
   });
@@ -72,12 +63,9 @@ export const TablePlugin = (editor: Editor) => {
         stylable: [
           "background-color",
           "border",
-          "height",
-          "max-width",
           "padding",
-          "width",
           "text-align",
-          ...textAttributes,
+          "vertical-align",
         ],
       },
     },
@@ -92,8 +80,14 @@ export const TablePlugin = (editor: Editor) => {
         droppable: ["*"],
         draggable: ["td"],
         components: t("insertTextHere"),
-        stylable: [...textAttributes],
-        style: defaults.text,
+        stylable: ["font-family", "font-size", "color"],
+        style: {
+          ...defaults.text,
+          "padding-bottom": "0px",
+          "padding-left": "0px",
+          "padding-right": "0px",
+          "padding-top": "0px",
+        },
       },
     },
   });
@@ -101,16 +95,10 @@ export const TablePlugin = (editor: Editor) => {
   editor.Components.addType("image", {
     model: {
       defaults: {
+        resizable: false,
         draggable: ["td"],
         style: defaults.image,
-        stylable: [
-          "border-radius",
-          "border",
-          "height",
-          "margin",
-          "max-width",
-          "width",
-        ],
+        stylable: ["height", "width", "margin"],
       },
     },
   });
@@ -120,9 +108,19 @@ export const TablePlugin = (editor: Editor) => {
       activate: true,
       defaults: {
         name: t("tableWrapper"),
+        draggable: false,
         droppable: false,
-        tagName: "mj-raw",
-        components: `
+      },
+    },
+  });
+
+  editor.Blocks.add("mj-table", {
+    category: t("tableBlocks"),
+    label: t("table"),
+    media: LayoutGrid,
+    content: `
+      <mj-section>
+        <mj-raw>
           <table>
             <tr>
               <td>
@@ -141,69 +139,42 @@ export const TablePlugin = (editor: Editor) => {
               </td>
             </tr>
           </table>
-        `,
-      },
-    },
-  });
-};
-
-export const TableBlock = (): BlockProperties => {
-  const { $i18n: { t } } = useNuxtApp();
-
-  return {
-    category: t("tableBlocks"),
-    label: t("table"),
-    media: LayoutGrid,
-    content: { type: "mj-raw" },
+        </mj-raw>
+      </mj-section>
+    `,
     activate: true,
     attributes: { id: "table-block" },
-  };
-};
+  });
 
-export const RowBlock = (): BlockProperties => {
-  const { $i18n: { t } } = useNuxtApp();
-
-  return {
+  editor.Blocks.add("mj-table-row", {
     category: t("tableBlocks"),
     label: t("row"),
     media: BetweenHorizonalEnd,
     content: { type: "row" },
     activate: true,
-  };
-};
+  });
 
-export const CellBlock = (): BlockProperties => {
-  const { $i18n: { t } } = useNuxtApp();
-
-  return {
+  editor.Blocks.add("mj-table-cell", {
     category: t("tableBlocks"),
     label: t("cell"),
     media: BetweenVerticalEnd,
     content: { type: "cell" },
     activate: true,
-  };
-};
+  });
 
-export const CellTextBlock = (): BlockProperties => {
-  const { $i18n: { t } } = useNuxtApp();
-
-  return {
+  editor.Blocks.add("mj-table-cell-text", {
     category: t("tableBlocks"),
     label: t("cellText"),
     media: Text,
     content: { type: "table-text" },
     activate: true,
-  };
-};
+  });
 
-export const CellImageBlock = (): BlockProperties => {
-  const { $i18n: { t } } = useNuxtApp();
-
-  return {
+  editor.Blocks.add("mj-table-cell-image", {
     category: t("tableBlocks"),
     label: t("cellImage"),
     media: Image,
     content: `<img src="https://placehold.co/300x150?text=${t("image")}">`,
     activate: true,
-  };
+  });
 };

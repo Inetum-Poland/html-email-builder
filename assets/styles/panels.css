@@ -294,6 +294,7 @@
   .gjs-sm-label {
     font-weight: normal;
     margin: var(--gjs-gap) 0;
+    color: currentColor !important;
   }
 
   .gjs-sm-properties {
