@@ -78,6 +78,12 @@
     fill: transparent;
   }
 
+  .gjs-toolbar-items {
+    display: flex;
+    align-items: flex-end;
+    margin-top: -2px;
+  }
+
   .gjs-toolbar {
     border-radius: var(--gjs-border-radius);
   }

@@ -177,4 +177,105 @@ export const TablePlugin = (editor: Editor) => {
     content: `<img src="https://placehold.co/300x150?text=${t("image")}">`,
     activate: true,
   });
+
+  editor.Components.addType("image-link", {
+    isComponent: (element) =>
+      element.nodeName === "A" && element.dataset.type === "image-link",
+    model: {
+      defaults: {
+        name: "Link",
+        tagName: "a",
+        traits: ["title", "href", "target"],
+        stylable: false,
+      },
+    },
+  });
+
+  editor.Commands.add("image-link", {
+    run(editor) {
+      const selected = editor.getSelected();
+
+      if (!selected) {
+        return;
+      }
+
+      const isLinked = selected.parent()?.attributes.tagName === "a";
+
+      if (isLinked) {
+        return;
+      }
+
+      const child = selected.view?.el.outerHTML;
+
+      const linked = selected.replaceWith({
+        tagName: "a",
+        type: "image-link",
+        attributes: {
+          "data-type": "image-link",
+          "href": "",
+        },
+        components: [child],
+      });
+
+      editor.trigger("change:canvas");
+      editor.select(linked);
+    },
+  });
+
+  editor.Commands.add("image-unlink", {
+    run(editor) {
+      const selected = editor.getSelected();
+
+      if (!selected) {
+        return;
+      }
+
+      const isLinked = selected.parent()?.attributes.tagName === "a";
+
+      if (!isLinked) {
+        return;
+      }
+
+      const child = selected.view?.el.outerHTML;
+
+      if (!child) {
+        return;
+      }
+
+      const unlinked = selected.parent()?.replaceWith(child)?.at(0);
+      editor.trigger("change:canvas");
+      editor.select(unlinked);
+      return;
+    },
+  });
+
+  editor.on("component:selected", (element) => {
+    if (element.attributes?.type !== "image") {
+      return;
+    }
+
+    const isLinked = element?.parent()?.attributes.tagName === "a";
+
+    const action = isLinked
+      ? {
+          attributes: { class: "fa fa-chain-broken" },
+          command: "image-unlink",
+        }
+      : {
+          attributes: { class: "fa fa-link" },
+          command: "image-link",
+        };
+
+    const toolbar = element.get("toolbar");
+    const index = toolbar.findIndex(
+      ({ command }: { command: string }) => command === action.command
+    );
+
+    if (index !== -1) {
+      toolbar.splice(index, 1);
+    }
+
+    toolbar.push(action);
+    element.set("toolbar", toolbar);
+  });
 };

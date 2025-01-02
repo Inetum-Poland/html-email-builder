@@ -80,7 +80,7 @@ export const handleTabs = (editor: Editor) => {
     editor.StyleManager.getSectors().each((sector: Sector) => sector.set({ open: true }));
 
     const hideStyles = !e?.attributes.stylable;
-    const hideTraits = !e?.attributes.traits.length;
+    const hideTraits = !e?.attributes.traits?.length;
 
     const styles = {
       wrapper: document.querySelector("#styles-panel-wrapper") as HTMLElement,
