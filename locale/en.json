@@ -103,15 +103,23 @@
     },
     "addBlocks": {
       "title": "Add blocks",
-      "description": "This panel contains all the blocks that you can add into the document. Generally, sections with text and images should be wrapped in columns."
+      "description": "This panel contains all the blocks that you can add into the document."
+    },
+    "columns": {
+      "title": "Columns",
+      "description": "Use columns or tables for layout. Columns are responsive, but the compatibility may be lacking among email clients."
+    },
+    "tables": {
+      "title": "Tables",
+      "description": "Tables aren't responsive, but they guarantee that the columns won't collapse into rows. When working with tables, it may be convenient to toggle on component borders."
+    },
+    "blocks": {
+      "title": "Blocks",
+      "description": "Blocks can be inserted into columns or table cells."
     },
     "addImages": {
       "title": "Add images",
       "description": "You can provide source URLs for the images, or upload them from your drive directly. In that case, they will be scaled to a maximum resolution and embedded into the document. To keep the size of the document lower, it is recommended to host the images somewhere else and only provide the URLs."
-    },
-    "addTables": {
-      "title": "Add tables",
-      "description": "Tables aren't responsive, but they guarantee that the columns won't collapse into rows. Tables only accept components from the Table section. When working with tables, it may be convenient to toggle on component borders in the Toolbar."
     }
   }
 }

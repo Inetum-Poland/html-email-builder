@@ -41,17 +41,31 @@ export const demo = (editor: Editor) => {
         },
       },
       {
+        element: "#layout-panel .gjs-block-category:nth-of-type(1)",
+        popover: {
+          title: t("demo.columns.title"),
+          description: t("demo.columns.description"),
+        },
+      },
+      {
+        element: "#layout-panel .gjs-block-category:nth-of-type(2)",
+        popover: {
+          title: t("demo.tables.title"),
+          description: t("demo.tables.description"),
+        },
+      },
+      {
+        element: "#layout-panel .gjs-block-category:nth-of-type(3)",
+        popover: {
+          title: t("demo.blocks.title"),
+          description: t("demo.blocks.description"),
+        },
+      },
+      {
         element: "#image-block",
         popover: {
           title: t("demo.addImages.title"),
           description: t("demo.addImages.description"),
-        },
-      },
-      {
-        element: "#table-block",
-        popover: {
-          title: t("demo.addTables.title"),
-          description: t("demo.addTables.description"),
         },
       },
       {
