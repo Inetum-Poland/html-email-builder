@@ -31,6 +31,6 @@ export const HeadingBlock = (level: 1 | 2 | 3 | 4 | 5 | 6) => (editor: Editor) =
     </mj-text>`,
     activate: true,
     attributes: { title: `${t("heading")} ${level}` },
-    category: t("genericBlocks"),
+    category: t("blocks"),
   });
 };

@@ -84,6 +84,35 @@ export const TextBlock = (editor: Editor) => {
     },
   });
 
+  editor.Components.addType("link", {
+    model: {
+      defaults: {
+        toolbar: [],
+        droppable: false,
+        draggable: false,
+        copyable: false,
+        removable: false,
+        highlightable: false,
+        editable: true,
+        style: defaults.link,
+        stylable: [
+          "color",
+          "font-style",
+          "font-weight",
+          "text-decoration",
+        ],
+        traits: [
+          "title",
+          {
+            label: t("link"),
+            name: "href",
+            placeholder: "eg. https://www.inetum.com/",
+          },
+        ],
+      },
+    },
+  });
+
   editor.Components.addType("mj-text", {
     model: {
       defaults: {
@@ -99,25 +128,65 @@ export const TextBlock = (editor: Editor) => {
     },
   });
 
-  editor.Components.addType("link", {
+  editor.Components.addType("table-text", {
+    extend: "text",
     model: {
       defaults: {
-        style: defaults.link,
-        stylable: [
-          "color",
-          "font-style",
-          "font-weight",
-          "text-decoration",
-        ],
+        name: t("text"),
+        tagName: "span",
+        droppable: ["*"],
+        draggable: ["td"],
+        components: t("insertTextHere"),
+        stylable: ["font-family", "font-size", "color"],
+        style: {
+          ...defaults.text,
+          "padding-bottom": "0px",
+          "padding-left": "0px",
+          "padding-right": "0px",
+          "padding-top": "0px",
+        },
       },
     },
   });
 
-  editor.Blocks.add("mj-text", {
+  editor.Components.addType("text-generic", {
+    model: {
+      defaults: {
+        draggable: ["[data-gjs-type=\"cell\"]", "[data-gjs-type=\"mj-column\"]"],
+      },
+    },
+  });
+
+  editor.on("component:mount", (component) => {
+    if (component.attributes.type !== "text-generic") {
+      return;
+    }
+
+    switch (component.parent().attributes.type) {
+      case "mj-column": {
+        const replaced = component.replaceWith(`<mj-text>${t("insertTextHere")}</mj-text>`);
+        editor.trigger("change:canvas");
+        editor.select(replaced);
+        break;
+      }
+      case "cell": {
+        const replaced = component.replaceWith({ type: "table-text" });
+        editor.trigger("change:canvas");
+        editor.select(replaced);
+        break;
+      }
+      default: {
+        component.remove();
+        break;
+      }
+    }
+  });
+
+  editor.Blocks.add("text-generic", {
     label: t("text"),
     media: Text,
-    content: `<mj-text>${t("insertTextHere")}</mj-text>`,
+    content: { type: "text-generic" },
     activate: true,
-    category: t("genericBlocks"),
+    category: t("blocks"),
   });
 };

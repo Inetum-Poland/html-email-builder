@@ -33,6 +33,6 @@ export const ColumnBlock = (count: 1 | 2 | 3) => (editor: Editor) => {
     label: t("column", count),
     media: icons.get(count),
     content: createContent(count),
-    category: t("genericBlocks"),
+    category: t("responsiveColumns"),
   });
 };

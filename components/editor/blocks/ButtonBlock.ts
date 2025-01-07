@@ -29,6 +29,6 @@ export const ButtonBlock = (editor: Editor) => {
     activate: true,
     media: SquarePlus,
     content: `<mj-button>${t("button")}</mj-button>`,
-    category: t("genericBlocks"),
+    category: t("blocks"),
   });
 };

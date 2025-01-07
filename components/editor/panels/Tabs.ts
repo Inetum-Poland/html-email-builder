@@ -76,11 +76,13 @@ export const handleTabs = (editor: Editor) => {
     traits.input.disabled = true;
   });
 
-  editor.on("style:target", (e) => {
+  editor.on("style:target", () => {
     editor.StyleManager.getSectors().each((sector: Sector) => sector.set({ open: true }));
 
-    const hideStyles = !e?.attributes.stylable;
-    const hideTraits = !e?.attributes.traits?.length;
+    const e = editor.getSelected();
+
+    const hideStyles = !Object.keys(e?.getStyle() ?? {}).length;
+    const hideTraits = !e?.getTraits()?.length;
 
     const styles = {
       wrapper: document.querySelector("#styles-panel-wrapper") as HTMLElement,

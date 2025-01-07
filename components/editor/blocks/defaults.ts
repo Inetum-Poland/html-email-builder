@@ -99,6 +99,18 @@ export const setDefaults = (editor: Editor) => {
     },
   });
 
+  editor.Components.addType("default", {
+    model: {
+      defaults: {
+        copyable: false,
+        draggable: false,
+        stylable: false,
+        traits: [],
+        selectable: false,
+      },
+    },
+  });
+
   editor.Components.addType("mj-body", {
     model: {
       defaults: {
