@@ -81,7 +81,10 @@ const onDemo = (editor: Editor) => {
   demo(editor);
 };
 
-export const WelcomeModal = (editor: Editor) => {
+export const WelcomeModal = (
+  editor: Editor,
+  options?: { hideAutosaveOption: boolean }
+) => {
   const { $i18n: { t } } = useNuxtApp();
 
   const wrapper = document.createElement("div");
@@ -89,13 +92,17 @@ export const WelcomeModal = (editor: Editor) => {
   wrapper.className = "button-list";
 
   const buttons = [
-    Button({
-      innerHTML: `${FilePen} ${t("continueFromAutosave")}`,
-      onclick: () => onRestore(editor)
-    }),
+    ...(options?.hideAutosaveOption
+      ? []
+      : [
+          Button({
+            innerHTML: `${FilePen} ${t("continueFromAutosave")}`,
+            onclick: () => onRestore(editor),
+          }),
+        ]),
     Button({
       innerHTML: `${FilePlus2} ${t("createNewProject")}`,
-      onclick: () => onClear(editor)
+      onclick: () => onClear(editor),
     }),
     Button({
       id: "open-existing-project",
@@ -104,7 +111,7 @@ export const WelcomeModal = (editor: Editor) => {
     }),
     Button({
       innerHTML: `${MessageCircleQuestion} ${t("showDemoTour")}`,
-      onclick: () => onDemo(editor)
+      onclick: () => onDemo(editor),
     }),
   ];
 

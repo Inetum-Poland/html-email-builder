@@ -15,7 +15,7 @@ export const demo = (editor: Editor) => {
   const { $i18n: { t } } = useNuxtApp();
 
   driver({
-    onDestroyed: () => WelcomeModal(editor),
+    onDestroyed: () => WelcomeModal(editor, { hideAutosaveOption: true }),
     popoverClass: "demo-popover",
     showProgress: true,
     steps: [

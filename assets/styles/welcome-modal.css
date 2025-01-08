@@ -35,7 +35,6 @@
     }
 
     &.invalid {
-      border: 1px solid var(--inetum-orange);
       color: var(--inetum-orange);
 
       &:hover,

@@ -87,6 +87,7 @@ export const setDefaults = (editor: Editor) => {
     model: {
       defaults: {
         stylable: false,
+        selectable: false,
       },
     },
   });
@@ -95,6 +96,7 @@ export const setDefaults = (editor: Editor) => {
     model: {
       defaults: {
         traits: [],
+        selectable: false,
       },
     },
   });
@@ -114,6 +116,7 @@ export const setDefaults = (editor: Editor) => {
   editor.Components.addType("mj-body", {
     model: {
       defaults: {
+        "toolbar": [],
         "stylable": ["background-color", "padding"],
         "style": {
           "background-color": "transparent",

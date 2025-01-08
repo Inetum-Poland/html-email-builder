@@ -94,6 +94,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+
+      .gjs-pn-panel,
+      .gjs-pn-btn {
+        all: unset;
+      }
+
+      button {
+        cursor: pointer !important;
+
+        &:hover {
+          color: var(--inetum-orange);
+        }
+      }
+    }
   }
 
   #top-bar {
@@ -402,17 +420,6 @@
     &:hover,
     &:focus-visible {
       color: var(--inetum-green);
-    }
-
-    &.invalid {
-      border: 1px solid var(--inetum-orange);
-      color: var(--inetum-orange);
-
-      &:hover,
-      &:focus-visible {
-        color: white;
-        background-color: var(--inetum-orange);
-      }
     }
   }
 }

@@ -8,7 +8,10 @@
 
     <div id="nav-bar">
       <Logo />
-      <ThemeToggle />
+      <nav class="buttons">
+        <div id="menu" />
+        <ThemeToggle />
+      </nav>
     </div>
     <div id="top-bar" />
     <div id="bottom-bar" />
@@ -85,6 +88,7 @@ import {
   ToggleAutosavePanel,
   ToggleBorders,
   UndoRedo,
+  Menu,
 } from "@panels";
 import { defaults, setDefaults } from "@defaults";
 import { Device } from "@types";
@@ -204,6 +208,7 @@ onMounted(() => {
   Panels.addPanel(UndoRedo());
   Panels.addPanel(ToggleAutosavePanel());
   Panels.addPanel(ExportProject());
+  Panels.addPanel(Menu());
 });
 </script>
 
