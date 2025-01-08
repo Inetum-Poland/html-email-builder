@@ -55,6 +55,9 @@ export default defineNuxtConfig({
     vueI18n: "./i18n.config.ts",
   },
   pwa: {
+    workbox: {
+      navigateFallback: undefined,
+    },
     manifest: {
       name: "HTML Email Builder",
       short_name: "HTML Email Builder",
