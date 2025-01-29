@@ -38,7 +38,7 @@ The generated MJML markup gets translated into HTML, which can be used in emails
 
 ### Outlook
 
-To paste the email into Outlook, use a third-party plugin such as [Insert HTML by Designmodo](https://appsource.microsoft.com/en-us/product/office/wa200002918) and paste the exported HTML code there.
+To paste the email into Outlook, use an Outlook Add-In such as [Insert HTML - Outlook Add-In by Inetum](https://github.com/Inetum-Poland/html-email-builder-outlook-addin) and paste the exported HTML code there.
 
 ## Available scripts
 
