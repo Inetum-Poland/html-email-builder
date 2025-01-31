@@ -36,7 +36,9 @@ const resize = (source: string): Promise<{ src: string; height: number; width: n
 };
 
 export async function uploadImage(this: any, e: ImageUploadEvent) {
-  const files = [...(e.dataTransfer ? e.dataTransfer.files : e.target?.files ?? [])];
+  const files = [
+    ...(e.dataTransfer ? e.dataTransfer.files : e.target?.files ?? []),
+  ].filter(({ type }) => type.includes("image"));
 
   if (!files.length) {
     return;
